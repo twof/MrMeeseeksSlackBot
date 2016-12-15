@@ -1,9 +1,10 @@
 import os
 import time
+import random
 from slackclient import SlackClient
 
 
-# starterbot's ID as an environment variable
+# Mr MeeseekBot's ID as an environment variable
 BOT_ID = os.environ.get("BOT_ID")
 
 # constants
@@ -12,6 +13,11 @@ EXAMPLE_COMMAND = "do"
 
 # instantiate Slack & Twilio clients
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
+
+intros = ["I'M MR MEESEEKS LOOK AT ME",
+          "I'M MR MEESEEKS",
+          "OOH I'M MR MEESEEKS LOOK AT ME",
+          "HEY THERE I'M MR MEESEEKS"]
 
 
 def handle_command(command, channel):
@@ -25,7 +31,7 @@ def handle_command(command, channel):
         if command.startswith(EXAMPLE_COMMAND):
             response = "Sure...write some more code then I can do that!"
         elif command is "":
-            response = "I'M MR MEESEEKS LOOK AT ME"
+            response = random.choice(intros)
         slack_client.api_call("chat.postMessage", channel=channel,
                               text=response, as_user=True)
 
