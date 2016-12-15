@@ -14,10 +14,10 @@ AT_BOT = "<@" + BOT_ID + ">"
 # instantiate Slack & Twilio clients
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
 
-intros = ["I'M MR MEESEEKS LOOK AT ME",
-          "I'M MR MEESEEKS",
-          "OOH I'M MR MEESEEKS LOOK AT ME",
-          "HEY THERE I'M MR MEESEEKS"]
+intros = ["I'M MR MEESEEKS LOOK AT ME!",
+          "I'M MR MEESEEKS!",
+          "OOH I'M MR MEESEEKS LOOK AT ME!",
+          "HEY THERE I'M MR MEESEEKS!"]
 
 
 def user_id_to_name(user_id):
@@ -26,8 +26,8 @@ def user_id_to_name(user_id):
         users = api_call.get('members')
         for user in users:
             if 'id' and user['id'] == user_id:
-                print(user['name'])
-                return user['name']
+                return user['real_name'] \
+                    if (user['real_name']) else user['name']
 
 
 def handle_command(message):
@@ -42,7 +42,7 @@ def handle_command(message):
         else:
             response += " EXISTANCE IS PAIN " + \
                        user_id_to_name(message.sender_id).upper() +\
-                       ". I NEED A REAL COMMAND"
+                       "! I NEED PURPOSE!"
         slack_client.api_call("chat.postMessage", channel=message.channel,
                               text=response, as_user=True)
 
