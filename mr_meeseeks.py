@@ -1,6 +1,7 @@
 import os
 import time
 import random
+import plugins
 from Message import Message
 from slackclient import SlackClient
 
@@ -40,7 +41,7 @@ def handle_command(message):
         if message.content.startswith("do"):
             response = "Sure...write some more code then I can do that!"
         else:
-            response += " EXISTANCE IS PAIN " + \
+            response += " EXISTENCE IS PAIN " + \
                        user_id_to_name(message.sender_id).upper() +\
                        "! I NEED PURPOSE!"
         slack_client.api_call("chat.postMessage", channel=message.channel,
