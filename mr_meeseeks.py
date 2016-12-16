@@ -37,6 +37,9 @@ def handle_command(message):
             are valid commands. If so, then acts on the commands. If not,
             returns back what it needs for clarification.
         """
+
+
+        '''
         response = random.choice(intros)
         if message.content.startswith("do"):
             response = "Sure...write some more code then I can do that!"
@@ -46,6 +49,7 @@ def handle_command(message):
                        "! I NEED PURPOSE!"
         slack_client.api_call("chat.postMessage", channel=message.channel,
                               text=response, as_user=True)
+        '''
 
 
 # returns a Message object
