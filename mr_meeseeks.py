@@ -2,7 +2,7 @@ import os
 import time
 import random
 import plugins
-from Message import Message
+from Models.Message import Message
 from slackclient import SlackClient
 
 
