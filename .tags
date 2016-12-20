@@ -1338,7 +1338,7 @@ EggMetadata	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__i
 EggMetadata	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^class EggMetadata(ZipProvider):$/;"	c
 EggProvider	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__init__.py	/^class EggProvider(NullProvider):$/;"	c
 EggProvider	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^class EggProvider(NullProvider):$/;"	c
-Eight_Ball	Plugins/Eight_Ball.py	/^class Eight_Ball(Plugin):$/;"	c
+Eight_Ball	Plugins/Eight_Ball.py	/^class Eight_Ball(Plugin, Singleton):$/;"	c
 Eight_Ball	Plugins/__init__.py	/^from Plugins.Eight_Ball import Eight_Ball$/;"	i
 Element	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree.py	/^    class Element(base.Node):$/;"	c	function:getETreeBuilder
 Element	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py	/^        class Element(builder.Element):$/;"	c	function:TreeBuilder.__init__
@@ -3948,7 +3948,6 @@ Plugin	Models/Plugin.py	/^class Plugin(object):$/;"	c
 Plugin	Plugins/Eight_Ball.py	/^from Models.Plugin import Plugin$/;"	i
 Plugin_Handler	mr_meeseeks.py	/^import Helpers.Plugin_Handler as Plugin_Handler$/;"	i
 Plugin_Type	Helpers/Plugin_Handler.py	/^from Utils.constants import Plugin_Type$/;"	i
-Plugin_Type	Models/Plugin.py	/^from Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	Plugins/Eight_Ball.py	/^from Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	Utils/constants.py	/^class Plugin_Type(Enum):$/;"	c
 Plugins	Helpers/Plugin_Handler.py	/^import Plugins$/;"	i
@@ -5517,6 +5516,7 @@ SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/pip/_vendor/reque
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/requests/packages/chardet/sbcharsetprober.py	/^class SingleByteCharSetProber(CharSetProber):$/;"	c
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/requests/packages/chardet/sbcsgroupprober.py	/^from .sbcharsetprober import SingleByteCharSetProber$/;"	i
 Singleton	Models/Singleton.py	/^class Singleton(object):$/;"	c
+Singleton	Plugins/Eight_Ball.py	/^from Models.Singleton import Singleton$/;"	i
 Sized	starterbot/lib/python3.4/_collections_abc.py	/^class Sized(metaclass=ABCMeta):$/;"	c
 SkipTo	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^class SkipTo(ParseElementEnhance):$/;"	c
 SkipTo	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^class SkipTo(ParseElementEnhance):$/;"	c
@@ -7672,7 +7672,7 @@ __imul__	starterbot/lib/python3.4/collections/__init__.py	/^    def __imul__(sel
 __imul__	starterbot/lib/python3.4/operator.py	/^__imul__ = imul$/;"	v
 __index__	starterbot/lib/python3.4/operator.py	/^__index__ = index$/;"	v
 __init__	Models/Message.py	/^    def __init__(self, content=None, sender_id=None, channel=None):$/;"	m	class:Message
-__init__	Models/Plugin.py	/^    def __init__(self, match_type=Plugin_Type.everything, query=None):$/;"	m	class:Plugin
+__init__	Models/Plugin.py	/^    def __init__(self, match_type, query):$/;"	m	class:Plugin
 __init__	Plugins/Eight_Ball.py	/^    def __init__(self):$/;"	m	class:Eight_Ball
 __init__	starterbot/lib/python3.4/__future__.py	/^    def __init__(self, optionalRelease, mandatoryRelease, compiler_flag):$/;"	m	class:_Feature
 __init__	starterbot/lib/python3.4/_collections_abc.py	/^    def __init__(self, mapping):$/;"	m	class:MappingView
@@ -11762,7 +11762,7 @@ callable	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/packag
 callable	starterbot/lib/python3.4/site-packages/six.py	/^    callable = callable$/;"	v
 callable	starterbot/lib/python3.4/site-packages/six.py	/^    def callable(obj):$/;"	f
 callback	Models/Plugin.py	/^    def callback(reply, message):$/;"	m	class:Plugin
-callback	Plugins/Eight_Ball.py	/^    def callback(message):$/;"	m	class:Eight_Ball
+callback	Plugins/Eight_Ball.py	/^    def callback(self, message):$/;"	m	class:Eight_Ball
 can	starterbot/lib/python3.4/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	i
 canParseNext	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^    def canParseNext(self, instring, loc):$/;"	m	class:ParserElement
 canParseNext	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def canParseNext(self, instring, loc):$/;"	m	class:ParserElement

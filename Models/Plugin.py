@@ -5,11 +5,10 @@
 #   represted in constants.Plugin_Type
 # query: The string to match in accordance with match_type
 # callback: function that will run on query match
-from Utils.constants import Plugin_Type
 
 
 class Plugin(object):
-    def __init__(self, match_type=Plugin_Type.everything, query=None):
+    def __init__(self, match_type, query):
         self.match_type = match_type
         self.query = query
 

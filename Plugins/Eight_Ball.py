@@ -1,15 +1,17 @@
 from Utils.constants import Plugin_Type
 import random
 from Models.Plugin import Plugin
+from Models.Singleton import Singleton
 
 
-class Eight_Ball(Plugin):
+# All plugins must implement Plugin and Singleton
+class Eight_Ball(Plugin, Singleton):
     def __init__(self):
         super(Eight_Ball, self).__init__(Plugin_Type.starts_with, "/8")
 
     # message is of type message
-    def callback(message):
-        if message.content is super.query:
+    def callback(self, message):
+        if message.content is self.query:
             return "Ask the magic 8ball a question! Usage: /8 <question>"
 
         messages = [

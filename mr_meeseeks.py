@@ -68,6 +68,7 @@ def parse_slack_output(slack_rtm_output):
 
 
 if __name__ == "__main__":
+    Plugin_Handler.setup()
     READ_WEBSOCKET_DELAY = 1  # 1 second delay between reading from firehose
     if slack_client.rtm_connect():
         print("StarterBot connected and running!")

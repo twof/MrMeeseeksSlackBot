@@ -17,12 +17,20 @@ def setup():
 # plugin is a class which makes things a bit wonky
 def handle(message):
     for plugin in plugin_arr:
-        return{
-            Plugin_Type.everything: _everything(message, plugin()),
-            Plugin_Type.equals: _equals(message, plugin()),
-            Plugin_Type.starts_with: _starts_with(message, plugin()),
-            Plugin_Type.contains: _contains(message, plugin()),
-        }.get(plugin().match_type, None)
+        print(plugin)
+        print(plugin().match_type)
+        match = plugin().match_type
+
+        if match is Plugin_Type.equals:
+            return _equals(message, plugin())
+        elif match is Plugin_Type.contains:
+            return _contains(message, plugin())
+        elif match is Plugin_Type.starts_with:
+            return _starts_with(message, plugin())
+        elif match is Plugin_Type.everything:
+            return _everything(message, plugin())
+        else:
+            return None
 
 
 def _everything(message, plugin):
