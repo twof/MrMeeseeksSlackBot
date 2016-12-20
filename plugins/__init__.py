@@ -1,1 +1,2 @@
-__all__ = ["8ball"]
+from Plugins.Eight_Ball import Eight_Ball
+__all__ = ['Eight_Ball']

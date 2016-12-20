@@ -1,9 +1,10 @@
 import os
 import time
 import random
-import plugins
+import Helpers.Plugin_Handler as Plugin_Handler
 from Models.Message import Message
 from slackclient import SlackClient
+from Utils.constants import intros
 
 
 # Mr MeeseekBot's ID as an environment variable
@@ -14,11 +15,6 @@ AT_BOT = "<@" + BOT_ID + ">"
 
 # instantiate Slack & Twilio clients
 slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
-
-intros = ["I'M MR MEESEEKS LOOK AT ME!",
-          "I'M MR MEESEEKS!",
-          "OOH I'M MR MEESEEKS LOOK AT ME!",
-          "HEY THERE I'M MR MEESEEKS!"]
 
 
 def user_id_to_name(user_id):
@@ -38,18 +34,16 @@ def handle_command(message):
             returns back what it needs for clarification.
         """
 
-
-        '''
         response = random.choice(intros)
-        if message.content.startswith("do"):
-            response = "Sure...write some more code then I can do that!"
+        handled = Plugin_Handler.handle(message)
+        if handled:
+            response += handled
         else:
             response += " EXISTENCE IS PAIN " + \
                        user_id_to_name(message.sender_id).upper() +\
                        "! I NEED PURPOSE!"
         slack_client.api_call("chat.postMessage", channel=message.channel,
                               text=response, as_user=True)
-        '''
 
 
 # returns a Message object

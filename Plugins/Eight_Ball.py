@@ -1,16 +1,15 @@
-from utils.constants import Plugin_Type
-from Models.Message import Message
+from Utils.constants import Plugin_Type
 import random
-from Plugin import Plugin
+from Models.Plugin import Plugin
 
 
 class Eight_Ball(Plugin):
     def __init__(self):
-        super().__init__(Plugin_Type.starts_with, "/8")
+        super(Eight_Ball, self).__init__(Plugin_Type.starts_with, "/8")
 
     # message is of type message
-    def callback(self, message):
-        if message.content is self.query:
+    def callback(message):
+        if message.content is super.query:
             return "Ask the magic 8ball a question! Usage: /8 <question>"
 
         messages = [
