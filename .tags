@@ -5516,6 +5516,7 @@ SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/pip/_vendor/reque
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/chardet/sbcsgroupprober.py	/^from .sbcharsetprober import SingleByteCharSetProber$/;"	i
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/requests/packages/chardet/sbcharsetprober.py	/^class SingleByteCharSetProber(CharSetProber):$/;"	c
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/requests/packages/chardet/sbcsgroupprober.py	/^from .sbcharsetprober import SingleByteCharSetProber$/;"	i
+Singleton	Models/Singleton.py	/^class Singleton(object):$/;"	c
 Sized	starterbot/lib/python3.4/_collections_abc.py	/^class Sized(metaclass=ABCMeta):$/;"	c
 SkipTo	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^class SkipTo(ParseElementEnhance):$/;"	c
 SkipTo	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^class SkipTo(ParseElementEnhance):$/;"	c
@@ -6674,7 +6675,6 @@ _PY_VERSION_SHORT	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/_ba
 _PY_VERSION_SHORT_NO_DOT	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/_backport/sysconfig.py	/^_PY_VERSION_SHORT_NO_DOT = _PY_VERSION[0] + _PY_VERSION[2]$/;"	v
 _ParseResultsWithOffset	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^class _ParseResultsWithOffset(object):$/;"	c
 _ParseResultsWithOffset	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^class _ParseResultsWithOffset(object):$/;"	c
-_Plugin	Models/Plugin.py	/^    class _Plugin:$/;"	c	class:Plugin
 _PositionToken	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^class _PositionToken(Token):$/;"	c
 _PositionToken	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^class _PositionToken(Token):$/;"	c
 _Printer	starterbot/lib/python3.4/site.py	/^class _Printer(object):$/;"	c
@@ -7486,7 +7486,6 @@ __get_module	starterbot/lib/python3.4/site-packages/six.py	/^    def __get_modul
 __get_openssl_constructor	starterbot/lib/python3.4/hashlib.py	/^def __get_openssl_constructor(name):$/;"	f	file:
 __get_output_extensions	starterbot/lib/python3.4/site-packages/setuptools/command/build_ext.py	/^    def __get_output_extensions(self):$/;"	m	class:build_ext	file:
 __get_stubs_outputs	starterbot/lib/python3.4/site-packages/setuptools/command/build_ext.py	/^    def __get_stubs_outputs(self):$/;"	m	class:build_ext	file:
-__getattr__	Models/Plugin.py	/^    def __getattr__(self, name):$/;"	m	class:Plugin	file:
 __getattr__	starterbot/lib/python3.4/codecs.py	/^    def __getattr__(self, name,$/;"	m	class:StreamReader	file:
 __getattr__	starterbot/lib/python3.4/codecs.py	/^    def __getattr__(self, name,$/;"	m	class:StreamReaderWriter	file:
 __getattr__	starterbot/lib/python3.4/codecs.py	/^    def __getattr__(self, name,$/;"	m	class:StreamRecoder	file:
@@ -7673,7 +7672,6 @@ __imul__	starterbot/lib/python3.4/collections/__init__.py	/^    def __imul__(sel
 __imul__	starterbot/lib/python3.4/operator.py	/^__imul__ = imul$/;"	v
 __index__	starterbot/lib/python3.4/operator.py	/^__index__ = index$/;"	v
 __init__	Models/Message.py	/^    def __init__(self, content=None, sender_id=None, channel=None):$/;"	m	class:Message
-__init__	Models/Plugin.py	/^        def __init__(self, match_type=Plugin_Type.everything, query=None):$/;"	m	class:Plugin._Plugin
 __init__	Models/Plugin.py	/^    def __init__(self, match_type=Plugin_Type.everything, query=None):$/;"	m	class:Plugin
 __init__	Plugins/Eight_Ball.py	/^    def __init__(self):$/;"	m	class:Eight_Ball
 __init__	starterbot/lib/python3.4/__future__.py	/^    def __init__(self, optionalRelease, mandatoryRelease, compiler_flag):$/;"	m	class:_Feature
@@ -8591,6 +8589,7 @@ __neg__	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/_structures
 __neg__	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/_structures.py	/^    def __neg__(self):$/;"	m	class:NegativeInfinity	file:
 __neg__	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/_structures.py	/^    def __neg__(self):$/;"	m	class:Infinity	file:
 __neg__	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/_structures.py	/^    def __neg__(self):$/;"	m	class:NegativeInfinity	file:
+__new__	Models/Singleton.py	/^    def __new__(class_, *args, **kwargs):$/;"	m	class:Singleton	file:
 __new__	starterbot/lib/python3.4/abc.py	/^    def __new__(mcls, name, bases, namespace):$/;"	m	class:ABCMeta	file:
 __new__	starterbot/lib/python3.4/codecs.py	/^    def __new__(cls, encode, decode, streamreader=None, streamwriter=None,$/;"	m	class:CodecInfo	file:
 __new__	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_inputstream.py	/^    def __new__(self, value):$/;"	m	class:EncodingBytes	file:
@@ -9972,6 +9971,7 @@ _inst	starterbot/lib/python3.4/random.py	/^_inst = Random()$/;"	v
 _install	starterbot/lib/python3.4/importlib/_bootstrap.py	/^def _install(sys_module, _imp_module):$/;"	f
 _install	starterbot/lib/python3.4/site-packages/setuptools/command/install.py	/^_install = orig.install$/;"	v
 _installed_safely	starterbot/lib/python3.4/importlib/_bootstrap.py	/^class _installed_safely:$/;"	c
+_instance	Models/Singleton.py	/^    _instance = None$/;"	v	class:Singleton
 _interrupt	starterbot/lib/python3.4/_dummy_thread.py	/^_interrupt = False$/;"	v
 _inverted_registry	starterbot/lib/python3.4/copyreg.py	/^_inverted_registry = {}                 # code -> key$/;"	v
 _io	starterbot/lib/python3.4/io.py	/^import _io$/;"	i
@@ -16338,7 +16338,6 @@ install_wrapper_scripts	starterbot/lib/python3.4/site-packages/setuptools/comman
 installation_report	starterbot/lib/python3.4/site-packages/setuptools/command/easy_install.py	/^    def installation_report(self, req, dist, what="Installed"):$/;"	m	class:easy_install
 installed_version	starterbot/lib/python3.4/site-packages/pip/req/req_install.py	/^    def installed_version(self):$/;"	m	class:InstallRequirement
 installer	starterbot/lib/python3.4/site-packages/pip/wheel.py	/^    installer = os.path.join(info_dir[0], 'INSTALLER')$/;"	v
-instance	Models/Plugin.py	/^    instance = None$/;"	v	class:Plugin
 int2byte	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/packages/six.py	/^    int2byte = chr$/;"	v
 int2byte	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/packages/six.py	/^    int2byte = struct.Struct(">B").pack$/;"	v
 int2byte	starterbot/lib/python3.4/site-packages/pip/_vendor/six.py	/^    int2byte = chr$/;"	v
