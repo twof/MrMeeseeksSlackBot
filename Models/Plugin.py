@@ -8,6 +8,9 @@
 
 
 class Plugin(object):
+    match_type = 0
+    query = 0
+
     def __init__(self, match_type, query):
         self.match_type = match_type
         self.query = query

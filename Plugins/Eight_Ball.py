@@ -9,7 +9,7 @@ class Eight_Ball(Plugin, Singleton):
     def __init__(self):
         super(Eight_Ball, self).__init__(Plugin_Type.starts_with, "/8")
 
-    # message is of type message
+    # message is of type Message
     def callback(self, message):
         if message.content is self.query:
             return "Ask the magic 8ball a question! Usage: /8 <question>"

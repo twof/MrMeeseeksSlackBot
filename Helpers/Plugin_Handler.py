@@ -17,8 +17,6 @@ def setup():
 # plugin is a class which makes things a bit wonky
 def handle(message):
     for plugin in plugin_arr:
-        print(plugin)
-        print(plugin().match_type)
         match = plugin().match_type
 
         if match is Plugin_Type.equals:
