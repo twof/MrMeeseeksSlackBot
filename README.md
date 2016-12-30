@@ -1,8 +1,7 @@
 # Mr Meeseeks
-## State: Not functioning
-Be aware of the state of the bot when forking. Once the plugin system is complete I'll be sure to do breaking development on the dev branch. Sorry about that guys. 
+## State: Functioning
+Be aware of the state of the bot when forking. Once the plugin system is complete I'll be sure to do breaking development on the dev branch. Sorry about that guys.
 ### TODO:
-* Plugin System
 * Write plugin test suite so devs can test their plugins without an api key
 * Personality class with show quotes
 * Write guide to writing plugins
