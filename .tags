@@ -1388,7 +1388,6 @@ EggMetadata	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^c
 EggProvider	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__init__.py	/^class EggProvider(NullProvider):$/;"	c
 EggProvider	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^class EggProvider(NullProvider):$/;"	c
 Eight_Ball	Plugins/Eight_Ball.py	/^class Eight_Ball(Plugin, Singleton):$/;"	c
-Eight_Ball	Plugins/__init__.py	/^from Plugins.Eight_Ball import Eight_Ball$/;"	i
 Element	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree.py	/^    class Element(base.Node):$/;"	c	function:getETreeBuilder
 Element	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py	/^        class Element(builder.Element):$/;"	c	function:TreeBuilder.__init__
 Ellipsis	starterbot/include/python3.4m/Python-ast.h	/^#define Ellipsis(/;"	d
