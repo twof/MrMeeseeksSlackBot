@@ -37,7 +37,7 @@ def handle_command(message):
         response = random.choice(intros)
         handled = Plugin_Handler.handle(message)
         if handled:
-            response += + " " + handled
+            response += " " + handled
         else:
             response += " EXISTENCE IS PAIN " + \
                        user_id_to_name(message.sender_id).upper() +\

@@ -11,7 +11,8 @@ class Eight_Ball(Plugin, Singleton):
 
     # message is of type Message
     def callback(self, message):
-        if message.content is self.query:
+        print(message.content)
+        if message.content == self.query:
             return "Ask the magic 8ball a question! Usage: /8 <question>"
 
         messages = [
