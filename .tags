@@ -4112,6 +4112,7 @@ PgenParser	starterbot/lib/python3.4/site-packages/jedi/parser/pgen2/parse.py	/^c
 Phase	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/html5parser.py	/^    class Phase(with_metaclass(getMetaclass(debug, log))):$/;"	c	function:getPhases
 Pie	starterbot/lib/python3.4/site-packages/pip/_vendor/progress/counter.py	/^class Pie(Stack):$/;"	c
 PieSpinner	starterbot/lib/python3.4/site-packages/pip/_vendor/progress/spinner.py	/^class PieSpinner(Spinner):$/;"	c
+Ping	Plugins/Ping.py	/^class Ping(Plugin, Singleton):$/;"	c
 PipDeprecationWarning	starterbot/lib/python3.4/site-packages/pip/utils/deprecation.py	/^class PipDeprecationWarning(Warning):$/;"	c
 PipError	starterbot/lib/python3.4/site-packages/pip/__init__.py	/^from pip.exceptions import InstallationError, CommandError, PipError$/;"	i
 PipError	starterbot/lib/python3.4/site-packages/pip/exceptions.py	/^class PipError(Exception):$/;"	c
@@ -4123,9 +4124,11 @@ PlainToken	starterbot/lib/python3.4/tokenize.py	/^PlainToken = group(Number, Fun
 PlatformInfo	starterbot/lib/python3.4/site-packages/setuptools/msvc.py	/^class PlatformInfo:$/;"	c
 Plugin	Models/Plugin.py	/^class Plugin(object):$/;"	c
 Plugin	Plugins/Eight_Ball.py	/^from Models.Plugin import Plugin$/;"	i
+Plugin	Plugins/Ping.py	/^from Models.Plugin import Plugin$/;"	i
 Plugin_Handler	mr_meeseeks.py	/^import Helpers.Plugin_Handler as Plugin_Handler$/;"	i
 Plugin_Type	Helpers/Plugin_Handler.py	/^from Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	Plugins/Eight_Ball.py	/^from Utils.constants import Plugin_Type$/;"	i
+Plugin_Type	Plugins/Ping.py	/^from Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	Utils/constants.py	/^class Plugin_Type(Enum):$/;"	c
 Plugins	Helpers/Plugin_Handler.py	/^import Plugins$/;"	i
 Point	starterbot/lib/python3.4/collections/__main__.py	/^Point = namedtuple('Point', 'x, y', True)$/;"	v
@@ -5717,6 +5720,7 @@ SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/requests/packages
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/requests/packages/chardet/sbcsgroupprober.py	/^from .sbcharsetprober import SingleByteCharSetProber$/;"	i
 Singleton	Models/Singleton.py	/^class Singleton(object):$/;"	c
 Singleton	Plugins/Eight_Ball.py	/^from Models.Singleton import Singleton$/;"	i
+Singleton	Plugins/Ping.py	/^from Models.Singleton import Singleton$/;"	i
 Sized	starterbot/lib/python3.4/_collections_abc.py	/^class Sized(metaclass=ABCMeta):$/;"	c
 SkipTo	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^class SkipTo(ParseElementEnhance):$/;"	c
 SkipTo	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^class SkipTo(ParseElementEnhance):$/;"	c
@@ -7226,7 +7230,7 @@ __add__	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^    de
 __add__	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^    def __add__(self, other):$/;"	m	class:Environment	file:
 __add__	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def __add__( self, other ):$/;"	m	class:ParseResults	file:
 __add__	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def __add__(self, other ):$/;"	m	class:ParserElement	file:
-__all__	Plugins/__init__.py	/^__all__ = ['Eight_Ball']$/;"	v
+__all__	Plugins/__init__.py	/^__all__ = ['Eight_Ball', 'Ping']$/;"	v
 __all__	starterbot/lib/python3.4/__future__.py	/^__all__ = ["all_feature_names"] + all_feature_names$/;"	v
 __all__	starterbot/lib/python3.4/_collections_abc.py	/^__all__ = ["Hashable", "Iterable", "Iterator",$/;"	v
 __all__	starterbot/lib/python3.4/_dummy_thread.py	/^__all__ = ['error', 'start_new_thread', 'exit', 'get_ident', 'allocate_lock',$/;"	v
@@ -7936,6 +7940,7 @@ __index__	starterbot/lib/python3.4/operator.py	/^__index__ = index$/;"	v
 __init__	Models/Message.py	/^    def __init__(self, content=None, sender_id=None, channel=None):$/;"	m	class:Message
 __init__	Models/Plugin.py	/^    def __init__(self, match_type, query):$/;"	m	class:Plugin
 __init__	Plugins/Eight_Ball.py	/^    def __init__(self):$/;"	m	class:Eight_Ball
+__init__	Plugins/Ping.py	/^    def __init__(self):$/;"	m	class:Ping
 __init__	starterbot/lib/python3.4/__future__.py	/^    def __init__(self, optionalRelease, mandatoryRelease, compiler_flag):$/;"	m	class:_Feature
 __init__	starterbot/lib/python3.4/_collections_abc.py	/^    def __init__(self, mapping):$/;"	m	class:MappingView
 __init__	starterbot/lib/python3.4/_dummy_thread.py	/^    def __init__(self):$/;"	m	class:LockType
@@ -10930,6 +10935,7 @@ _recursive_repr	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compa
 _recursive_repr	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compat.py	/^        from reprlib import recursive_repr as _recursive_repr$/;"	i
 _recv	starterbot/lib/python3.4/site-packages/websocket/_core.py	/^    def _recv(self, bufsize):$/;"	m	class:WebSocket
 _reduce_ex	starterbot/lib/python3.4/copyreg.py	/^def _reduce_ex(self, proto):$/;"	f
+_regex	Helpers/Plugin_Handler.py	/^def _regex(message, plugin):$/;"	f
 _regex	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/specifiers.py	/^    _regex = re.compile($/;"	v	class:LegacySpecifier
 _regex	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/specifiers.py	/^    _regex = re.compile($/;"	v	class:Specifier
 _regex	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/version.py	/^    _regex = re.compile($/;"	v	class:Version
@@ -12403,6 +12409,7 @@ callable	starterbot/lib/python3.4/site-packages/six.py	/^    callable = callable
 callable	starterbot/lib/python3.4/site-packages/six.py	/^    def callable(obj):$/;"	f
 callback	Models/Plugin.py	/^    def callback(reply, message):$/;"	m	class:Plugin
 callback	Plugins/Eight_Ball.py	/^    def callback(self, message):$/;"	m	class:Eight_Ball
+callback	Plugins/Ping.py	/^    def callback(self, message):$/;"	m	class:Ping
 can	starterbot/lib/python3.4/distutils/__init__.py	/^import opcode # opcode is not a virtualenv module, so we can use it to find the stdlib$/;"	i
 canParseNext	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^    def canParseNext(self, instring, loc):$/;"	m	class:ParserElement
 canParseNext	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def canParseNext(self, instring, loc):$/;"	m	class:ParserElement
@@ -20516,6 +20523,7 @@ rcdataEndTagNameState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5li
 rcdataEndTagOpenState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataEndTagOpenState(self):$/;"	m	class:HTMLTokenizer
 rcdataLessThanSignState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataLessThanSignState(self):$/;"	m	class:HTMLTokenizer
 rcdataState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataState(self):$/;"	m	class:HTMLTokenizer
+re	Helpers/Plugin_Handler.py	/^import re$/;"	i
 re	starterbot/lib/python3.4/base64.py	/^import re$/;"	i
 re	starterbot/lib/python3.4/encodings/idna.py	/^import stringprep, re, codecs$/;"	i
 re	starterbot/lib/python3.4/fnmatch.py	/^import re$/;"	i
@@ -20752,6 +20760,7 @@ reductor	starterbot/lib/python3.4/copy.py	/^                    reductor = getat
 reductor	starterbot/lib/python3.4/copy.py	/^                reductor = dispatch_table.get(cls)$/;"	v	class:deepcopy.
 ref	starterbot/include/python3.4m/weakrefobject.h	/^PyAPI_FUNC(PyObject *) PyWeakref_GetObject(PyObject *ref);$/;"	v
 ref	starterbot/lib/python3.4/_weakrefset.py	/^from _weakref import ref$/;"	i
+regex	Utils/constants.py	/^    regex = 5$/;"	v	class:Plugin_Type
 register	starterbot/lib/python3.4/abc.py	/^    def register(cls, subclass):$/;"	m	class:ABCMeta
 register	starterbot/lib/python3.4/functools.py	/^    def register(cls, func=None):$/;"	f	function:singledispatch
 register	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/index.py	/^    def register(self, metadata):$/;"	m	class:PackageIndex

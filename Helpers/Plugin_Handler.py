@@ -1,6 +1,7 @@
 import Plugins
 import importlib
 import inspect
+import re
 from Utils.constants import Plugin_Type
 
 plugin_arr = []
@@ -20,15 +21,20 @@ def handle(message):
         match = plugin().match_type
 
         if match is Plugin_Type.equals:
-            return _equals(message, plugin())
+            response = _equals(message, plugin())
         elif match is Plugin_Type.contains:
-            return _contains(message, plugin())
+            response = _contains(message, plugin())
         elif match is Plugin_Type.starts_with:
-            return _starts_with(message, plugin())
+            response = _starts_with(message, plugin())
         elif match is Plugin_Type.everything:
-            return _everything(message, plugin())
+            response = _everything(message, plugin())
+        elif match is Plugin_Type.regex:
+            response = _regex(message, plugin())
         else:
             return None
+
+        if response:
+            return response
 
 
 def _everything(message, plugin):
@@ -47,4 +53,9 @@ def _starts_with(message, plugin):
 
 def _contains(message, plugin):
     if plugin.query in message.content:
+        return plugin.callback(message)
+
+
+def _regex(message, plugin):
+    if re.search(plugin.query, message.content) is not None:
         return plugin.callback(message)
