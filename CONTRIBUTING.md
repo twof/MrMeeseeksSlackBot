@@ -53,6 +53,20 @@ A plugin consists of a `.py` file placed in the `Plugins` directory.
 
 * Document your code. I'm not going to enforce this, but it'll make everyone's lives easier.
 
+### Plugin Suggestions
+Want to start writing plugins but don't know where to start? Here are some ideas!
+Be if you start work on a concept listed here, be sure to remove it from this list in the same commit you start so we don't get redundant development. Thanks!
+
+#### Port Plugins from MilkBot
+Mr Meeseeks takes a lot of inspiration from [MilkBot](https://github.com/DanH42/mi1kb0t). If you want something easy, you could port the plugins that already exist in MilkBot to Mr Meeseeks. Note that MilkBot is written in Node so you may need some JS knowledge to start. Here's a list of plugins that haven't been ported yet:
+* [CatFacts](https://github.com/DanH42/mi1kb0t/blob/master/plugins/CatFacts.js)
+* [Hedgehogs](https://github.com/DanH42/mi1kb0t/blob/master/plugins/hedgehogs.js)
+* [Image](https://github.com/DanH42/mi1kb0t/blob/master/plugins/hedgehogs.js)
+* [PingPong](https://github.com/DanH42/mi1kb0t/blob/master/plugins/pingpong.js) (This set would be the easiest. It's all straight call and response)
+* [random](https://github.com/DanH42/mi1kb0t/blob/master/plugins/random.js)
+* [reddit](https://github.com/DanH42/mi1kb0t/blob/master/plugins/reddit.js) (This should be split into multiple plugins)
+* [Urban](https://github.com/DanH42/mi1kb0t/blob/master/plugins/urban.js)
+
 #### [Example Plugin](https://github.com/twof/MrMeeseeksSlackBot/blob/master/Plugins/Eight_Ball.py)
 
 ## Code Style Guide
