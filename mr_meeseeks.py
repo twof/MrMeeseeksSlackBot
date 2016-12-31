@@ -6,7 +6,6 @@ from Models.Message import Message
 from slackclient import SlackClient
 from Utils.constants import intros
 
-
 # Mr MeeseekBot's ID as an environment variable
 BOT_ID = os.environ.get("BOT_ID")
 

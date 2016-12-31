@@ -1,7 +1,7 @@
 from Utils.constants import Plugin_Type
-import random
 from Models.Plugin import Plugin
 from Models.Singleton import Singleton
+import random
 
 
 # All plugins must implement Plugin and Singleton
