@@ -5009,7 +5009,6 @@ READELF	starterbot/lib/python3.4/config-3.4m/Makefile	/^READELF=	:$/;"	m
 READMES	starterbot/lib/python3.4/site-packages/setuptools/command/sdist.py	/^    READMES = 'README', 'README.rst', 'README.txt'$/;"	v	class:sdist
 READONLY	starterbot/include/python3.4m/structmember.h	/^#define READONLY /;"	d
 READ_RESTRICTED	starterbot/include/python3.4m/structmember.h	/^#define READ_RESTRICTED /;"	d
-READ_WEBSOCKET_DELAY	mr_meeseeks.py	/^    READ_WEBSOCKET_DELAY = 1  # 1 second delay between reading from firehose$/;"	v
 RECENT_DATE	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/connection.py	/^RECENT_DATE = datetime.date(2014, 1, 1)$/;"	v
 RECENT_DATE	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/connection.py	/^RECENT_DATE = datetime.date(2014, 1, 1)$/;"	v
 RECIP_BPF	starterbot/lib/python3.4/random.py	/^RECIP_BPF = 2**-BPF$/;"	v
@@ -11050,6 +11049,7 @@ _self_names_dict	starterbot/lib/python3.4/site-packages/jedi/evaluate/representa
 _semantic_key	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/version.py	/^def _semantic_key(s):$/;"	f
 _send	starterbot/lib/python3.4/site-packages/websocket/_core.py	/^    def _send(self, data):$/;"	m	class:WebSocket
 _send_ping	starterbot/lib/python3.4/site-packages/websocket/_app.py	/^    def _send_ping(self, interval, event):$/;"	m	class:WebSocketApp
+_send_resonse	mr_meeseeks.py	/^def _send_resonse(text, channel):$/;"	f
 _send_until_done	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/contrib/pyopenssl.py	/^    def _send_until_done(self, data):$/;"	m	class:WrappedSocket
 _send_until_done	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/contrib/pyopenssl.py	/^    def _send_until_done(self, data):$/;"	m	class:WrappedSocket
 _sep	starterbot/lib/python3.4/site-packages/jedi/evaluate/compiled/__init__.py	/^_sep = os.path.sep$/;"	v
@@ -18665,7 +18665,6 @@ merge_hooks	starterbot/lib/python3.4/site-packages/requests/sessions.py	/^def me
 merge_setting	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/sessions.py	/^def merge_setting(request_setting, session_setting, dict_class=OrderedDict):$/;"	f
 merge_setting	starterbot/lib/python3.4/site-packages/requests/sessions.py	/^def merge_setting(request_setting, session_setting, dict_class=OrderedDict):$/;"	f
 mergebitset	starterbot/include/python3.4m/pgenheaders.h	/^#define mergebitset /;"	d
-message	mr_meeseeks.py	/^            message = parse_slack_output(slack_client.rtm_read())$/;"	v
 message	starterbot/lib/python3.4/site-packages/pip/_vendor/progress/bar.py	/^    message = ''$/;"	v	class:Bar
 message	starterbot/lib/python3.4/site-packages/pip/_vendor/progress/counter.py	/^    message = ''$/;"	v	class:Counter
 message	starterbot/lib/python3.4/site-packages/pip/_vendor/progress/spinner.py	/^    message = ''$/;"	v	class:Spinner

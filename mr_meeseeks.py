@@ -33,16 +33,19 @@ def handle_command(message):
             returns back what it needs for clarification.
         """
 
-        response = random.choice(intros)
-        handled = Plugin_Handler.handle(message)
-        if handled:
-            response += " " + handled
+        handled_responses = Plugin_Handler.handle(message)
+        if handled_responses:
+            for response in handled_responses:
+                intro = random.choice(intros)
+                intro + " " + response
+                _send_resonse(intro + " " + response, message.channel)
+
         else:
-            response += " EXISTENCE IS PAIN " + \
-                       user_id_to_name(message.sender_id).upper() +\
-                       "! I NEED PURPOSE!"
-        slack_client.api_call("chat.postMessage", channel=message.channel,
-                              text=response, as_user=True)
+            intro = random.choice(intros)
+            response = intro + " EXISTENCE IS PAIN " + \
+                user_id_to_name(message.sender_id).upper() +\
+                "! I NEED PURPOSE!"
+            _send_resonse(response, message.channel)
 
 
 # returns a Message object
@@ -64,6 +67,11 @@ def parse_slack_output(slack_rtm_output):
                 return Message(content, sender_id, channel)
 
     return Message()
+
+
+def _send_resonse(text, channel):
+    slack_client.api_call("chat.postMessage", channel=channel,
+                          text=text, as_user=True)
 
 
 if __name__ == "__main__":

@@ -17,6 +17,8 @@ def setup():
 
 # plugin is a class which makes things a bit wonky
 def handle(message):
+    responses = []
+
     for plugin in plugin_arr:
         match = plugin().match_type
 
@@ -34,7 +36,9 @@ def handle(message):
             return None
 
         if response:
-            return response
+            responses.append(response)
+
+    return responses if responses else None
 
 
 def _everything(message, plugin):
