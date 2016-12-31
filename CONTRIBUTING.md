@@ -67,6 +67,14 @@ Mr Meeseeks takes a lot of inspiration from [MilkBot](https://github.com/DanH42/
 * [reddit](https://github.com/DanH42/mi1kb0t/blob/master/plugins/reddit.js) (This should be split into multiple plugins)
 * [Urban](https://github.com/DanH42/mi1kb0t/blob/master/plugins/urban.js)
 
+#### Other Ideas
+If anyone has an idea for a plugin, but either don't have the knowhow or motivation to make it, feel free to add it to this list.
+* Get stats from your favorite game (LoL, DoTA, WoW, Overwatch, etc)
+* Get weather for an area
+* Github info (Streak leaderboard?)
+* Get schedule for the day (Make School)
+* Get headlines from Google News
+
 #### [Example Plugin](https://github.com/twof/MrMeeseeksSlackBot/blob/master/Plugins/Eight_Ball.py)
 
 ## Code Style Guide
