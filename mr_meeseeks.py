@@ -1,4 +1,5 @@
 import os
+print(os.environ.get('PYTHONPATH'))
 import sys
 import time
 import random
