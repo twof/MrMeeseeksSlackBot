@@ -8,7 +8,7 @@ from Utils.constants import intros
 from dotenv import load_dotenv
 
 # Load environment variables
-load_dotenv(os.path.join(BASE_DIR, '.env'))
+load_dotenv(os.path.join('.', '.env.example'))
 
 # Mr MeeseekBot's ID as an environment variable
 BOT_ID = os.getenv("BOT_ID")
