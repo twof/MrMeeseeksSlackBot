@@ -4501,7 +4501,6 @@ Plugin_Handler	mr_meeseeks.py	/^import Helpers.Plugin_Handler as Plugin_Handler$
 Plugin_Type	Helpers/Plugin_Handler.py	/^from Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	Plugins/Eight_Ball.py	/^from Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	Plugins/Ping.py	/^from Utils.constants import Plugin_Type$/;"	i
-Plugin_Type	Utils/__init__.py	/^from .constants import intros, Plugin_Type$/;"	i
 Plugin_Type	Utils/constants.py	/^class Plugin_Type(Enum):$/;"	c
 Plugins	Helpers/Plugin_Handler.py	/^import Plugins$/;"	i
 Plugins	__init__.py	/^import Plugins$/;"	i
@@ -14502,6 +14501,7 @@ console_to_str	starterbot/lib/python3.4/site-packages/pip/compat/__init__.py	/^ 
 console_to_str	starterbot/lib/python3.4/site-packages/pip/utils/__init__.py	/^from pip.compat import console_to_str, expanduser, stdlib_pkgs$/;"	i
 const	starterbot/lib/python3.4/site-packages/jinja2/nodes.py	/^        def const(obj):$/;"	f	function:Slice.as_const
 constant_time_compare	starterbot/lib/python3.4/site-packages/itsdangerous.py	/^def constant_time_compare(val1, val2):$/;"	f
+constants	Utils/__init__.py	/^import constants$/;"	i
 constants	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/dom.py	/^from .. import constants$/;"	i
 constants	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree.py	/^from .. import constants$/;"	i
 constants	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py	/^from .. import constants$/;"	i
@@ -19147,7 +19147,6 @@ intersection_update	starterbot/lib/python3.4/_weakrefset.py	/^    def intersecti
 intranges_contain	starterbot/lib/python3.4/site-packages/requests/packages/idna/core.py	/^from .intranges import intranges_contain$/;"	i
 intranges_contain	starterbot/lib/python3.4/site-packages/requests/packages/idna/intranges.py	/^def intranges_contain(int_, ranges):$/;"	f
 intranges_from_list	starterbot/lib/python3.4/site-packages/requests/packages/idna/intranges.py	/^def intranges_from_list(list_):$/;"	f
-intros	Utils/__init__.py	/^from .constants import intros, Plugin_Type$/;"	i
 intros	Utils/constants.py	/^intros = ["I'M MR MEESEEKS LOOK AT ME!",$/;"	v
 intros	mr_meeseeks.py	/^from Utils.constants import intros$/;"	i
 inv	starterbot/lib/python3.4/operator.py	/^def inv(a):$/;"	f
