@@ -1,4 +1,5 @@
-''' Implemented by plugins. Ensures that plugins are singletons '''
+#!python
+# -*- coding: utf-8 -*-
 
 
 class Singleton(object):
@@ -8,7 +9,7 @@ class Singleton(object):
     @staticmethod
     def __new__(class_, *args, **kwargs):
         '''
-        Spits out the instance if it exsits and creates a new one if it
+        Returns the instance if it exsits and creates a new one if it
         does not
         '''
         if not isinstance(class_._instance, class_):
