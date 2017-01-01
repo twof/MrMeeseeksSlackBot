@@ -2,7 +2,7 @@ import Plugins
 import importlib
 import inspect
 import re
-from Utils.constants import Plugin_Type
+from ..Utils.constants import Plugin_Type
 
 plugin_arr = []
 

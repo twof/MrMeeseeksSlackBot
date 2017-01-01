@@ -4496,7 +4496,7 @@ Plugin	Models/Plugin.py	/^class Plugin(object):$/;"	c
 Plugin	Plugins/Eight_Ball.py	/^from Models.Plugin import Plugin$/;"	i
 Plugin	Plugins/Ping.py	/^from Models.Plugin import Plugin$/;"	i
 Plugin_Handler	mr_meeseeks.py	/^import Helpers.Plugin_Handler as Plugin_Handler$/;"	i
-Plugin_Type	Helpers/Plugin_Handler.py	/^from Utils.constants import Plugin_Type$/;"	i
+Plugin_Type	Helpers/Plugin_Handler.py	/^from ..Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	Plugins/Eight_Ball.py	/^from Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	Plugins/Ping.py	/^from Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	Utils/constants.py	/^class Plugin_Type(Enum):$/;"	c
