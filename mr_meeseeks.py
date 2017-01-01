@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import random
 import Helpers.Plugin_Handler as Plugin_Handler
@@ -7,6 +8,7 @@ from slackclient import SlackClient
 from Utils.constants import intros
 from dotenv import load_dotenv
 
+sys.path.append('.')
 # Load environment variables
 load_dotenv(os.path.join('.', '.env.example'))
 
