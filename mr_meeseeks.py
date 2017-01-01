@@ -5,15 +5,19 @@ import Helpers.Plugin_Handler as Plugin_Handler
 from Models.Message import Message
 from slackclient import SlackClient
 from Utils.constants import intros
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 # Mr MeeseekBot's ID as an environment variable
-BOT_ID = os.environ.get("BOT_ID")
+BOT_ID = os.getenv("BOT_ID")
 
 # constants
 AT_BOT = "<@" + BOT_ID + ">"
 
 # instantiate Slack & Twilio clients
-slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
+slack_client = SlackClient(os.getenv('SLACK_BOT_TOKEN'))
 
 
 def user_id_to_name(user_id):

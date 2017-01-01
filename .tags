@@ -293,7 +293,7 @@ BOM_UTF8	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compat.py	/^
 BOM_UTF8	starterbot/lib/python3.4/tokenize.py	/^from codecs import lookup, BOM_UTF8$/;"	i
 BOOLOP	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/markers.py	/^BOOLOP = L("and") | L("or")$/;"	v
 BOOLOP	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/markers.py	/^BOOLOP = L("and") | L("or")$/;"	v
-BOT_ID	mr_meeseeks.py	/^BOT_ID = os.environ.get("BOT_ID")$/;"	v
+BOT_ID	mr_meeseeks.py	/^BOT_ID = os.getenv("BOT_ID")$/;"	v
 BOT_NAME	Utils/print_bot_id.py	/^BOT_NAME = 'mrmeeseeks'$/;"	v
 BPF	starterbot/lib/python3.4/random.py	/^BPF = 53        # Number of bits in a float$/;"	v
 BRANCH	starterbot/lib/python3.4/re.py	/^        from sre_constants import BRANCH, SUBPATTERN$/;"	i
@@ -18174,6 +18174,7 @@ load_cert_chain	starterbot/lib/python3.4/site-packages/requests/packages/urllib3
 load_compiled	starterbot/lib/python3.4/imp.py	/^def load_compiled(name, pathname, file=None):$/;"	f
 load_config_paths	starterbot/lib/python3.4/site-packages/wheel/signatures/keys.py	/^from ..util import native, load_config_paths, save_config_path$/;"	i
 load_config_paths	starterbot/lib/python3.4/site-packages/wheel/util.py	/^    def load_config_paths(*resource):$/;"	f
+load_dotenv	mr_meeseeks.py	/^from dotenv import load_dotenv$/;"	i
 load_dynamic	starterbot/lib/python3.4/imp.py	/^    from _imp import load_dynamic$/;"	i
 load_dynamic	starterbot/lib/python3.4/imp.py	/^    load_dynamic = None$/;"	v
 load_entry_point	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__init__.py	/^    def load_entry_point(self, group, name):$/;"	m	class:Distribution
@@ -21812,7 +21813,7 @@ skip_requirements_regex	starterbot/lib/python3.4/site-packages/pip/cmdoptions.py
 skipped_extensions	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/resources.py	/^        skipped_extensions = ('.pyc', '.pyo')$/;"	v	class:ResourceFinder
 skipped_extensions	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/resources.py	/^        skipped_extensions = ('.pyc', '.pyo', '.class')$/;"	v	class:ResourceFinder
 slack_client	Utils/print_bot_id.py	/^slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))$/;"	v
-slack_client	mr_meeseeks.py	/^slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))$/;"	v
+slack_client	mr_meeseeks.py	/^slack_client = SlackClient(os.getenv('SLACK_BOT_TOKEN'))$/;"	v
 sleep	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/util/retry.py	/^    def sleep(self):$/;"	m	class:Retry
 sleep	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/util/retry.py	/^    def sleep(self, response=None):$/;"	m	class:Retry
 sleep_for_retry	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/util/retry.py	/^    def sleep_for_retry(self, response=None):$/;"	m	class:Retry
