@@ -1,1 +1,1 @@
-import constants
+from . import constants

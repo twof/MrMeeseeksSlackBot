@@ -14501,7 +14501,7 @@ console_to_str	starterbot/lib/python3.4/site-packages/pip/compat/__init__.py	/^ 
 console_to_str	starterbot/lib/python3.4/site-packages/pip/utils/__init__.py	/^from pip.compat import console_to_str, expanduser, stdlib_pkgs$/;"	i
 const	starterbot/lib/python3.4/site-packages/jinja2/nodes.py	/^        def const(obj):$/;"	f	function:Slice.as_const
 constant_time_compare	starterbot/lib/python3.4/site-packages/itsdangerous.py	/^def constant_time_compare(val1, val2):$/;"	f
-constants	Utils/__init__.py	/^import constants$/;"	i
+constants	Utils/__init__.py	/^from . import constants$/;"	i
 constants	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/dom.py	/^from .. import constants$/;"	i
 constants	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree.py	/^from .. import constants$/;"	i
 constants	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py	/^from .. import constants$/;"	i

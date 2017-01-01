@@ -9,8 +9,6 @@ from slackclient import SlackClient
 from Utils.constants import intros
 from dotenv import load_dotenv
 
-print(os.environ.get('PYTHONPATH'))
-
 # Load environment variables
 load_dotenv(os.path.join('.', '.env.example'))
 
