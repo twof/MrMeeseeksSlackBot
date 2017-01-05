@@ -42,8 +42,8 @@ A plugin consists of a `.py` file placed in the `Plugins` directory.
                 * `equals`: Respond only when messages equal your query
                 * `starts_with`: Respond only when messages start with your query
                 * `contains`: Respond only when messages contain your query
-                * `regex`: Responds only when messages match
-                the regular expression represented by the query
+                * `regex`: Responds only when messages match the regular expression represented by the query
+
         * Implement `callback`. This is the meat of your plugin. `callback` will be called in the event that a message sent to the bot matches the `query` that the plugin tests for. `callback` takes a `Message` object and returns the response that the bot will send to the target channel.
     * `Singleton`
 
