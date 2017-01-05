@@ -1,15 +1,15 @@
-import Plugins
 import importlib
 import inspect
 import re
-from Utils.constants import Plugin_Type
+from .. import Plugins
+from ..Utils.constants import Plugin_Type
 
 plugin_arr = []
 
 
 def setup():
     for plugin in Plugins.__all__:
-        mod = "Plugins." + plugin
+        mod = "src.Plugins." + plugin
         new_mod = importlib.import_module(mod)
         plugin_class = inspect.getmembers(new_mod)[0]
         plugin_arr.append(plugin_class[1])

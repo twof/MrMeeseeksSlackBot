@@ -1,13 +1,11 @@
 import os
-print(os.environ.get('PYTHONPATH'))
-import sys
 import time
 import random
-import Helpers.Plugin_Handler as Plugin_Handler
-from Models.Message import Message
-from slackclient import SlackClient
-from Utils.constants import intros
 from dotenv import load_dotenv
+from slackclient import SlackClient
+import src.Helpers.Plugin_Handler as Plugin_Handler
+from src.Models.Message import Message
+from src.Utils.constants import intros
 
 # Load environment variables
 load_dotenv(os.path.join('.', '.env.example'))

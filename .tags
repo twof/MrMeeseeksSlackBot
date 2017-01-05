@@ -320,7 +320,7 @@ BOOL	starterbot/lib/python3.4/site-packages/click/types.py	/^BOOL = BoolParamTyp
 BOOLOP	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/markers.py	/^BOOLOP = L("and") | L("or")$/;"	v
 BOOLOP	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/markers.py	/^BOOLOP = L("and") | L("or")$/;"	v
 BOT_ID	mr_meeseeks.py	/^BOT_ID = os.getenv("BOT_ID")$/;"	v
-BOT_NAME	Utils/print_bot_id.py	/^BOT_NAME = 'mrmeeseeks'$/;"	v
+BOT_NAME	src/Utils/print_bot_id.py	/^BOT_NAME = 'mrmeeseeks'$/;"	v
 BPF	starterbot/lib/python3.4/random.py	/^BPF = 53        # Number of bits in a float$/;"	v
 BRANCH	starterbot/lib/python3.4/re.py	/^        from sre_constants import BRANCH, SUBPATTERN$/;"	i
 BRANCH	starterbot/lib/python3.4/sre_constants.py	/^BRANCH = "branch"$/;"	v
@@ -1519,7 +1519,7 @@ EggMetadata	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__i
 EggMetadata	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^class EggMetadata(ZipProvider):$/;"	c
 EggProvider	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__init__.py	/^class EggProvider(NullProvider):$/;"	c
 EggProvider	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^class EggProvider(NullProvider):$/;"	c
-Eight_Ball	Plugins/Eight_Ball.py	/^class Eight_Ball(Plugin, Singleton):$/;"	c
+Eight_Ball	src/Plugins/Eight_Ball.py	/^class Eight_Ball(Plugin, Singleton):$/;"	c
 Element	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree.py	/^    class Element(base.Node):$/;"	c	function:getETreeBuilder
 Element	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py	/^        class Element(builder.Element):$/;"	c	function:TreeBuilder.__init__
 Ellipsis	starterbot/include/python3.4m/Python-ast.h	/^#define Ellipsis(/;"	d
@@ -1542,7 +1542,7 @@ EncodingParser	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_inpu
 EntryPoint	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__init__.py	/^class EntryPoint(object):$/;"	c
 EntryPoint	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^class EntryPoint(object):$/;"	c
 EntryPoint	starterbot/lib/python3.4/site-packages/setuptools/command/bdist_egg.py	/^from pkg_resources import EntryPoint$/;"	i
-Enum	Utils/constants.py	/^from enum import Enum$/;"	i
+Enum	src/Utils/constants.py	/^from enum import Enum$/;"	i
 Environment	starterbot/lib/python3.4/site-packages/jinja2/__init__.py	/^from jinja2.environment import Environment, Template$/;"	i
 Environment	starterbot/lib/python3.4/site-packages/jinja2/environment.py	/^class Environment(object):$/;"	c
 Environment	starterbot/lib/python3.4/site-packages/jinja2/ext.py	/^from jinja2.environment import Environment$/;"	i
@@ -2346,7 +2346,7 @@ HelpFormatter	starterbot/lib/python3.4/site-packages/click/core.py	/^from .forma
 HelpFormatter	starterbot/lib/python3.4/site-packages/click/formatting.py	/^class HelpFormatter(object):$/;"	c
 Helper	starterbot/lib/python3.4/site-packages/jinja2/nodes.py	/^class Helper(Node):$/;"	c
 Helpers	__init__.py	/^import Helpers$/;"	i
-Helpers	mr_meeseeks.py	/^import Helpers.Plugin_Handler as Plugin_Handler$/;"	i
+Helpers	mr_meeseeks.py	/^import src.Helpers.Plugin_Handler as Plugin_Handler$/;"	i
 Hexnumber	starterbot/lib/python3.4/tokenize.py	/^Hexnumber = r'0[xX][0-9a-fA-F]+'$/;"	v
 Hint	starterbot/lib/python3.4/site-packages/wheel/signatures/djbec.py	/^def Hint(m):$/;"	f
 HostChangedError	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/exceptions.py	/^class HostChangedError(RequestError):$/;"	c
@@ -3706,8 +3706,8 @@ MergedArray	starterbot/lib/python3.4/site-packages/jedi/evaluate/iterable.py	/^c
 MergedNamesDict	starterbot/lib/python3.4/site-packages/jedi/parser/fast.py	/^class MergedNamesDict(object):$/;"	c
 MergedNodes	starterbot/lib/python3.4/site-packages/jedi/evaluate/analysis.py	/^    from jedi.evaluate.iterable import MergedNodes$/;"	i
 MergedNodes	starterbot/lib/python3.4/site-packages/jedi/evaluate/iterable.py	/^class MergedNodes(frozenset):$/;"	c
-Message	Models/Message.py	/^class Message:$/;"	c
-Message	mr_meeseeks.py	/^from Models.Message import Message$/;"	i
+Message	mr_meeseeks.py	/^from src.Models.Message import Message$/;"	i
+Message	src/Models/Message.py	/^class Message:$/;"	c
 Message	starterbot/lib/python3.4/site-packages/wheel/bdist_wheel.py	/^        from email.message import Message$/;"	i
 MetaPathFinder	starterbot/lib/python3.4/importlib/abc.py	/^class MetaPathFinder(Finder):$/;"	c
 Metadata	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/database.py	/^from .metadata import Metadata, METADATA_FILENAME, WHEEL_METADATA_FILENAME$/;"	i
@@ -4484,7 +4484,7 @@ Phase	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/html5parser.py
 Pi	starterbot/lib/python3.4/site-packages/jinja2/_stringdefs.py	/^Pi = u'\\xab\\u2018\\u201b\\u201c\\u201f\\u2039\\u2e02\\u2e04\\u2e09\\u2e0c\\u2e1c'$/;"	v
 Pie	starterbot/lib/python3.4/site-packages/pip/_vendor/progress/counter.py	/^class Pie(Stack):$/;"	c
 PieSpinner	starterbot/lib/python3.4/site-packages/pip/_vendor/progress/spinner.py	/^class PieSpinner(Spinner):$/;"	c
-Ping	Plugins/Ping.py	/^class Ping(Plugin, Singleton):$/;"	c
+Ping	src/Plugins/Ping.py	/^class Ping(Plugin, Singleton):$/;"	c
 PipDeprecationWarning	starterbot/lib/python3.4/site-packages/pip/utils/deprecation.py	/^class PipDeprecationWarning(Warning):$/;"	c
 PipError	starterbot/lib/python3.4/site-packages/pip/__init__.py	/^from pip.exceptions import InstallationError, CommandError, PipError$/;"	i
 PipError	starterbot/lib/python3.4/site-packages/pip/exceptions.py	/^class PipError(Exception):$/;"	c
@@ -4494,16 +4494,16 @@ PipXmlrpcTransport	starterbot/lib/python3.4/site-packages/pip/commands/search.py
 PipXmlrpcTransport	starterbot/lib/python3.4/site-packages/pip/download.py	/^class PipXmlrpcTransport(xmlrpc_client.Transport):$/;"	c
 PlainToken	starterbot/lib/python3.4/tokenize.py	/^PlainToken = group(Number, Funny, String, Name)$/;"	v
 PlatformInfo	starterbot/lib/python3.4/site-packages/setuptools/msvc.py	/^class PlatformInfo:$/;"	c
-Plugin	Models/Plugin.py	/^class Plugin(object):$/;"	c
-Plugin	Plugins/Eight_Ball.py	/^from Models.Plugin import Plugin$/;"	i
-Plugin	Plugins/Ping.py	/^from Models.Plugin import Plugin$/;"	i
-Plugin_Handler	mr_meeseeks.py	/^import Helpers.Plugin_Handler as Plugin_Handler$/;"	i
-Plugin_Type	Helpers/Plugin_Handler.py	/^from Utils.constants import Plugin_Type$/;"	i
-Plugin_Type	Plugins/Eight_Ball.py	/^from Utils.constants import Plugin_Type$/;"	i
-Plugin_Type	Plugins/Ping.py	/^from Utils.constants import Plugin_Type$/;"	i
-Plugin_Type	Utils/constants.py	/^class Plugin_Type(Enum):$/;"	c
-Plugins	Helpers/Plugin_Handler.py	/^import Plugins$/;"	i
+Plugin	src/Models/Plugin.py	/^class Plugin(object):$/;"	c
+Plugin	src/Plugins/Eight_Ball.py	/^from ..Models.Plugin import Plugin$/;"	i
+Plugin	src/Plugins/Ping.py	/^from ..Models.Plugin import Plugin$/;"	i
+Plugin_Handler	mr_meeseeks.py	/^import src.Helpers.Plugin_Handler as Plugin_Handler$/;"	i
+Plugin_Type	src/Helpers/Plugin_Handler.py	/^from ..Utils.constants import Plugin_Type$/;"	i
+Plugin_Type	src/Plugins/Eight_Ball.py	/^from ..Utils.constants import Plugin_Type$/;"	i
+Plugin_Type	src/Plugins/Ping.py	/^from ..Utils.constants import Plugin_Type$/;"	i
+Plugin_Type	src/Utils/constants.py	/^class Plugin_Type(Enum):$/;"	c
 Plugins	__init__.py	/^import Plugins$/;"	i
+Plugins	src/Helpers/Plugin_Handler.py	/^from .. import Plugins$/;"	i
 Po	starterbot/lib/python3.4/site-packages/jinja2/_stringdefs.py	/^Po = u'!"#%&\\'*,.\/:;?@\\\\\\xa1\\xb7\\xbf\\u037e\\u0387\\u055a\\u055b\\u055c\\u055d\\u055e\\u055f\\u0589\\u05be\\u05c0\\u05c3\\u05c6\\u05f3\\u05f4\\u060c\\u060d\\u061b\\u061e\\u061f\\u066a\\u066b\\u066c\\u066d\\u06d4\\u0700\\u0701\\u0702\\u0703\\u0704\\u0705\\u0706\\u0707\\u0708\\u0709\\u070a\\u070b\\u070c\\u070d\\u0964\\u0965\\u0970\\u0df4\\u0e4f\\u0e5a\\u0e5b\\u0f04\\u0f05\\u0f06\\u0f07\\u0f08\\u0f09\\u0f0a\\u0f0b\\u0f0c\\u0f0d\\u0f0e\\u0f0f\\u0f10\\u0f11\\u0f12\\u0f85\\u0fd0\\u0fd1\\u104a\\u104b\\u104c\\u104d\\u104e\\u104f\\u10fb\\u1361\\u1362\\u1363\\u1364\\u1365\\u1366\\u1367\\u1368\\u166d\\u166e\\u16eb\\u16ec\\u16ed\\u1735\\u1736\\u17d4\\u17d5\\u17d6\\u17d8\\u17d9\\u17da\\u1800\\u1801\\u1802\\u1803\\u1804\\u1805\\u1807\\u1808\\u1809\\u180a\\u1944\\u1945\\u19de\\u19df\\u1a1e\\u1a1f\\u2016\\u2017\\u2020\\u2021\\u2022\\u2023\\u2024\\u2025\\u2026\\u2027\\u2030\\u2031\\u2032\\u2033\\u2034\\u2035\\u2036\\u2037\\u2038\\u203b\\u203c\\u203d\\u203e\\u2041\\u2042\\u2043\\u2047\\u2048\\u2049\\u204a\\u204b\\u204c\\u204d\\u204e\\u204f\\u2050\\u2051\\u2053\\u2055\\u2056\\u2057\\u2058\\u2059\\u205a\\u205b\\u205c\\u205d\\u205e\\u23b6\\u2cf9\\u2cfa\\u2cfb\\u2cfc\\u2cfe\\u2cff\\u2e00\\u2e01\\u2e06\\u2e07\\u2e08\\u2e0b\\u2e0e\\u2e0f\\u2e10\\u2e11\\u2e12\\u2e13\\u2e14\\u2e15\\u2e16\\u3001\\u3002\\u3003\\u303d\\u30fb\\ufe10\\ufe11\\ufe12\\ufe13\\ufe14\\ufe15\\ufe16\\ufe19\\ufe30\\ufe45\\ufe46\\ufe49\\ufe4a\\ufe4b\\ufe4c\\ufe50\\ufe51\\ufe52\\ufe54\\ufe55\\ufe56\\ufe57\\ufe5f\\ufe60\\ufe61\\ufe68\\ufe6a\\ufe6b\\uff01\\uff02\\uff03\\uff05\\uff06\\uff07\\uff0a\\uff0c\\uff0e\\uff0f\\uff1a\\uff1b\\uff1f\\uff20\\uff3c\\uff61\\uff64\\uff65'$/;"	v
 Point	starterbot/lib/python3.4/collections/__main__.py	/^Point = namedtuple('Point', 'x, y', True)$/;"	v
 Point	starterbot/lib/python3.4/collections/__main__.py	/^class Point(namedtuple('Point', 'x y')):$/;"	c
@@ -6134,15 +6134,15 @@ SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/pip/_vendor/reque
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/chardet/sbcsgroupprober.py	/^from .sbcharsetprober import SingleByteCharSetProber$/;"	i
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/requests/packages/chardet/sbcharsetprober.py	/^class SingleByteCharSetProber(CharSetProber):$/;"	c
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/requests/packages/chardet/sbcsgroupprober.py	/^from .sbcharsetprober import SingleByteCharSetProber$/;"	i
-Singleton	Models/Singleton.py	/^class Singleton(object):$/;"	c
-Singleton	Plugins/Eight_Ball.py	/^from Models.Singleton import Singleton$/;"	i
-Singleton	Plugins/Ping.py	/^from Models.Singleton import Singleton$/;"	i
+Singleton	src/Models/Singleton.py	/^class Singleton(object):$/;"	c
+Singleton	src/Plugins/Eight_Ball.py	/^from ..Models.Singleton import Singleton$/;"	i
+Singleton	src/Plugins/Ping.py	/^from ..Models.Singleton import Singleton$/;"	i
 Sized	starterbot/lib/python3.4/_collections_abc.py	/^class Sized(metaclass=ABCMeta):$/;"	c
 Sk	starterbot/lib/python3.4/site-packages/jinja2/_stringdefs.py	/^Sk = u'^`\\xa8\\xaf\\xb4\\xb8\\u02c2\\u02c3\\u02c4\\u02c5\\u02d2\\u02d3\\u02d4\\u02d5\\u02d6\\u02d7\\u02d8\\u02d9\\u02da\\u02db\\u02dc\\u02dd\\u02de\\u02df\\u02e5\\u02e6\\u02e7\\u02e8\\u02e9\\u02ea\\u02eb\\u02ec\\u02ed\\u02ef\\u02f0\\u02f1\\u02f2\\u02f3\\u02f4\\u02f5\\u02f6\\u02f7\\u02f8\\u02f9\\u02fa\\u02fb\\u02fc\\u02fd\\u02fe\\u02ff\\u0374\\u0375\\u0384\\u0385\\u1fbd\\u1fbf\\u1fc0\\u1fc1\\u1fcd\\u1fce\\u1fcf\\u1fdd\\u1fde\\u1fdf\\u1fed\\u1fee\\u1fef\\u1ffd\\u1ffe\\u309b\\u309c\\ua700\\ua701\\ua702\\ua703\\ua704\\ua705\\ua706\\ua707\\ua708\\ua709\\ua70a\\ua70b\\ua70c\\ua70d\\ua70e\\ua70f\\ua710\\ua711\\ua712\\ua713\\ua714\\ua715\\ua716\\uff3e\\uff40\\uffe3'$/;"	v
 SkipTo	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^class SkipTo(ParseElementEnhance):$/;"	c
 SkipTo	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^class SkipTo(ParseElementEnhance):$/;"	c
-SlackClient	Utils/print_bot_id.py	/^from slackclient import SlackClient$/;"	i
 SlackClient	mr_meeseeks.py	/^from slackclient import SlackClient$/;"	i
+SlackClient	src/Utils/print_bot_id.py	/^from slackclient import SlackClient$/;"	i
 SlackClient	starterbot/lib/python3.4/site-packages/slackclient/__init__.py	/^from slackclient._client import SlackClient  # noqa$/;"	i
 SlackClient	starterbot/lib/python3.4/site-packages/slackclient/_client.py	/^class SlackClient(object):$/;"	c
 SlackConnectionError	starterbot/lib/python3.4/site-packages/slackclient/_server.py	/^class SlackConnectionError(Exception):$/;"	c
@@ -7836,7 +7836,7 @@ __add__	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^    de
 __add__	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^    def __add__(self, other):$/;"	m	class:Environment	file:
 __add__	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def __add__( self, other ):$/;"	m	class:ParseResults	file:
 __add__	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def __add__(self, other ):$/;"	m	class:ParserElement	file:
-__all__	Plugins/__init__.py	/^__all__ = ['Eight_Ball', 'Ping']$/;"	v
+__all__	src/Plugins/__init__.py	/^__all__ = ['Eight_Ball', 'Ping']$/;"	v
 __all__	starterbot/lib/python3.4/__future__.py	/^__all__ = ["all_feature_names"] + all_feature_names$/;"	v
 __all__	starterbot/lib/python3.4/_collections_abc.py	/^__all__ = ["Hashable", "Iterable", "Iterator",$/;"	v
 __all__	starterbot/lib/python3.4/_dummy_thread.py	/^__all__ = ['error', 'start_new_thread', 'exit', 'get_ident', 'allocate_lock',$/;"	v
@@ -8610,10 +8610,10 @@ __import__	starterbot/lib/python3.4/importlib/_bootstrap.py	/^def __import__(nam
 __imul__	starterbot/lib/python3.4/collections/__init__.py	/^    def __imul__(self, n):$/;"	m	class:UserList	file:
 __imul__	starterbot/lib/python3.4/operator.py	/^__imul__ = imul$/;"	v
 __index__	starterbot/lib/python3.4/operator.py	/^__index__ = index$/;"	v
-__init__	Models/Message.py	/^    def __init__(self, content=None, sender_id=None, channel=None):$/;"	m	class:Message
-__init__	Models/Plugin.py	/^    def __init__(self, match_type, query):$/;"	m	class:Plugin
-__init__	Plugins/Eight_Ball.py	/^    def __init__(self):$/;"	m	class:Eight_Ball
-__init__	Plugins/Ping.py	/^    def __init__(self):$/;"	m	class:Ping
+__init__	src/Models/Message.py	/^    def __init__(self, content=None, sender_id=None, channel=None):$/;"	m	class:Message
+__init__	src/Models/Plugin.py	/^    def __init__(self, match_type, query):$/;"	m	class:Plugin
+__init__	src/Plugins/Eight_Ball.py	/^    def __init__(self):$/;"	m	class:Eight_Ball
+__init__	src/Plugins/Ping.py	/^    def __init__(self):$/;"	m	class:Ping
 __init__	starterbot/lib/python3.4/__future__.py	/^    def __init__(self, optionalRelease, mandatoryRelease, compiler_flag):$/;"	m	class:_Feature
 __init__	starterbot/lib/python3.4/_collections_abc.py	/^    def __init__(self, mapping):$/;"	m	class:MappingView
 __init__	starterbot/lib/python3.4/_dummy_thread.py	/^    def __init__(self):$/;"	m	class:LockType
@@ -9759,7 +9759,7 @@ __neg__	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/_structures
 __neg__	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/_structures.py	/^    def __neg__(self):$/;"	m	class:NegativeInfinity	file:
 __neg__	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/_structures.py	/^    def __neg__(self):$/;"	m	class:Infinity	file:
 __neg__	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/_structures.py	/^    def __neg__(self):$/;"	m	class:NegativeInfinity	file:
-__new__	Models/Singleton.py	/^    def __new__(class_, *args, **kwargs):$/;"	m	class:Singleton	file:
+__new__	src/Models/Singleton.py	/^    def __new__(class_, *args, **kwargs):$/;"	m	class:Singleton	file:
 __new__	starterbot/lib/python3.4/abc.py	/^    def __new__(mcls, name, bases, namespace):$/;"	m	class:ABCMeta	file:
 __new__	starterbot/lib/python3.4/codecs.py	/^    def __new__(cls, encode, decode, streamreader=None, streamwriter=None,$/;"	m	class:CodecInfo	file:
 __new__	starterbot/lib/python3.4/site-packages/jinja2/_compat.py	/^        def __new__(cls, name, this_bases, d):$/;"	m	class:with_metaclass.metaclass	file:
@@ -10777,7 +10777,7 @@ _const_compare_digest	starterbot/lib/python3.4/site-packages/pip/_vendor/request
 _const_compare_digest	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/util/ssl_.py	/^_const_compare_digest = getattr(hmac, 'compare_digest',$/;"	v
 _const_compare_digest_backport	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py	/^def _const_compare_digest_backport(a, b):$/;"	f
 _const_compare_digest_backport	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/util/ssl_.py	/^def _const_compare_digest_backport(a, b):$/;"	f
-_contains	Helpers/Plugin_Handler.py	/^def _contains(message, plugin):$/;"	f
+_contains	src/Helpers/Plugin_Handler.py	/^def _contains(message, plugin):$/;"	f
 _context_function_types	starterbot/lib/python3.4/site-packages/jinja2/nodes.py	/^_context_function_types = (types.FunctionType, types.MethodType)$/;"	v
 _context_function_types	starterbot/lib/python3.4/site-packages/jinja2/runtime.py	/^from jinja2.nodes import EvalContext, _context_function_types$/;"	i
 _convert	starterbot/lib/python3.4/site-packages/click/core.py	/^        def _convert(value, level):$/;"	f	function:Parameter.type_cast_value
@@ -10925,7 +10925,7 @@ _entity_re	starterbot/lib/python3.4/site-packages/markupsafe/__init__.py	/^_enti
 _environ_prefix_re	starterbot/lib/python3.4/site-packages/pip/baseparser.py	/^_environ_prefix_re = re.compile(r"^PIP_", re.I)$/;"	v
 _environment_sanity_check	starterbot/lib/python3.4/site-packages/jinja2/environment.py	/^def _environment_sanity_check(environment):$/;"	f
 _eq	starterbot/lib/python3.4/collections/__init__.py	/^from operator import itemgetter as _itemgetter, eq as _eq$/;"	i
-_equals	Helpers/Plugin_Handler.py	/^def _equals(message, plugin):$/;"	f
+_equals	src/Helpers/Plugin_Handler.py	/^def _equals(message, plugin):$/;"	f
 _errno	starterbot/lib/python3.4/tempfile.py	/^import errno as _errno$/;"	i
 _error_argument_count	starterbot/lib/python3.4/site-packages/jedi/evaluate/param.py	/^def _error_argument_count(func, actual_count):$/;"	f
 _error_catcher	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/response.py	/^    def _error_catcher(self):$/;"	m	class:HTTPResponse
@@ -10948,7 +10948,7 @@ _eval_param	starterbot/lib/python3.4/site-packages/jedi/evaluate/finder.py	/^def
 _evaluate_for_statement_string	starterbot/lib/python3.4/site-packages/jedi/evaluate/docstrings.py	/^def _evaluate_for_statement_string(evaluator, string, module):$/;"	f
 _evaluate_markers	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/markers.py	/^def _evaluate_markers(markers, environment):$/;"	f
 _evaluate_markers	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/markers.py	/^def _evaluate_markers(markers, environment):$/;"	f
-_everything	Helpers/Plugin_Handler.py	/^def _everything(message, plugin):$/;"	f
+_everything	src/Helpers/Plugin_Handler.py	/^def _everything(message, plugin):$/;"	f
 _excepthandler	starterbot/include/python3.4m/Python-ast.h	/^struct _excepthandler {$/;"	s
 _excepthandler_kind	starterbot/include/python3.4m/Python-ast.h	/^enum _excepthandler_kind {ExceptHandler_kind=1};$/;"	g
 _exception_patterns	starterbot/lib/python3.4/site-packages/setuptools/sandbox.py	/^    _exception_patterns = [$/;"	v	class:DirectorySandbox
@@ -11435,7 +11435,7 @@ _install	starterbot/lib/python3.4/site-packages/setuptools/command/install.py	/^
 _install_callables	starterbot/lib/python3.4/site-packages/jinja2/ext.py	/^    def _install_callables(self, gettext, ngettext, newstyle=None):$/;"	m	class:InternationalizationExtension
 _install_null	starterbot/lib/python3.4/site-packages/jinja2/ext.py	/^    def _install_null(self, newstyle=None):$/;"	m	class:InternationalizationExtension
 _installed_safely	starterbot/lib/python3.4/importlib/_bootstrap.py	/^class _installed_safely:$/;"	c
-_instance	Models/Singleton.py	/^    _instance = None$/;"	v	class:Singleton
+_instance	src/Models/Singleton.py	/^    _instance = None$/;"	v	class:Singleton
 _interrupt	starterbot/lib/python3.4/_dummy_thread.py	/^_interrupt = False$/;"	v
 _invalid_ident_char_re	starterbot/lib/python3.4/site-packages/click/_bashcomplete.py	/^_invalid_ident_char_re = re.compile(r'[^a-zA-Z0-9_]')$/;"	v
 _invalidate_star_import_cache_module	starterbot/lib/python3.4/site-packages/jedi/cache.py	/^def _invalidate_star_import_cache_module(module, only_main=False):$/;"	f
@@ -11934,7 +11934,7 @@ _recursive_repr	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compa
 _recursive_repr	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compat.py	/^        from reprlib import recursive_repr as _recursive_repr$/;"	i
 _recv	starterbot/lib/python3.4/site-packages/websocket/_core.py	/^    def _recv(self, bufsize):$/;"	m	class:WebSocket
 _reduce_ex	starterbot/lib/python3.4/copyreg.py	/^def _reduce_ex(self, proto):$/;"	f
-_regex	Helpers/Plugin_Handler.py	/^def _regex(message, plugin):$/;"	f
+_regex	src/Helpers/Plugin_Handler.py	/^def _regex(message, plugin):$/;"	f
 _regex	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/specifiers.py	/^    _regex = re.compile($/;"	v	class:LegacySpecifier
 _regex	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/specifiers.py	/^    _regex = re.compile($/;"	v	class:Specifier
 _regex	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/version.py	/^    _regex = re.compile($/;"	v	class:Version
@@ -12158,7 +12158,7 @@ _stack_removal	starterbot/lib/python3.4/site-packages/jedi/parser/__init__.py	/^
 _star_star_dict	starterbot/lib/python3.4/site-packages/jedi/evaluate/param.py	/^def _star_star_dict(evaluator, array, input_node, func):$/;"	f
 _starmap	starterbot/lib/python3.4/collections/__init__.py	/^from itertools import repeat as _repeat, chain as _chain, starmap as _starmap$/;"	i
 _start_time	starterbot/lib/python3.4/site-packages/jedi/debug.py	/^_start_time = time.time()$/;"	v
-_starts_with	Helpers/Plugin_Handler.py	/^def _starts_with(message, plugin):$/;"	f
+_starts_with	src/Helpers/Plugin_Handler.py	/^def _starts_with(message, plugin):$/;"	f
 _stash	starterbot/lib/python3.4/site-packages/pip/req/req_uninstall.py	/^    def _stash(self, path):$/;"	m	class:UninstallPathSet
 _stat	starterbot/lib/python3.4/tempfile.py	/^    _stat = _os.lstat$/;"	v
 _stat	starterbot/lib/python3.4/tempfile.py	/^    _stat = _os.stat$/;"	v
@@ -12857,7 +12857,7 @@ anythingElse	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/html5pa
 anythingElse	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/html5parser.py	/^        def anythingElse(self):$/;"	m	class:getPhases.InitialPhase
 ap_lower	starterbot/include/python3.4m/code.h	/^        int ap_lower;$/;"	m	struct:_addr_pair
 ap_upper	starterbot/include/python3.4m/code.h	/^        int ap_upper;$/;"	m	struct:_addr_pair
-api_call	Utils/print_bot_id.py	/^    api_call = slack_client.api_call("users.list")$/;"	v
+api_call	src/Utils/print_bot_id.py	/^    api_call = slack_client.api_call("users.list")$/;"	v
 api_call	starterbot/lib/python3.4/site-packages/slackclient/_client.py	/^    def api_call(self, method, **kwargs):$/;"	m	class:SlackClient
 api_call	starterbot/lib/python3.4/site-packages/slackclient/_server.py	/^    def api_call(self, method, **kwargs):$/;"	m	class:Server
 api_type	starterbot/lib/python3.4/site-packages/jedi/evaluate/compiled/__init__.py	/^    def api_type(self):$/;"	m	class:CompiledObject
@@ -13530,9 +13530,9 @@ callable	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/packag
 callable	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/packages/six.py	/^    def callable(obj):$/;"	f
 callable	starterbot/lib/python3.4/site-packages/six.py	/^    callable = callable$/;"	v
 callable	starterbot/lib/python3.4/site-packages/six.py	/^    def callable(obj):$/;"	f
-callback	Models/Plugin.py	/^    def callback(reply, message):$/;"	m	class:Plugin
-callback	Plugins/Eight_Ball.py	/^    def callback(self, message):$/;"	m	class:Eight_Ball
-callback	Plugins/Ping.py	/^    def callback(self, message):$/;"	m	class:Ping
+callback	src/Models/Plugin.py	/^    def callback(reply, message):$/;"	m	class:Plugin
+callback	src/Plugins/Eight_Ball.py	/^    def callback(self, message):$/;"	m	class:Eight_Ball
+callback	src/Plugins/Ping.py	/^    def callback(self, message):$/;"	m	class:Ping
 callback	starterbot/lib/python3.4/site-packages/click/decorators.py	/^        def callback(ctx, param, value):$/;"	f	function:confirmation_option.decorator
 callback	starterbot/lib/python3.4/site-packages/click/decorators.py	/^        def callback(ctx, param, value):$/;"	f	function:help_option.decorator
 callback	starterbot/lib/python3.4/site-packages/click/decorators.py	/^        def callback(ctx, param, value):$/;"	f	function:version_option.decorator
@@ -14501,7 +14501,7 @@ console_to_str	starterbot/lib/python3.4/site-packages/pip/compat/__init__.py	/^ 
 console_to_str	starterbot/lib/python3.4/site-packages/pip/utils/__init__.py	/^from pip.compat import console_to_str, expanduser, stdlib_pkgs$/;"	i
 const	starterbot/lib/python3.4/site-packages/jinja2/nodes.py	/^        def const(obj):$/;"	f	function:Slice.as_const
 constant_time_compare	starterbot/lib/python3.4/site-packages/itsdangerous.py	/^def constant_time_compare(val1, val2):$/;"	f
-constants	Utils/__init__.py	/^from . import constants$/;"	i
+constants	src/Utils/__init__.py	/^from . import constants$/;"	i
 constants	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/dom.py	/^from .. import constants$/;"	i
 constants	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree.py	/^from .. import constants$/;"	i
 constants	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py	/^from .. import constants$/;"	i
@@ -14536,7 +14536,7 @@ consume_value	starterbot/lib/python3.4/site-packages/click/core.py	/^    def con
 cont_str	starterbot/lib/python3.4/site-packages/jedi/parser/tokenize.py	/^cont_str = group(r"[bBuU]?[rR]?'[^\\n'\\\\]*(?:\\\\.[^\\n'\\\\]*)*" +$/;"	v
 contact	starterbot/lib/python3.4/site-packages/wheel/test/pydist-schema.json	/^    "contact": {$/;"	f
 contacts	starterbot/lib/python3.4/site-packages/wheel/test/pydist-schema.json	/^        "contacts": {$/;"	f
-contains	Utils/constants.py	/^    contains = 4$/;"	v	class:Plugin_Type
+contains	src/Utils/constants.py	/^    contains = 4$/;"	v	class:Plugin_Type
 contains	starterbot/lib/python3.4/operator.py	/^def contains(a, b):$/;"	f
 contains	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/specifiers.py	/^    def contains(self, item, prereleases=None):$/;"	m	class:BaseSpecifier
 contains	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/specifiers.py	/^    def contains(self, item, prereleases=None):$/;"	m	class:SpecifierSet
@@ -16455,7 +16455,7 @@ envvar_list_splitter	starterbot/lib/python3.4/site-packages/click/types.py	/^   
 envvar_list_splitter	starterbot/lib/python3.4/site-packages/click/types.py	/^    envvar_list_splitter = os.path.pathsep$/;"	v	class:Path
 eos	starterbot/lib/python3.4/site-packages/jinja2/lexer.py	/^    eos = property(lambda x: not x, doc="Are we at the end of the stream?")$/;"	v	class:TokenStream
 eq	starterbot/lib/python3.4/operator.py	/^def eq(a, b):$/;"	f
-equals	Utils/constants.py	/^    equals = 2$/;"	v	class:Plugin_Type
+equals	src/Utils/constants.py	/^    equals = 2$/;"	v	class:Plugin_Type
 er	starterbot/lib/python3.4/site-packages/jedi/api/__init__.py	/^from jedi.evaluate import representation as er$/;"	i
 er	starterbot/lib/python3.4/site-packages/jedi/api/classes.py	/^from jedi.evaluate import representation as er$/;"	i
 er	starterbot/lib/python3.4/site-packages/jedi/api/interpreter.py	/^from jedi.evaluate import representation as er$/;"	i
@@ -16570,7 +16570,7 @@ evaluate	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/markers.py
 evaluate	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/markers.py	/^    def evaluate(self, environment=None):$/;"	m	class:Marker
 evaluate_marker	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__init__.py	/^def evaluate_marker(text, extra=None):$/;"	f
 evaluate_marker	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^def evaluate_marker(text, extra=None):$/;"	f
-everything	Utils/constants.py	/^    everything = 1$/;"	v	class:Plugin_Type
+everything	src/Utils/constants.py	/^    everything = 1$/;"	v	class:Plugin_Type
 exact_type	starterbot/lib/python3.4/tokenize.py	/^    def exact_type(self):$/;"	m	class:TokenInfo
 exact_version	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/version.py	/^    def exact_version(self):$/;"	m	class:Matcher
 exc	starterbot/include/python3.4m/Python-ast.h	/^            expr_ty exc;$/;"	m	struct:_stmt::__anon74::__anon85
@@ -18483,7 +18483,7 @@ gzip	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/locators.py	/^im
 gzip	starterbot/lib/python3.4/tarfile.py	/^            import gzip$/;"	i
 gzopen	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/_backport/tarfile.py	/^    def gzopen(cls, name, mode="r", fileobj=None, compresslevel=9, **kwargs):$/;"	m	class:TarFile
 gzopen	starterbot/lib/python3.4/tarfile.py	/^    def gzopen(cls, name, mode="r", fileobj=None, compresslevel=9, **kwargs):$/;"	m	class:TarFile
-handle	Helpers/Plugin_Handler.py	/^def handle(message):$/;"	f
+handle	src/Helpers/Plugin_Handler.py	/^def handle(message):$/;"	f
 handle	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/__init__.py	/^        def handle(self, record): pass$/;"	m	class:DistlibException.NullHandler
 handleComment	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_inputstream.py	/^    def handleComment(self):$/;"	m	class:EncodingParser
 handleMeta	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_inputstream.py	/^    def handleMeta(self):$/;"	m	class:EncodingParser
@@ -18872,7 +18872,7 @@ import_string	starterbot/lib/python3.4/site-packages/jinja2/utils.py	/^def impor
 importer	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compat.py	/^        importer = staticmethod(__import__)$/;"	v	class:BaseConfigurator
 importer	starterbot/lib/python3.4/site-packages/pip/compat/dictconfig.py	/^    importer = __import__$/;"	v	class:BaseConfigurator
 importer_from_error_statement	starterbot/lib/python3.4/site-packages/jedi/api/helpers.py	/^def importer_from_error_statement(error_statement, pos):$/;"	f
-importlib	Helpers/Plugin_Handler.py	/^import importlib$/;"	i
+importlib	src/Helpers/Plugin_Handler.py	/^import importlib$/;"	i
 importlib	starterbot/include/python3.4m/pystate.h	/^    PyObject *importlib;$/;"	m	struct:_is
 importlib	starterbot/lib/python3.4/imp.py	/^import importlib$/;"	i
 importlib	starterbot/lib/python3.4/site-packages/jedi/_compatibility.py	/^    import importlib$/;"	i
@@ -19036,7 +19036,7 @@ insertion_unsort	starterbot/lib/python3.4/encodings/punycode.py	/^def insertion_
 insort	starterbot/lib/python3.4/bisect.py	/^insort = insort_right   # backward compatibility$/;"	v
 insort_left	starterbot/lib/python3.4/bisect.py	/^def insort_left(a, x, lo=0, hi=None):$/;"	f
 insort_right	starterbot/lib/python3.4/bisect.py	/^def insort_right(a, x, lo=0, hi=None):$/;"	f
-inspect	Helpers/Plugin_Handler.py	/^import inspect$/;"	i
+inspect	src/Helpers/Plugin_Handler.py	/^import inspect$/;"	i
 inspect	starterbot/lib/python3.4/site-packages/click/decorators.py	/^import inspect$/;"	i
 inspect	starterbot/lib/python3.4/site-packages/jedi/api/interpreter.py	/^import inspect$/;"	i
 inspect	starterbot/lib/python3.4/site-packages/jedi/cache.py	/^import inspect$/;"	i
@@ -19147,8 +19147,8 @@ intersection_update	starterbot/lib/python3.4/_weakrefset.py	/^    def intersecti
 intranges_contain	starterbot/lib/python3.4/site-packages/requests/packages/idna/core.py	/^from .intranges import intranges_contain$/;"	i
 intranges_contain	starterbot/lib/python3.4/site-packages/requests/packages/idna/intranges.py	/^def intranges_contain(int_, ranges):$/;"	f
 intranges_from_list	starterbot/lib/python3.4/site-packages/requests/packages/idna/intranges.py	/^def intranges_from_list(list_):$/;"	f
-intros	Utils/constants.py	/^intros = ["I'M MR MEESEEKS LOOK AT ME!",$/;"	v
-intros	mr_meeseeks.py	/^from Utils.constants import intros$/;"	i
+intros	mr_meeseeks.py	/^from src.Utils.constants import intros$/;"	i
+intros	src/Utils/constants.py	/^intros = ["I'M MR MEESEEKS LOOK AT ME!",$/;"	v
 inv	starterbot/lib/python3.4/operator.py	/^def inv(a):$/;"	f
 inv	starterbot/lib/python3.4/site-packages/wheel/signatures/djbec.py	/^def inv(x):$/;"	f
 invalid_marker	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__init__.py	/^def invalid_marker(text):$/;"	f
@@ -20508,7 +20508,7 @@ match_hostname	starterbot/lib/python3.4/site-packages/setuptools/ssl_support.py	
 match_hostname	starterbot/lib/python3.4/site-packages/websocket/_ssl_compat.py	/^            from backports.ssl_match_hostname import match_hostname$/;"	i
 match_hostname	starterbot/lib/python3.4/site-packages/websocket/_ssl_compat.py	/^            from ssl import match_hostname$/;"	i
 match_markers	starterbot/lib/python3.4/site-packages/pip/req/req_install.py	/^    def match_markers(self, extras_requested=None):$/;"	m	class:InstallRequirement
-match_type	Models/Plugin.py	/^    match_type = 0$/;"	v	class:Plugin
+match_type	src/Models/Plugin.py	/^    match_type = 0$/;"	v	class:Plugin
 matches	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^    def matches(self, testString, parseAll=True):$/;"	m	class:ParserElement
 matches	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def matches(self, testString, parseAll=True):$/;"	m	class:ParserElement
 matches_requirement	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/database.py	/^    def matches_requirement(self, req):$/;"	m	class:Distribution
@@ -21386,8 +21386,8 @@ origin_req_host	starterbot/lib/python3.4/site-packages/requests/cookies.py	/^   
 originalTextFor	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^def originalTextFor(expr, asString=True):$/;"	f
 originalTextFor	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/requirements.py	/^from pkg_resources.extern.pyparsing import stringStart, stringEnd, originalTextFor, ParseException$/;"	i
 originalTextFor	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^def originalTextFor(expr, asString=True):$/;"	f
-os	Utils/print_bot_id.py	/^import os$/;"	i
 os	mr_meeseeks.py	/^import os$/;"	i
+os	src/Utils/print_bot_id.py	/^import os$/;"	i
 os	starterbot/bin/activate_this.py	/^import os$/;"	i
 os	starterbot/lib/python3.4/config-3.4m/python-config.py	/^import os$/;"	i
 os	starterbot/lib/python3.4/distutils/__init__.py	/^import os$/;"	i
@@ -22113,7 +22113,7 @@ platform	starterbot/lib/python3.4/site-packages/setuptools/windows_support.py	/^
 platform_dependent	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/locators.py	/^    platform_dependent = re.compile(r'\\b(linux-(i\\d86|x86_64|arm\\w+)|'$/;"	v	class:SimpleScrapingLocator
 plistlib	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__init__.py	/^import plistlib$/;"	i
 plistlib	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^import plistlib$/;"	i
-plugin_arr	Helpers/Plugin_Handler.py	/^plugin_arr = []$/;"	v
+plugin_arr	src/Helpers/Plugin_Handler.py	/^plugin_arr = []$/;"	v
 point_float	starterbot/lib/python3.4/site-packages/jedi/parser/tokenize.py	/^point_float = group(r'[0-9]+\\.[0-9]*', r'\\.[0-9]+') + maybe(exponent)$/;"	v
 poll	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/util/connection.py	/^    from select import poll, POLLIN$/;"	i
 poll	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/util/connection.py	/^    poll = False$/;"	v
@@ -22598,7 +22598,7 @@ pyver	starterbot/bin/python-config	/^pyver = sysconfig.get_config_var('VERSION')
 pyver	starterbot/lib/python3.4/config-3.4m/python-config.py	/^pyver = sysconfig.get_config_var('VERSION')$/;"	v
 q	starterbot/lib/python3.4/site-packages/wheel/signatures/djbec.py	/^q = 2**255 - 19$/;"	v
 qualified_name	starterbot/lib/python3.4/site-packages/wheel/test/pydist-schema.json	/^    "qualified_name" : {$/;"	f
-query	Models/Plugin.py	/^    query = 0$/;"	v	class:Plugin
+query	src/Models/Plugin.py	/^    query = 0$/;"	v	class:Plugin
 queue	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compat.py	/^    import Queue as queue$/;"	i
 queue	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compat.py	/^    import queue$/;"	i
 quiet	starterbot/lib/python3.4/site-packages/pip/cmdoptions.py	/^quiet = partial($/;"	v
@@ -22634,8 +22634,8 @@ raise_helper	starterbot/lib/python3.4/site-packages/jinja2/debug.py	/^    raise_
 raise_stmt	starterbot/include/python3.4m/graminit.h	/^#define raise_stmt /;"	d
 randint	starterbot/lib/python3.4/random.py	/^    def randint(self, a, b):$/;"	m	class:Random
 randint	starterbot/lib/python3.4/random.py	/^randint = _inst.randint$/;"	v
-random	Plugins/Eight_Ball.py	/^import random$/;"	i
 random	mr_meeseeks.py	/^import random$/;"	i
+random	src/Plugins/Eight_Ball.py	/^import random$/;"	i
 random	starterbot/lib/python3.4/random.py	/^    def random(self):$/;"	m	class:SystemRandom
 random	starterbot/lib/python3.4/random.py	/^random = _inst.random$/;"	v
 random	starterbot/lib/python3.4/site-packages/pip/_vendor/retrying.py	/^import random$/;"	i
@@ -22678,7 +22678,7 @@ rcdataEndTagNameState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5li
 rcdataEndTagOpenState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataEndTagOpenState(self):$/;"	m	class:HTMLTokenizer
 rcdataLessThanSignState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataLessThanSignState(self):$/;"	m	class:HTMLTokenizer
 rcdataState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataState(self):$/;"	m	class:HTMLTokenizer
-re	Helpers/Plugin_Handler.py	/^import re$/;"	i
+re	src/Helpers/Plugin_Handler.py	/^import re$/;"	i
 re	starterbot/lib/python3.4/base64.py	/^import re$/;"	i
 re	starterbot/lib/python3.4/encodings/idna.py	/^import stringprep, re, codecs$/;"	i
 re	starterbot/lib/python3.4/fnmatch.py	/^import re$/;"	i
@@ -22933,7 +22933,7 @@ reductor	starterbot/lib/python3.4/copy.py	/^                    reductor = getat
 reductor	starterbot/lib/python3.4/copy.py	/^                reductor = dispatch_table.get(cls)$/;"	v	class:deepcopy.
 ref	starterbot/include/python3.4m/weakrefobject.h	/^PyAPI_FUNC(PyObject *) PyWeakref_GetObject(PyObject *ref);$/;"	v
 ref	starterbot/lib/python3.4/_weakrefset.py	/^from _weakref import ref$/;"	i
-regex	Utils/constants.py	/^    regex = 5$/;"	v	class:Plugin_Type
+regex	src/Utils/constants.py	/^    regex = 5$/;"	v	class:Plugin_Type
 regex_type	starterbot/lib/python3.4/site-packages/jinja2/tests.py	/^regex_type = type(number_re)$/;"	v
 register	starterbot/lib/python3.4/abc.py	/^    def register(cls, subclass):$/;"	m	class:ABCMeta
 register	starterbot/lib/python3.4/functools.py	/^    def register(cls, func=None):$/;"	f	function:singledispatch
@@ -23826,7 +23826,7 @@ settings	starterbot/lib/python3.4/site-packages/jedi/evaluate/imports.py	/^from 
 settings	starterbot/lib/python3.4/site-packages/jedi/evaluate/iterable.py	/^from jedi import settings$/;"	i
 settings	starterbot/lib/python3.4/site-packages/jedi/evaluate/recursion.py	/^from jedi import settings$/;"	i
 settings	starterbot/lib/python3.4/site-packages/jedi/parser/fast.py	/^from jedi import settings$/;"	i
-setup	Helpers/Plugin_Handler.py	/^def setup():$/;"	f
+setup	src/Helpers/Plugin_Handler.py	/^def setup():$/;"	f
 setup	starterbot/lib/python3.4/site-packages/setuptools/__init__.py	/^setup = distutils.core.setup$/;"	v
 setup	starterbot/lib/python3.4/site-packages/setuptools/command/easy_install.py	/^    from setuptools import setup$/;"	i
 setup	starterbot/lib/python3.4/site-packages/wheel/test/complex-dist/setup.py	/^from setuptools import setup$/;"	i
@@ -24059,8 +24059,8 @@ skip_regex	starterbot/lib/python3.4/site-packages/pip/req/req_file.py	/^def skip
 skip_requirements_regex	starterbot/lib/python3.4/site-packages/pip/cmdoptions.py	/^skip_requirements_regex = partial($/;"	v
 skipped_extensions	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/resources.py	/^        skipped_extensions = ('.pyc', '.pyo')$/;"	v	class:ResourceFinder
 skipped_extensions	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/resources.py	/^        skipped_extensions = ('.pyc', '.pyo', '.class')$/;"	v	class:ResourceFinder
-slack_client	Utils/print_bot_id.py	/^slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))$/;"	v
 slack_client	mr_meeseeks.py	/^slack_client = SlackClient(os.getenv('SLACK_BOT_TOKEN'))$/;"	v
+slack_client	src/Utils/print_bot_id.py	/^slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))$/;"	v
 sleep	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/util/retry.py	/^    def sleep(self):$/;"	m	class:Retry
 sleep	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/util/retry.py	/^    def sleep(self, response=None):$/;"	m	class:Retry
 sleep_for_retry	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/util/retry.py	/^    def sleep_for_retry(self, response=None):$/;"	m	class:Retry
@@ -24232,6 +24232,7 @@ sqlite3	starterbot/lib/python3.4/site-packages/pip/_vendor/lockfile/sqlitelockfi
 sqlitelockfile	starterbot/lib/python3.4/site-packages/pip/_vendor/lockfile/__init__.py	/^    from . import sqlitelockfile$/;"	i
 srange	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^def srange(s):$/;"	f
 srange	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^def srange(s):$/;"	f
+src	mr_meeseeks.py	/^import src.Helpers.Plugin_Handler as Plugin_Handler$/;"	i
 src	starterbot/include/python3.4m/longintrepr.h	/^PyAPI_FUNC(PyObject *) _PyLong_Copy(PyLongObject *src);$/;"	v
 src	starterbot/lib/python3.4/site-packages/pip/cmdoptions.py	/^src = partial($/;"	v
 src_prefix	starterbot/lib/python3.4/site-packages/pip/cmdoptions.py	/^from pip.locations import USER_CACHE_DIR, src_prefix$/;"	i
@@ -24418,7 +24419,7 @@ start_pos	starterbot/lib/python3.4/site-packages/jedi/parser/tree.py	/^    def s
 start_pos	starterbot/lib/python3.4/site-packages/jedi/parser/tree.py	/^    def start_pos(self):$/;"	m	class:Leaf
 start_pos	starterbot/lib/python3.4/site-packages/jedi/parser/tree.py	/^    def start_pos(self, value):$/;"	m	class:Leaf
 start_write	starterbot/lib/python3.4/site-packages/jinja2/compiler.py	/^    def start_write(self, frame, node=None):$/;"	m	class:CodeGenerator
-starts_with	Utils/constants.py	/^    starts_with = 3$/;"	v	class:Plugin_Type
+starts_with	src/Utils/constants.py	/^    starts_with = 3$/;"	v	class:Plugin_Type
 startswith	starterbot/lib/python3.4/collections/__init__.py	/^    def startswith(self, prefix, start=0, end=_sys.maxsize):$/;"	m	class:UserString
 stat	starterbot/lib/python3.4/genericpath.py	/^import stat$/;"	i
 stat	starterbot/lib/python3.4/ntpath.py	/^import stat$/;"	i
@@ -24719,7 +24720,6 @@ symlink_exception	starterbot/lib/python3.4/tarfile.py	/^symlink_exception = (Att
 symmetric_difference	starterbot/lib/python3.4/_weakrefset.py	/^    def symmetric_difference(self, other):$/;"	m	class:WeakSet
 symmetric_difference_update	starterbot/lib/python3.4/_weakrefset.py	/^    def symmetric_difference_update(self, other):$/;"	m	class:WeakSet
 symtable	starterbot/include/python3.4m/symtable.h	/^struct symtable {$/;"	s
-sys	mr_meeseeks.py	/^import sys$/;"	i
 sys	starterbot/bin/activate_this.py	/^import sys$/;"	i
 sys	starterbot/bin/python-config	/^import sys$/;"	i
 sys	starterbot/bin/wsdump.py	/^import sys$/;"	i
@@ -26155,7 +26155,7 @@ user_stmt	starterbot/lib/python3.4/site-packages/jedi/parser/user_context.py	/^ 
 user_stmt_with_whitespace	starterbot/lib/python3.4/site-packages/jedi/parser/user_context.py	/^    def user_stmt_with_whitespace(self):$/;"	m	class:UserContextParser
 user_test	starterbot/lib/python3.4/site-packages/pip/utils/__init__.py	/^        def user_test(d):$/;"	f	function:get_installed_distributions
 usercustomize	starterbot/lib/python3.4/site.py	/^        import usercustomize$/;"	i
-users	Utils/print_bot_id.py	/^        users = api_call.get('members')$/;"	v
+users	src/Utils/print_bot_id.py	/^        users = api_call.get('members')$/;"	v
 uses_pycache	starterbot/lib/python3.4/site-packages/pip/compat/__init__.py	/^    uses_pycache = True$/;"	v
 uses_pycache	starterbot/lib/python3.4/site-packages/pip/compat/__init__.py	/^    uses_pycache = hasattr(imp, 'cache_from_source')$/;"	v
 uses_pycache	starterbot/lib/python3.4/site-packages/pip/req/req_uninstall.py	/^from pip.compat import uses_pycache, WINDOWS, cache_from_source$/;"	i

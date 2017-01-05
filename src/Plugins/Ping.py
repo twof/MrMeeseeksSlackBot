@@ -1,6 +1,6 @@
-from Utils.constants import Plugin_Type
-from Models.Plugin import Plugin
-from Models.Singleton import Singleton
+from ..Utils.constants import Plugin_Type
+from ..Models.Plugin import Plugin
+from ..Models.Singleton import Singleton
 
 
 class Ping(Plugin, Singleton):
