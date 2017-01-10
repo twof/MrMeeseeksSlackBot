@@ -7,20 +7,20 @@ import random
 # All plugins must implement Plugin and Singleton
 class Eight_Ball(Plugin, Singleton):
     '''
-    Will only trigger on messages that start with "/8"
+    Will only trigger on messages that start with ".8"
     This is indicated by the Plugin_Type being starts_with and the query being
-    /8.
+    .8.
     Examples:
     Will match:
-    "@mrmeeseeks /8 Are you sentient?"
-    "@mrmeeseeks /8"
+    ".8 Are you sentient?"
+    ".8"
     Will not match:
-    "@mrmeeseeks Are you sentient?"
-    "@mrmeeseeks \8 Are you sentient?"
-    "@mrmeeseeks fasdfs/8 Are you sentient?"
+    "Are you sentient?"
+    "\8 Are you sentient?"
+    "fasdfs.8 Are you sentient?"
     '''
     def __init__(self):
-        super(Eight_Ball, self).__init__(Plugin_Type.starts_with, "/8")
+        super(Eight_Ball, self).__init__(Plugin_Type.starts_with, ".8")
 
     '''
     Triggered when the query is matched by a message. Tha message is wrapped as
@@ -32,10 +32,10 @@ class Eight_Ball(Plugin, Singleton):
         Triggers when the message starts with the correct query but a question
         wasn't asked.
         Example:
-        "@mrmeeseeks /8"
+        ".8"
         '''
         if message.content == self.query:
-            return "Ask the magic 8ball a question! Usage: /8 <question>"
+            return "Ask the magic 8ball a question! Usage: .s8 <question>"
 
         messages = [
             "It is certain",

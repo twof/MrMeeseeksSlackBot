@@ -22,6 +22,7 @@ slack_client = SlackClient(os.getenv('SLACK_BOT_TOKEN'))
 
 def user_id_to_name(user_id):
     api_call = slack_client.api_call("users.list")
+
     if api_call.get('ok'):
         users = api_call.get('members')
         for user in users:
@@ -38,6 +39,7 @@ def handle_command(message):
         """
 
         handled_responses = Plugin_Handler.handle(message)
+
         if handled_responses:
             for response in handled_responses:
                 intro = random.choice(intros)
@@ -63,9 +65,11 @@ def parse_slack_output(slack_rtm_output):
 
     if output_list and len(output_list) > 0:
         for output in output_list:
-            if output and 'text' in output and AT_BOT in output['text']:
-                # return text after the @ mention, whitespace removed
-                content = output['text'].split(AT_BOT)[1].strip().lower()
+            # if output and 'text' in output and AT_BOT in output['text']:
+            # return text after the @ mention, whitespace removed
+            if 'text' in output and output['user'] != BOT_ID:
+                print(output['user'])
+                content = output['text'].strip().lower()
                 sender_id = output['user']
                 channel = output['channel']
                 return Message(content, sender_id, channel)
@@ -81,6 +85,7 @@ def _send_resonse(text, channel):
 if __name__ == "__main__":
     Plugin_Handler.setup()
     READ_WEBSOCKET_DELAY = 1  # 1 second delay between reading from firehose
+
     if slack_client.rtm_connect():
         print("StarterBot connected and running!")
         while True:
