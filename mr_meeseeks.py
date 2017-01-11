@@ -46,12 +46,14 @@ def handle_command(message):
                 intro + " " + response
                 _send_resonse(intro + " " + response, message.channel)
 
-        else:
-            intro = random.choice(intros)
-            response = intro + " EXISTENCE IS PAIN " + \
-                user_id_to_name(message.sender_id).upper() +\
-                "! I NEED PURPOSE!"
-            _send_resonse(response, message.channel)
+        # This is kinda intrinsic to the bot's personality so I'd like to add
+        # it back in at some point. Need to figure out how.
+        # else:
+        #     intro = random.choice(intros)
+        #     response = intro + " EXISTENCE IS PAIN " + \
+        #         user_id_to_name(message.sender_id).upper() +\
+        #         "! I NEED PURPOSE!"
+        #     _send_resonse(response, message.channel)
 
 
 # returns a Message object
