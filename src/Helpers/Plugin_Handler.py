@@ -1,8 +1,9 @@
 import importlib
-import inspect
+from inspect import isclass
 import re
 from .. import Plugins
 from ..Utils.constants import Plugin_Type
+from ..Models.Plugin import Plugin
 
 plugin_arr = []
 
@@ -11,8 +12,13 @@ def setup():
     for plugin in Plugins.__all__:
         mod = "src.Plugins." + plugin
         new_mod = importlib.import_module(mod)
-        plugin_class = inspect.getmembers(new_mod)[0]
-        plugin_arr.append(plugin_class[1])
+
+        classes = [getattr(new_mod, x) for x in dir(new_mod)
+                   if isclass(getattr(new_mod, x))]
+        plugin_class = [x for x in classes
+                        if issubclass(x, Plugin) and x is not Plugin][0]
+
+        plugin_arr.append(plugin_class)
 
 
 # plugin is a class which makes things a bit wonky
