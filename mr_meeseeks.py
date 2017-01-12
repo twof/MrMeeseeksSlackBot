@@ -70,7 +70,6 @@ def parse_slack_output(slack_rtm_output):
             # if output and 'text' in output and AT_BOT in output['text']:
             # return text after the @ mention, whitespace removed
             if 'text' in output and output['user'] != BOT_ID:
-                print(output['user'])
                 content = output['text'].strip().lower()
                 sender_id = output['user']
                 channel = output['channel']
@@ -85,11 +84,11 @@ def _send_resonse(text, channel):
 
 
 if __name__ == "__main__":
-    Plugin_Handler.setup()
     READ_WEBSOCKET_DELAY = 1  # 1 second delay between reading from firehose
 
     if slack_client.rtm_connect():
         print("StarterBot connected and running!")
+        Plugin_Handler.setup()
         while True:
             message = parse_slack_output(slack_client.rtm_read())
             if message.content and message.channel or message.content is "":
