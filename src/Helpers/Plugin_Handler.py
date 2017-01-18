@@ -13,12 +13,16 @@ def setup():
         mod = "src.Plugins." + plugin
         new_mod = importlib.import_module(mod)
 
-        classes = [getattr(new_mod, x) for x in dir(new_mod)
-                   if isclass(getattr(new_mod, x))]
-        plugin_class = [x for x in classes
-                        if issubclass(x, Plugin) and x is not Plugin][0]
+        classes = [getattr(new_mod, subclass) for subclass in dir(new_mod)
+                   if isclass(getattr(new_mod, subclass))]
+        plugin_classes = [subclass for subclass in classes
+                          if issubclass(subclass, Plugin)
+                          and subclass is not Plugin]
+        if len(plugin_classes) == 0:
+            raise Exception("Plugin subclass not found")
 
-        plugin_arr.append(plugin_class)
+        plugin_instance = plugin_classes[0]()
+        plugin_arr.append(plugin_instance)
 
 
 # plugin is a class which makes things a bit wonky
@@ -26,18 +30,18 @@ def handle(message):
     responses = []
 
     for plugin in plugin_arr:
-        match = plugin().match_type
+        match = plugin.match_type
 
         if match is Plugin_Type.equals:
-            response = _equals(message, plugin())
+            response = _equals(message, plugin)
         elif match is Plugin_Type.contains:
-            response = _contains(message, plugin())
+            response = _contains(message, plugin)
         elif match is Plugin_Type.starts_with:
-            response = _starts_with(message, plugin())
+            response = _starts_with(message, plugin)
         elif match is Plugin_Type.everything:
-            response = _everything(message, plugin())
+            response = _everything(message, plugin)
         elif match is Plugin_Type.regex:
-            response = _regex(message, plugin())
+            response = _regex(message, plugin)
         else:
             return None
 

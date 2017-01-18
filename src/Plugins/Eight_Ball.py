@@ -20,7 +20,8 @@ class Eight_Ball(Plugin, Singleton):
     "fasdfs.8 Are you sentient?"
     '''
     def __init__(self):
-        super(Eight_Ball, self).__init__(Plugin_Type.starts_with, ".8")
+        prefix = ".8"
+        super().__init__(Plugin_Type.starts_with, prefix)
 
     '''
     Triggered when the query is matched by a message. Tha message is wrapped as
@@ -35,7 +36,7 @@ class Eight_Ball(Plugin, Singleton):
         ".8"
         '''
         if message.content == self.query:
-            return "Ask the magic 8ball a question! Usage: .s8 <question>"
+            return "Ask the magic 8ball a question! Usage: .8 <question>"
 
         messages = [
             "It is certain",

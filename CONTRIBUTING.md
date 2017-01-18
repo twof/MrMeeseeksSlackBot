@@ -35,7 +35,7 @@ A plugin consists of a `.py` file placed in the `Plugins` directory.
 
 * All plugins must implement the following
     * `Plugin`
-        * In `__init__` call `super(<Class_Name>, self).__init__(<Plugin_Type>, <query>)`. `super.__init__` takes two parameters.
+        * In `__init__` call `super().__init__(<Plugin_Type>, <query>)`. `super.__init__` takes two parameters.
             * `query` which is a string that will be matched against messages to determine how the bot should respond.
             * `Plugin_Type` which determines how an incoming message could trigger your plugin. Plugin_Type can be one of the following
                 * `everything`: Respond to everything

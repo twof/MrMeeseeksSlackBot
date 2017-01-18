@@ -1735,7 +1735,6 @@ FilterArgumentError	starterbot/lib/python3.4/site-packages/jinja2/exceptions.py	
 FilterArgumentError	starterbot/lib/python3.4/site-packages/jinja2/filters.py	/^from jinja2.exceptions import FilterArgumentError$/;"	i
 FilterBlock	starterbot/lib/python3.4/site-packages/jinja2/nodes.py	/^class FilterBlock(Stmt):$/;"	c
 Finder	starterbot/lib/python3.4/importlib/abc.py	/^class Finder(metaclass=abc.ABCMeta):$/;"	c
-FlaskServerTest	MrMeeseeks/tests/test_plugin_handler.py	/^class FlaskServerTest(unittest.TestCase):$/;"	c
 FlaskServerTest	tests/test_plugin_handler.py	/^class FlaskServerTest(unittest.TestCase):$/;"	c
 FloatParamType	starterbot/lib/python3.4/site-packages/click/types.py	/^class FloatParamType(ParamType):$/;"	c
 Floatnumber	starterbot/lib/python3.4/tokenize.py	/^Floatnumber = group(Pointfloat, Expfloat)$/;"	v
@@ -4499,7 +4498,6 @@ Plugin	src/Models/Plugin.py	/^class Plugin(object):$/;"	c
 Plugin	src/Plugins/Eight_Ball.py	/^from ..Models.Plugin import Plugin$/;"	i
 Plugin	src/Plugins/Ping.py	/^from ..Models.Plugin import Plugin$/;"	i
 Plugin	src/Plugins/Weather.py	/^from ..Models.Plugin import Plugin$/;"	i
-Plugin_Handler	MrMeeseeks/tests/test_plugin_handler.py	/^from src.Helpers import Plugin_Handler$/;"	i
 Plugin_Handler	mr_meeseeks.py	/^import src.Helpers.Plugin_Handler as Plugin_Handler$/;"	i
 Plugin_Handler	tests/test_plugin_handler.py	/^from ..src.Helpers import Plugin_Handler$/;"	i
 Plugin_Type	src/Helpers/Plugin_Handler.py	/^from ..Utils.constants import Plugin_Type$/;"	i
@@ -11036,6 +11034,7 @@ _find_binary_reader	starterbot/lib/python3.4/site-packages/click/_compat.py	/^  
 _find_binary_reader	starterbot/lib/python3.4/site-packages/click/testing.py	/^    from ._compat import _find_binary_reader$/;"	i
 _find_binary_writer	starterbot/lib/python3.4/site-packages/click/_compat.py	/^    def _find_binary_writer(stream):$/;"	m	class:_FixupStream
 _find_binary_writer	starterbot/lib/python3.4/site-packages/click/utils.py	/^    from ._compat import _find_binary_writer$/;"	i
+_find_city	src/Plugins/Weather.py	/^    def _find_city(self, message):$/;"	m	class:Weather
 _find_dot_net_versions	starterbot/lib/python3.4/site-packages/setuptools/msvc.py	/^    def _find_dot_net_versions(self, bits=32):$/;"	m	class:SystemInfo
 _find_impl	starterbot/lib/python3.4/functools.py	/^def _find_impl(cls, registry):$/;"	f
 _find_link_target	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/_backport/tarfile.py	/^    def _find_link_target(self, tarinfo):$/;"	m	class:TarFile
@@ -11526,6 +11525,7 @@ _legacy_version_replacement_map	starterbot/lib/python3.4/site-packages/pip/_vend
 _legacy_version_replacement_map	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/version.py	/^_legacy_version_replacement_map = {$/;"	v
 _length_hint	starterbot/lib/python3.4/site-packages/click/_termui_impl.py	/^def _length_hint(obj):$/;"	f
 _letters	starterbot/lib/python3.4/site-packages/jinja2/utils.py	/^_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'$/;"	v
+_levenshtein_distance	src/Plugins/Weather.py	/^    def _levenshtein_distance(self, origin, comparison):$/;"	m	class:Weather
 _lexer_cache	starterbot/lib/python3.4/site-packages/jinja2/lexer.py	/^_lexer_cache = LRUCache(50)$/;"	v
 _lexer_cache	starterbot/lib/python3.4/site-packages/jinja2/utils.py	/^    from jinja2.lexer import _lexer_cache$/;"	i
 _link_package_versions	starterbot/lib/python3.4/site-packages/pip/index.py	/^    def _link_package_versions(self, link, search):$/;"	m	class:PackageFinder
@@ -13784,6 +13784,7 @@ chr	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^
 circular	starterbot/lib/python3.4/site-packages/pip/exceptions.py	/^        from pip.utils.hashes import FAVORITE_HASH  # Dodge circular import.$/;"	i
 circular	starterbot/lib/python3.4/site-packages/pip/wheel.py	/^    from pip.utils import FakeFile  # circular import$/;"	i
 circular	starterbot/lib/python3.4/weakref.py	/^import collections  # Import after _weakref to avoid circular import.$/;"	i
+city_api_url	src/Plugins/Weather.py	/^    city_api_url = "http:\/\/gd.geobytes.com\/AutoCompleteCity"$/;"	v	class:Weather
 class_types	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/packages/six.py	/^    class_types = (type, types.ClassType)$/;"	v
 class_types	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/packages/six.py	/^    class_types = type,$/;"	v
 class_types	starterbot/lib/python3.4/site-packages/pip/_vendor/six.py	/^    class_types = (type, types.ClassType)$/;"	v
@@ -17185,6 +17186,7 @@ format_progress_line	starterbot/lib/python3.4/site-packages/click/_termui_impl.p
 format_size	starterbot/lib/python3.4/site-packages/pip/download.py	/^from pip.utils import (splitext, rmtree, format_size, display_path,$/;"	i
 format_size	starterbot/lib/python3.4/site-packages/pip/utils/__init__.py	/^def format_size(bytes):$/;"	f
 format_size	starterbot/lib/python3.4/site-packages/pip/utils/ui.py	/^from pip.utils import format_size$/;"	i
+format_string	src/Plugins/Weather.py	/^    format_string = "{city} is experiencing {desc} and is {temp}°F"$/;"	v	class:Weather
 format_string	starterbot/lib/python3.4/locale.py	/^def format_string(f, val, grouping=False):$/;"	f
 format_string	starterbot/lib/python3.4/site-packages/jinja2/sandbox.py	/^    def format_string(self, s, args, kwargs):$/;"	m	class:SandboxedEnvironment
 format_usage	starterbot/lib/python3.4/site-packages/click/core.py	/^    def format_usage(self, ctx, formatter):$/;"	m	class:Command
@@ -20516,7 +20518,6 @@ match_hostname	starterbot/lib/python3.4/site-packages/setuptools/ssl_support.py	
 match_hostname	starterbot/lib/python3.4/site-packages/websocket/_ssl_compat.py	/^            from backports.ssl_match_hostname import match_hostname$/;"	i
 match_hostname	starterbot/lib/python3.4/site-packages/websocket/_ssl_compat.py	/^            from ssl import match_hostname$/;"	i
 match_markers	starterbot/lib/python3.4/site-packages/pip/req/req_install.py	/^    def match_markers(self, extras_requested=None):$/;"	m	class:InstallRequirement
-match_type	src/Models/Plugin.py	/^    match_type = 0$/;"	v	class:Plugin
 matches	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^    def matches(self, testString, parseAll=True):$/;"	m	class:ParserElement
 matches	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def matches(self, testString, parseAll=True):$/;"	m	class:ParserElement
 matches_requirement	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/database.py	/^    def matches_requirement(self, req):$/;"	m	class:Distribution
@@ -22607,7 +22608,6 @@ pyver	starterbot/bin/python-config	/^pyver = sysconfig.get_config_var('VERSION')
 pyver	starterbot/lib/python3.4/config-3.4m/python-config.py	/^pyver = sysconfig.get_config_var('VERSION')$/;"	v
 q	starterbot/lib/python3.4/site-packages/wheel/signatures/djbec.py	/^q = 2**255 - 19$/;"	v
 qualified_name	starterbot/lib/python3.4/site-packages/wheel/test/pydist-schema.json	/^    "qualified_name" : {$/;"	f
-query	src/Models/Plugin.py	/^    query = 0$/;"	v	class:Plugin
 queue	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compat.py	/^    import Queue as queue$/;"	i
 queue	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compat.py	/^    import queue$/;"	i
 quiet	starterbot/lib/python3.4/site-packages/pip/cmdoptions.py	/^quiet = partial($/;"	v
@@ -22688,6 +22688,7 @@ rcdataEndTagOpenState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5li
 rcdataLessThanSignState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataLessThanSignState(self):$/;"	m	class:HTMLTokenizer
 rcdataState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataState(self):$/;"	m	class:HTMLTokenizer
 re	src/Helpers/Plugin_Handler.py	/^import re$/;"	i
+re	src/Plugins/Weather.py	/^import re$/;"	i
 re	starterbot/lib/python3.4/base64.py	/^import re$/;"	i
 re	starterbot/lib/python3.4/encodings/idna.py	/^import stringprep, re, codecs$/;"	i
 re	starterbot/lib/python3.4/fnmatch.py	/^import re$/;"	i
@@ -23730,7 +23731,6 @@ setResultsName	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/
 setResultsName	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^    def setResultsName( self, name, listAllMatches=False ):$/;"	m	class:ParserElement
 setResultsName	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def setResultsName( self, name, listAllMatches=False ):$/;"	m	class:ParseExpression
 setResultsName	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def setResultsName( self, name, listAllMatches=False ):$/;"	m	class:ParserElement
-setUp	MrMeeseeks/tests/test_plugin_handler.py	/^    def setUp(self):$/;"	m	class:FlaskServerTest
 setUp	starterbot/lib/python3.4/site-packages/websocket/tests/test_websocket.py	/^    def setUp(self):$/;"	m	class:ProxyInfoTest
 setUp	starterbot/lib/python3.4/site-packages/websocket/tests/test_websocket.py	/^    def setUp(self):$/;"	m	class:WebSocketAppTest
 setUp	starterbot/lib/python3.4/site-packages/websocket/tests/test_websocket.py	/^    def setUp(self):$/;"	m	class:WebSocketTest
@@ -25189,7 +25189,6 @@ test_requires	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/databas
 test_requires	starterbot/lib/python3.4/site-packages/wheel/test/pydist-schema.json	/^    "test_requires": {$/;"	f
 test_sameas	starterbot/lib/python3.4/site-packages/jinja2/tests.py	/^def test_sameas(value, other):$/;"	f
 test_sequence	starterbot/lib/python3.4/site-packages/jinja2/tests.py	/^def test_sequence(value):$/;"	f
-test_setup	MrMeeseeks/tests/test_plugin_handler.py	/^    def test_setup(self):$/;"	m	class:FlaskServerTest
 test_setup	tests/test_plugin_handler.py	/^    def test_setup(self):$/;"	m	class:FlaskServerTest
 test_splitting	starterbot/lib/python3.4/site-packages/markupsafe/tests.py	/^    def test_splitting(self):$/;"	m	class:MarkupTestCase
 test_string	starterbot/lib/python3.4/site-packages/jinja2/tests.py	/^def test_string(value):$/;"	f
@@ -25813,7 +25812,6 @@ unique	starterbot/lib/python3.4/site-packages/wheel/metadata.py	/^def unique(ite
 unique_everseen	starterbot/lib/python3.4/site-packages/setuptools/package_index.py	/^def unique_everseen(iterable, key=None):$/;"	f
 unique_values	starterbot/lib/python3.4/site-packages/setuptools/package_index.py	/^def unique_values(func):$/;"	f
 unite	starterbot/lib/python3.4/site-packages/jedi/evaluate/iterable.py	/^def unite(iterable):$/;"	f
-unittest	MrMeeseeks/tests/test_plugin_handler.py	/^import unittest$/;"	i
 unittest	starterbot/lib/python3.4/site-packages/markupsafe/tests.py	/^import unittest$/;"	i
 unittest	starterbot/lib/python3.4/site-packages/setuptools/py31compat.py	/^import unittest$/;"	i
 unittest	starterbot/lib/python3.4/site-packages/websocket/tests/test_websocket.py	/^    import unittest$/;"	i
@@ -25980,6 +25978,7 @@ urldefrag	starterbot/lib/python3.4/site-packages/requests/compat.py	/^    from u
 urldefrag	starterbot/lib/python3.4/site-packages/requests/compat.py	/^    from urlparse import urlparse, urlunparse, urljoin, urlsplit, urldefrag$/;"	i
 urldefragauth	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/utils.py	/^def urldefragauth(url):$/;"	f
 urldefragauth	starterbot/lib/python3.4/site-packages/requests/utils.py	/^def urldefragauth(url):$/;"	f
+urlencode	src/Plugins/Weather.py	/^from urllib.parse import urlencode$/;"	i
 urlencode	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/compat.py	/^    from urllib import quote, unquote, quote_plus, unquote_plus, urlencode, getproxies, proxy_bypass$/;"	i
 urlencode	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/compat.py	/^    from urllib.parse import urlparse, urlunparse, urljoin, urlsplit, urlencode, quote, unquote, quote_plus, unquote_plus, urldefrag$/;"	i
 urlencode	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/request.py	/^    from urllib import urlencode$/;"	i
@@ -26585,6 +26584,7 @@ weakref	starterbot/lib/python3.4/site-packages/jinja2/loaders.py	/^import weakre
 weakref	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/dom.py	/^import weakref$/;"	i
 weakreflist	starterbot/include/python3.4m/memoryobject.h	/^    PyObject *weakreflist;$/;"	m	struct:__anon40
 weakreflist	starterbot/include/python3.4m/setobject.h	/^    PyObject *weakreflist;      \/* List of weak references *\/$/;"	m	struct:_setobject
+weather_api_url	src/Plugins/Weather.py	/^    weather_api_url = "http:\/\/api.openweathermap.org\/data\/2.5\/weather"$/;"	v	class:Weather
 webbrowser	starterbot/lib/python3.4/site-packages/click/_termui_impl.py	/^            import webbrowser$/;"	i
 webencodings	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_inputstream.py	/^from pip._vendor import webencodings$/;"	i
 websocket	starterbot/bin/wsdump.py	/^import websocket$/;"	i
