@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from slackclient import SlackClient
 import src.Helpers.Plugin_Handler as Plugin_Handler
 from src.Models.Message import Message
-from src.Utils.constants import intros
+from src.Utils.constants import intros, outros
 
 # Load environment variables
 load_dotenv(os.path.join('.', '.env.example'))
@@ -42,9 +42,9 @@ def handle_command(message):
 
         if handled_responses:
             for response in handled_responses:
-                intro = random.choice(intros)
-                intro + " " + response
-                _send_resonse(intro + " " + response, message.channel)
+                _send_resonse(random.choice(intros), message.channel)
+                _send_resonse(response, message.channel)
+                _send_resonse(random.choice(outros), message.channel)
 
         # This is kinda intrinsic to the bot's personality so I'd like to add
         # it back in at some point. Need to figure out how.

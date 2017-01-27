@@ -19156,7 +19156,7 @@ intersection_update	starterbot/lib/python3.4/_weakrefset.py	/^    def intersecti
 intranges_contain	starterbot/lib/python3.4/site-packages/requests/packages/idna/core.py	/^from .intranges import intranges_contain$/;"	i
 intranges_contain	starterbot/lib/python3.4/site-packages/requests/packages/idna/intranges.py	/^def intranges_contain(int_, ranges):$/;"	f
 intranges_from_list	starterbot/lib/python3.4/site-packages/requests/packages/idna/intranges.py	/^def intranges_from_list(list_):$/;"	f
-intros	mr_meeseeks.py	/^from src.Utils.constants import intros$/;"	i
+intros	mr_meeseeks.py	/^from src.Utils.constants import intros, outros$/;"	i
 intros	src/Utils/constants.py	/^intros = ["I'M MR MEESEEKS LOOK AT ME!",$/;"	v
 inv	starterbot/lib/python3.4/operator.py	/^def inv(a):$/;"	f
 inv	starterbot/lib/python3.4/site-packages/wheel/signatures/djbec.py	/^def inv(x):$/;"	f
@@ -21592,6 +21592,8 @@ output_legacy	starterbot/lib/python3.4/site-packages/pip/commands/list.py	/^    
 output_legacy_latest	starterbot/lib/python3.4/site-packages/pip/commands/list.py	/^    def output_legacy_latest(self, dist):$/;"	m	class:ListCommand
 output_package_listing	starterbot/lib/python3.4/site-packages/pip/commands/list.py	/^    def output_package_listing(self, packages, options):$/;"	m	class:ListCommand
 output_package_listing_columns	starterbot/lib/python3.4/site-packages/pip/commands/list.py	/^    def output_package_listing_columns(self, data, header):$/;"	m	class:ListCommand
+outros	mr_meeseeks.py	/^from src.Utils.constants import intros, outros$/;"	i
+outros	src/Utils/constants.py	/^outros = ["*poof*"]$/;"	v
 overallocate	starterbot/include/python3.4m/unicodeobject.h	/^    unsigned char overallocate;$/;"	m	struct:__anon138
 overflowed	starterbot/include/python3.4m/pystate.h	/^    char overflowed; \/* The stack has overflowed. Allow 50 more calls$/;"	m	struct:_ts
 overlaps	starterbot/lib/python3.4/site-packages/pip/_vendor/ipaddress.py	/^    def overlaps(self, other):$/;"	m	class:_BaseNetwork

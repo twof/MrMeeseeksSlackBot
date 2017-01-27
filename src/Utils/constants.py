@@ -13,3 +13,5 @@ intros = ["I'M MR MEESEEKS LOOK AT ME!",
           "I'M MR MEESEEKS!",
           "OOH I'M MR MEESEEKS LOOK AT ME!",
           "HEY THERE I'M MR MEESEEKS!"]
+
+outros = ["*poof*"]
