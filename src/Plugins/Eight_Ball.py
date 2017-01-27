@@ -1,11 +1,9 @@
-from ..Utils.constants import Plugin_Type
-from ..Models.Plugin import Plugin
-from ..Models.Singleton import Singleton
+from ..Models.Plugin import Plugin, Plugin_Type
 import random
 
 
 # All plugins must implement Plugin and Singleton
-class Eight_Ball(Plugin, Singleton):
+class Eight_Ball(Plugin):
     '''
     Will only trigger on messages that start with ".8"
     This is indicated by the Plugin_Type being starts_with and the query being

@@ -1519,7 +1519,7 @@ EggMetadata	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__i
 EggMetadata	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^class EggMetadata(ZipProvider):$/;"	c
 EggProvider	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__init__.py	/^class EggProvider(NullProvider):$/;"	c
 EggProvider	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^class EggProvider(NullProvider):$/;"	c
-Eight_Ball	src/Plugins/Eight_Ball.py	/^class Eight_Ball(Plugin, Singleton):$/;"	c
+Eight_Ball	src/Plugins/Eight_Ball.py	/^class Eight_Ball(Plugin):$/;"	c
 Element	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree.py	/^    class Element(base.Node):$/;"	c	function:getETreeBuilder
 Element	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treebuilders/etree_lxml.py	/^        class Element(builder.Element):$/;"	c	function:TreeBuilder.__init__
 Ellipsis	starterbot/include/python3.4m/Python-ast.h	/^#define Ellipsis(/;"	d
@@ -4494,14 +4494,14 @@ PipXmlrpcTransport	starterbot/lib/python3.4/site-packages/pip/download.py	/^clas
 PlainToken	starterbot/lib/python3.4/tokenize.py	/^PlainToken = group(Number, Funny, String, Name)$/;"	v
 PlatformInfo	starterbot/lib/python3.4/site-packages/setuptools/msvc.py	/^class PlatformInfo:$/;"	c
 Plugin	src/Helpers/Plugin_Handler.py	/^from ..Models.Plugin import Plugin$/;"	i
-Plugin	src/Models/Plugin.py	/^class Plugin(object):$/;"	c
-Plugin	src/Plugins/Eight_Ball.py	/^from ..Models.Plugin import Plugin$/;"	i
+Plugin	src/Models/Plugin.py	/^class Plugin(Singleton):$/;"	c
+Plugin	src/Plugins/Eight_Ball.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin	src/Plugins/Ping.py	/^from ..Models.Plugin import Plugin$/;"	i
 Plugin	src/Plugins/Weather.py	/^from ..Models.Plugin import Plugin$/;"	i
 Plugin_Handler	mr_meeseeks.py	/^import src.Helpers.Plugin_Handler as Plugin_Handler$/;"	i
 Plugin_Handler	tests/test_plugin_handler.py	/^from ..src.Helpers import Plugin_Handler$/;"	i
-Plugin_Type	src/Helpers/Plugin_Handler.py	/^from ..Utils.constants import Plugin_Type$/;"	i
-Plugin_Type	src/Plugins/Eight_Ball.py	/^from ..Utils.constants import Plugin_Type$/;"	i
+Plugin_Type	src/Models/Plugin.py	/^from ..Utils.constants import Plugin_Type$/;"	i
+Plugin_Type	src/Plugins/Eight_Ball.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin_Type	src/Plugins/Ping.py	/^from ..Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	src/Plugins/Weather.py	/^from ..Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	src/Utils/constants.py	/^class Plugin_Type(Enum):$/;"	c
@@ -6136,8 +6136,8 @@ SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/pip/_vendor/reque
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/chardet/sbcsgroupprober.py	/^from .sbcharsetprober import SingleByteCharSetProber$/;"	i
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/requests/packages/chardet/sbcharsetprober.py	/^class SingleByteCharSetProber(CharSetProber):$/;"	c
 SingleByteCharSetProber	starterbot/lib/python3.4/site-packages/requests/packages/chardet/sbcsgroupprober.py	/^from .sbcharsetprober import SingleByteCharSetProber$/;"	i
+Singleton	src/Models/Plugin.py	/^from ..Models.Singleton import Singleton$/;"	i
 Singleton	src/Models/Singleton.py	/^class Singleton(object):$/;"	c
-Singleton	src/Plugins/Eight_Ball.py	/^from ..Models.Singleton import Singleton$/;"	i
 Singleton	src/Plugins/Ping.py	/^from ..Models.Singleton import Singleton$/;"	i
 Singleton	src/Plugins/Weather.py	/^from ..Models.Singleton import Singleton$/;"	i
 Sized	starterbot/lib/python3.4/_collections_abc.py	/^class Sized(metaclass=ABCMeta):$/;"	c
@@ -10781,7 +10781,7 @@ _const_compare_digest	starterbot/lib/python3.4/site-packages/pip/_vendor/request
 _const_compare_digest	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/util/ssl_.py	/^_const_compare_digest = getattr(hmac, 'compare_digest',$/;"	v
 _const_compare_digest_backport	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py	/^def _const_compare_digest_backport(a, b):$/;"	f
 _const_compare_digest_backport	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/util/ssl_.py	/^def _const_compare_digest_backport(a, b):$/;"	f
-_contains	src/Helpers/Plugin_Handler.py	/^def _contains(message, plugin):$/;"	f
+_contains	src/Models/Plugin.py	/^    def _contains(self, message):$/;"	m	class:Plugin
 _context_function_types	starterbot/lib/python3.4/site-packages/jinja2/nodes.py	/^_context_function_types = (types.FunctionType, types.MethodType)$/;"	v
 _context_function_types	starterbot/lib/python3.4/site-packages/jinja2/runtime.py	/^from jinja2.nodes import EvalContext, _context_function_types$/;"	i
 _convert	starterbot/lib/python3.4/site-packages/click/core.py	/^        def _convert(value, level):$/;"	f	function:Parameter.type_cast_value
@@ -10929,7 +10929,7 @@ _entity_re	starterbot/lib/python3.4/site-packages/markupsafe/__init__.py	/^_enti
 _environ_prefix_re	starterbot/lib/python3.4/site-packages/pip/baseparser.py	/^_environ_prefix_re = re.compile(r"^PIP_", re.I)$/;"	v
 _environment_sanity_check	starterbot/lib/python3.4/site-packages/jinja2/environment.py	/^def _environment_sanity_check(environment):$/;"	f
 _eq	starterbot/lib/python3.4/collections/__init__.py	/^from operator import itemgetter as _itemgetter, eq as _eq$/;"	i
-_equals	src/Helpers/Plugin_Handler.py	/^def _equals(message, plugin):$/;"	f
+_equals	src/Models/Plugin.py	/^    def _equals(self, message):$/;"	m	class:Plugin
 _errno	starterbot/lib/python3.4/tempfile.py	/^import errno as _errno$/;"	i
 _error_argument_count	starterbot/lib/python3.4/site-packages/jedi/evaluate/param.py	/^def _error_argument_count(func, actual_count):$/;"	f
 _error_catcher	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/urllib3/response.py	/^    def _error_catcher(self):$/;"	m	class:HTTPResponse
@@ -10952,7 +10952,7 @@ _eval_param	starterbot/lib/python3.4/site-packages/jedi/evaluate/finder.py	/^def
 _evaluate_for_statement_string	starterbot/lib/python3.4/site-packages/jedi/evaluate/docstrings.py	/^def _evaluate_for_statement_string(evaluator, string, module):$/;"	f
 _evaluate_markers	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/markers.py	/^def _evaluate_markers(markers, environment):$/;"	f
 _evaluate_markers	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/markers.py	/^def _evaluate_markers(markers, environment):$/;"	f
-_everything	src/Helpers/Plugin_Handler.py	/^def _everything(message, plugin):$/;"	f
+_everything	src/Models/Plugin.py	/^    def _everything(self, message):$/;"	m	class:Plugin
 _excepthandler	starterbot/include/python3.4m/Python-ast.h	/^struct _excepthandler {$/;"	s
 _excepthandler_kind	starterbot/include/python3.4m/Python-ast.h	/^enum _excepthandler_kind {ExceptHandler_kind=1};$/;"	g
 _exception_patterns	starterbot/lib/python3.4/site-packages/setuptools/sandbox.py	/^    _exception_patterns = [$/;"	v	class:DirectorySandbox
@@ -11940,7 +11940,7 @@ _recursive_repr	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compa
 _recursive_repr	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compat.py	/^        from reprlib import recursive_repr as _recursive_repr$/;"	i
 _recv	starterbot/lib/python3.4/site-packages/websocket/_core.py	/^    def _recv(self, bufsize):$/;"	m	class:WebSocket
 _reduce_ex	starterbot/lib/python3.4/copyreg.py	/^def _reduce_ex(self, proto):$/;"	f
-_regex	src/Helpers/Plugin_Handler.py	/^def _regex(message, plugin):$/;"	f
+_regex	src/Models/Plugin.py	/^    def _regex(self, message):$/;"	m	class:Plugin
 _regex	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/specifiers.py	/^    _regex = re.compile($/;"	v	class:LegacySpecifier
 _regex	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/specifiers.py	/^    _regex = re.compile($/;"	v	class:Specifier
 _regex	starterbot/lib/python3.4/site-packages/pip/_vendor/packaging/version.py	/^    _regex = re.compile($/;"	v	class:Version
@@ -12164,7 +12164,7 @@ _stack_removal	starterbot/lib/python3.4/site-packages/jedi/parser/__init__.py	/^
 _star_star_dict	starterbot/lib/python3.4/site-packages/jedi/evaluate/param.py	/^def _star_star_dict(evaluator, array, input_node, func):$/;"	f
 _starmap	starterbot/lib/python3.4/collections/__init__.py	/^from itertools import repeat as _repeat, chain as _chain, starmap as _starmap$/;"	i
 _start_time	starterbot/lib/python3.4/site-packages/jedi/debug.py	/^_start_time = time.time()$/;"	v
-_starts_with	src/Helpers/Plugin_Handler.py	/^def _starts_with(message, plugin):$/;"	f
+_starts_with	src/Models/Plugin.py	/^    def _starts_with(self, message):$/;"	m	class:Plugin
 _stash	starterbot/lib/python3.4/site-packages/pip/req/req_uninstall.py	/^    def _stash(self, path):$/;"	m	class:UninstallPathSet
 _stat	starterbot/lib/python3.4/tempfile.py	/^    _stat = _os.lstat$/;"	v
 _stat	starterbot/lib/python3.4/tempfile.py	/^    _stat = _os.stat$/;"	v
@@ -18493,6 +18493,7 @@ gzip	starterbot/lib/python3.4/tarfile.py	/^            import gzip$/;"	i
 gzopen	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/_backport/tarfile.py	/^    def gzopen(cls, name, mode="r", fileobj=None, compresslevel=9, **kwargs):$/;"	m	class:TarFile
 gzopen	starterbot/lib/python3.4/tarfile.py	/^    def gzopen(cls, name, mode="r", fileobj=None, compresslevel=9, **kwargs):$/;"	m	class:TarFile
 handle	src/Helpers/Plugin_Handler.py	/^def handle(message):$/;"	f
+handle	src/Models/Plugin.py	/^    def handle(self, message):$/;"	m	class:Plugin
 handle	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/__init__.py	/^        def handle(self, record): pass$/;"	m	class:DistlibException.NullHandler
 handleComment	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_inputstream.py	/^    def handleComment(self):$/;"	m	class:EncodingParser
 handleMeta	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_inputstream.py	/^    def handleMeta(self):$/;"	m	class:EncodingParser
@@ -22687,7 +22688,7 @@ rcdataEndTagNameState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5li
 rcdataEndTagOpenState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataEndTagOpenState(self):$/;"	m	class:HTMLTokenizer
 rcdataLessThanSignState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataLessThanSignState(self):$/;"	m	class:HTMLTokenizer
 rcdataState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataState(self):$/;"	m	class:HTMLTokenizer
-re	src/Helpers/Plugin_Handler.py	/^import re$/;"	i
+re	src/Models/Plugin.py	/^import re$/;"	i
 re	src/Plugins/Weather.py	/^import re$/;"	i
 re	starterbot/lib/python3.4/base64.py	/^import re$/;"	i
 re	starterbot/lib/python3.4/encodings/idna.py	/^import stringprep, re, codecs$/;"	i
