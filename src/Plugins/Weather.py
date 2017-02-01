@@ -146,3 +146,7 @@ class Weather(Plugin):
 
     def tests(self):
         return []
+
+    def usage(self):
+        return "usage: weather -> sends the weather for a city of choice if"\
+            + " you mentioned one and San Francisco if you didn't"
