@@ -43,6 +43,7 @@ A plugin consists of a `.py` file placed in the `Plugins` directory.
 
         * Implement `callback`. This is the meat of your plugin. `callback` will be called in the event that a message sent to the bot matches the `query` that the plugin tests for. `callback` takes a `Message` object and returns the response that the bot will send to the target channel.
         * Implement `tests`. All this function has to do is return a few test cases that you will define. Test cases are in the form of an array of tuples where the first item in each tuple is a hypothetical message and the second item is the expected output. Expected output can either be the exact expected output in the form of a string, or a boolean (True if you expect some output) in the case that you're unsure what the exact output will be (ex: `Eight_Ball`).
+        * Implement `usage`. Just needs to return usage information for your plugin as a string.
 
 ### Recommended
 * In the case that the user misuses your plugin, return a helpful hint as a part of `callback`.
