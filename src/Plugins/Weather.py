@@ -8,7 +8,8 @@ import re
 
 
 class Weather(Plugin):
-    '''Tells us the weather in San Francisco'''
+    """Tells us the weather in San Francisco."""
+
     weather_api_url = "http://api.openweathermap.org/data/2.5/weather"
     city_api_url = "http://gd.geobytes.com/AutoCompleteCity"
     format_string = "{city} is experiencing {desc} and is {temp}°F"
@@ -142,3 +143,6 @@ class Weather(Plugin):
                                                            temp=temp)
 
         return weather_description
+
+    def tests(self):
+        return []
