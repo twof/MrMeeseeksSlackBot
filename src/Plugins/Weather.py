@@ -1,6 +1,4 @@
-from ..Utils.constants import Plugin_Type
-from ..Models.Plugin import Plugin
-from ..Models.Singleton import Singleton
+from ..Models.Plugin import Plugin, Plugin_Type
 from urllib.request import urlopen
 from urllib.parse import urlencode
 import os
@@ -8,7 +6,7 @@ import json
 import re
 
 
-class Weather(Plugin, Singleton):
+class Weather(Plugin):
     '''Tells us the weather in San Francisco'''
     weather_api_url = "http://api.openweathermap.org/data/2.5/weather"
     city_api_url = "http://gd.geobytes.com/AutoCompleteCity"
