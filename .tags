@@ -4505,7 +4505,6 @@ Plugin_Type	src/Plugins/Eight_Ball.py	/^from ..Models.Plugin import Plugin, Plug
 Plugin_Type	src/Plugins/Ping.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin_Type	src/Plugins/Weather.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin_Type	src/Utils/constants.py	/^class Plugin_Type(Enum):$/;"	c
-Plugins	src/Helpers/Plugin_Handler.py	/^from .. import Plugins$/;"	i
 Po	starterbot/lib/python3.4/site-packages/jinja2/_stringdefs.py	/^Po = u'!"#%&\\'*,.\/:;?@\\\\\\xa1\\xb7\\xbf\\u037e\\u0387\\u055a\\u055b\\u055c\\u055d\\u055e\\u055f\\u0589\\u05be\\u05c0\\u05c3\\u05c6\\u05f3\\u05f4\\u060c\\u060d\\u061b\\u061e\\u061f\\u066a\\u066b\\u066c\\u066d\\u06d4\\u0700\\u0701\\u0702\\u0703\\u0704\\u0705\\u0706\\u0707\\u0708\\u0709\\u070a\\u070b\\u070c\\u070d\\u0964\\u0965\\u0970\\u0df4\\u0e4f\\u0e5a\\u0e5b\\u0f04\\u0f05\\u0f06\\u0f07\\u0f08\\u0f09\\u0f0a\\u0f0b\\u0f0c\\u0f0d\\u0f0e\\u0f0f\\u0f10\\u0f11\\u0f12\\u0f85\\u0fd0\\u0fd1\\u104a\\u104b\\u104c\\u104d\\u104e\\u104f\\u10fb\\u1361\\u1362\\u1363\\u1364\\u1365\\u1366\\u1367\\u1368\\u166d\\u166e\\u16eb\\u16ec\\u16ed\\u1735\\u1736\\u17d4\\u17d5\\u17d6\\u17d8\\u17d9\\u17da\\u1800\\u1801\\u1802\\u1803\\u1804\\u1805\\u1807\\u1808\\u1809\\u180a\\u1944\\u1945\\u19de\\u19df\\u1a1e\\u1a1f\\u2016\\u2017\\u2020\\u2021\\u2022\\u2023\\u2024\\u2025\\u2026\\u2027\\u2030\\u2031\\u2032\\u2033\\u2034\\u2035\\u2036\\u2037\\u2038\\u203b\\u203c\\u203d\\u203e\\u2041\\u2042\\u2043\\u2047\\u2048\\u2049\\u204a\\u204b\\u204c\\u204d\\u204e\\u204f\\u2050\\u2051\\u2053\\u2055\\u2056\\u2057\\u2058\\u2059\\u205a\\u205b\\u205c\\u205d\\u205e\\u23b6\\u2cf9\\u2cfa\\u2cfb\\u2cfc\\u2cfe\\u2cff\\u2e00\\u2e01\\u2e06\\u2e07\\u2e08\\u2e0b\\u2e0e\\u2e0f\\u2e10\\u2e11\\u2e12\\u2e13\\u2e14\\u2e15\\u2e16\\u3001\\u3002\\u3003\\u303d\\u30fb\\ufe10\\ufe11\\ufe12\\ufe13\\ufe14\\ufe15\\ufe16\\ufe19\\ufe30\\ufe45\\ufe46\\ufe49\\ufe4a\\ufe4b\\ufe4c\\ufe50\\ufe51\\ufe52\\ufe54\\ufe55\\ufe56\\ufe57\\ufe5f\\ufe60\\ufe61\\ufe68\\ufe6a\\ufe6b\\uff01\\uff02\\uff03\\uff05\\uff06\\uff07\\uff0a\\uff0c\\uff0e\\uff0f\\uff1a\\uff1b\\uff1f\\uff20\\uff3c\\uff61\\uff64\\uff65'$/;"	v
 Point	starterbot/lib/python3.4/collections/__main__.py	/^Point = namedtuple('Point', 'x, y', True)$/;"	v
 Point	starterbot/lib/python3.4/collections/__main__.py	/^class Point(namedtuple('Point', 'x y')):$/;"	c
@@ -7837,7 +7836,6 @@ __add__	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^    de
 __add__	starterbot/lib/python3.4/site-packages/pkg_resources/__init__.py	/^    def __add__(self, other):$/;"	m	class:Environment	file:
 __add__	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def __add__( self, other ):$/;"	m	class:ParseResults	file:
 __add__	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def __add__(self, other ):$/;"	m	class:ParserElement	file:
-__all__	src/Plugins/__init__.py	/^__all__ = ['Eight_Ball', 'Ping', 'Weather']$/;"	v
 __all__	starterbot/lib/python3.4/__future__.py	/^__all__ = ["all_feature_names"] + all_feature_names$/;"	v
 __all__	starterbot/lib/python3.4/_collections_abc.py	/^__all__ = ["Hashable", "Iterable", "Iterator",$/;"	v
 __all__	starterbot/lib/python3.4/_dummy_thread.py	/^__all__ = ['error', 'start_new_thread', 'exit', 'get_ident', 'allocate_lock',$/;"	v
@@ -18235,6 +18233,7 @@ getlist	starterbot/lib/python3.4/site-packages/requests/packages/urllib3/_collec
 getlocale	starterbot/lib/python3.4/locale.py	/^def getlocale(category=LC_CTYPE):$/;"	f
 getmember	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/_backport/tarfile.py	/^    def getmember(self, name):$/;"	m	class:TarFile
 getmember	starterbot/lib/python3.4/tarfile.py	/^    def getmember(self, name):$/;"	m	class:TarFile
+getmembers	src/Helpers/Plugin_Handler.py	/^from inspect import isclass, getmembers$/;"	i
 getmembers	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/_backport/tarfile.py	/^    def getmembers(self):$/;"	m	class:TarFile
 getmembers	starterbot/lib/python3.4/tarfile.py	/^    def getmembers(self):$/;"	m	class:TarFile
 getmtime	starterbot/lib/python3.4/genericpath.py	/^def getmtime(filename):$/;"	f
@@ -19487,7 +19486,7 @@ isblk	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/_backport/tarfi
 isblk	starterbot/lib/python3.4/tarfile.py	/^    def isblk(self):$/;"	m	class:TarInfo
 ischr	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/_backport/tarfile.py	/^    def ischr(self):$/;"	m	class:TarInfo
 ischr	starterbot/lib/python3.4/tarfile.py	/^    def ischr(self):$/;"	m	class:TarInfo
-isclass	src/Helpers/Plugin_Handler.py	/^from inspect import isclass$/;"	i
+isclass	src/Helpers/Plugin_Handler.py	/^from inspect import isclass, getmembers$/;"	i
 isdecimal	starterbot/lib/python3.4/collections/__init__.py	/^    def isdecimal(self): return self.data.isdecimal()$/;"	m	class:UserString
 isdev	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/_backport/tarfile.py	/^    def isdev(self):$/;"	m	class:TarInfo
 isdev	starterbot/lib/python3.4/tarfile.py	/^    def isdev(self):$/;"	m	class:TarInfo
@@ -21395,6 +21394,7 @@ originalTextFor	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	
 originalTextFor	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/packaging/requirements.py	/^from pkg_resources.extern.pyparsing import stringStart, stringEnd, originalTextFor, ParseException$/;"	i
 originalTextFor	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^def originalTextFor(expr, asString=True):$/;"	f
 os	mr_meeseeks.py	/^import os$/;"	i
+os	src/Helpers/Plugin_Handler.py	/^import os$/;"	i
 os	src/Plugins/Weather.py	/^import os$/;"	i
 os	src/Utils/print_bot_id.py	/^import os$/;"	i
 os	starterbot/bin/activate_this.py	/^import os$/;"	i
@@ -22688,6 +22688,7 @@ rcdataEndTagNameState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5li
 rcdataEndTagOpenState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataEndTagOpenState(self):$/;"	m	class:HTMLTokenizer
 rcdataLessThanSignState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataLessThanSignState(self):$/;"	m	class:HTMLTokenizer
 rcdataState	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/_tokenizer.py	/^    def rcdataState(self):$/;"	m	class:HTMLTokenizer
+re	src/Helpers/Plugin_Handler.py	/^import re$/;"	i
 re	src/Models/Plugin.py	/^import re$/;"	i
 re	src/Plugins/Weather.py	/^import re$/;"	i
 re	starterbot/lib/python3.4/base64.py	/^import re$/;"	i

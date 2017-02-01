@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from ..Models.Plugin import Plugin, Plugin_Type
 from urllib.request import urlopen
 from urllib.parse import urlencode

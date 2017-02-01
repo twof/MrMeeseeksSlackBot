@@ -1,22 +1,33 @@
 import importlib
-from inspect import isclass
-from .. import Plugins
+import os
+import re
+from inspect import isclass, getmembers
+# from .. import Plugins
 from ..Models.Plugin import Plugin
 
 plugin_arr = []
 
 
 def setup():
-    for plugin in Plugins.__all__:
+    dir = os.path.dirname(__file__)
+    filename = os.path.join(dir, '../Plugins')
+    fls = os.listdir(filename)
+    plug_files = [re.sub(r"\.pyc?", "", fl) for fl in fls
+                  if fl.find(".py") != -1
+                  and re.search(r"__init__|\.pyc", fl) is None]
+
+    print(plug_files)
+
+    for plugin in plug_files:
         mod = "src.Plugins." + plugin
         new_mod = importlib.import_module(mod)
 
-        classes = [getattr(new_mod, subclass) for subclass in dir(new_mod)
-                   if isclass(getattr(new_mod, subclass))]
-        plugin_classes = [subclass for subclass in classes
-                          if issubclass(subclass, Plugin)
-                          and subclass is not Plugin]
+        plugin_classes = [plug[1] for plug in getmembers(new_mod, isclass)
+                          if issubclass(plug[1], Plugin)
+                          and plug[1] is not Plugin]
+
         if len(plugin_classes) == 0:
+            print(mod)
             raise Exception("Plugin subclass not found")
 
         plugin_instance = plugin_classes[0]()
