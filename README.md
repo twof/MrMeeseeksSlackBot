@@ -12,6 +12,7 @@ Any development on the bot core will be done on the dev branch. Master can be as
     * Followup: "Do you mean
                  1. Cincinnati, IA, United States
                  2. Cincinnati, OH, United States"
+* Add support for regex flags
 
 ### Contributing:
 See the [contribution guide.](https://github.com/twof/MrMeeseeksSlackBot/blob/master/CONTRIBUTING.md)
