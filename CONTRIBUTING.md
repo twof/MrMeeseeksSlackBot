@@ -32,16 +32,17 @@ A plugin consists of a `.py` file placed in the `Plugins` directory.
 
 * All plugins must implement the following
     * `Plugin`
-        * In `__init__` call `super().__init__(<Plugin_Type>, <query>)`. `super.__init__` takes two parameters.
+        * In `__init__` call `super().__init__(<Plugin_Type>, <query>)`. `super().__init__` takes two parameters.
             * `query` which is a string that will be matched against messages to determine how the bot should respond.
             * `Plugin_Type` which determines how an incoming message could trigger your plugin. Plugin_Type can be one of the following
                 * `everything`: Respond to everything
-                * `equals`: Respond only when messages equal your query
-                * `starts_with`: Respond only when messages start with your query
-                * `contains`: Respond only when messages contain your query
-                * `regex`: Responds only when messages match the regular expression represented by the query
+                * `equals`: Respond when messages equal your query
+                * `starts_with`: Respond when messages start with your query
+                * `contains`: Respond when messages contain your query
+                * `regex`: Responds when messages match the regular expression represented by the query
 
         * Implement `callback`. This is the meat of your plugin. `callback` will be called in the event that a message sent to the bot matches the `query` that the plugin tests for. `callback` takes a `Message` object and returns the response that the bot will send to the target channel.
+        * Implement `tests`. All this function has to do is return a few test cases that you will define. Test cases are in the form of an array of tuples where the first item in each tuple is a hypothetical message and the second item is the expected output. Expected output can either be the exact expected output in the form of a string, or a boolean (True if you expect some output) in the case that you're unsure what the exact output will be (ex: `Eight_Ball`).
 
 
 ### Recommended
