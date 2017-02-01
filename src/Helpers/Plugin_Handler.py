@@ -1,71 +1,44 @@
 import importlib
-from inspect import isclass
+import os
 import re
-from .. import Plugins
-from ..Utils.constants import Plugin_Type
+from inspect import isclass, getmembers
+# from .. import Plugins
 from ..Models.Plugin import Plugin
 
 plugin_arr = []
 
 
 def setup():
-    for plugin in Plugins.__all__:
+    dir = os.path.dirname(__file__)
+    filename = os.path.join(dir, '../Plugins')
+    fls = os.listdir(filename)
+    plug_files = [re.sub(r"\.pyc?", "", fl) for fl in fls
+                  if fl.find(".py") != -1
+                  and re.search(r"__init__|\.pyc", fl) is None]
+
+    for plugin in plug_files:
         mod = "src.Plugins." + plugin
         new_mod = importlib.import_module(mod)
 
-        classes = [getattr(new_mod, x) for x in dir(new_mod)
-                   if isclass(getattr(new_mod, x))]
-        plugin_class = [x for x in classes
-                        if issubclass(x, Plugin) and x is not Plugin][0]
+        plugin_classes = [plug[1] for plug in getmembers(new_mod, isclass)
+                          if issubclass(plug[1], Plugin)
+                          and plug[1] is not Plugin]
 
-        plugin_arr.append(plugin_class)
+        if len(plugin_classes) == 0:
+            print(mod)
+            raise Exception("Plugin subclass not found")
+
+        plugin_instance = plugin_classes[0]()
+        plugin_arr.append(plugin_instance)
 
 
-# plugin is a class which makes things a bit wonky
 def handle(message):
     responses = []
 
     for plugin in plugin_arr:
-        match = plugin().match_type
-
-        if match is Plugin_Type.equals:
-            response = _equals(message, plugin())
-        elif match is Plugin_Type.contains:
-            response = _contains(message, plugin())
-        elif match is Plugin_Type.starts_with:
-            response = _starts_with(message, plugin())
-        elif match is Plugin_Type.everything:
-            response = _everything(message, plugin())
-        elif match is Plugin_Type.regex:
-            response = _regex(message, plugin())
-        else:
-            return None
+        response = plugin.handle(message)
 
         if response:
             responses.append(response)
 
     return responses if responses else None
-
-
-def _everything(message, plugin):
-    return plugin.callback(message)
-
-
-def _equals(message, plugin):
-    if message.content is plugin.query:
-        return plugin.callback(message)
-
-
-def _starts_with(message, plugin):
-    if message.content.startswith(plugin.query):
-        return plugin.callback(message)
-
-
-def _contains(message, plugin):
-    if plugin.query in message.content:
-        return plugin.callback(message)
-
-
-def _regex(message, plugin):
-    if re.search(plugin.query, message.content) is not None:
-        return plugin.callback(message)

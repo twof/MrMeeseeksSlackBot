@@ -1,11 +1,10 @@
-from ..Utils.constants import Plugin_Type
-from ..Models.Plugin import Plugin
-from ..Models.Singleton import Singleton
+from ..Models.Plugin import Plugin, Plugin_Type
 
 
-class Ping(Plugin, Singleton):
+class Ping(Plugin):
     def __init__(self):
-        super(Ping, self).__init__(Plugin_Type.regex, "p[io]ng")
+        pattern = "p[io]ng"
+        super().__init__(Plugin_Type.regex, pattern)
 
     def callback(self, message):
         if "ping" in message.content:

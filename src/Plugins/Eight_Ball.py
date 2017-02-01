@@ -1,11 +1,9 @@
-from ..Utils.constants import Plugin_Type
-from ..Models.Plugin import Plugin
-from ..Models.Singleton import Singleton
+from ..Models.Plugin import Plugin, Plugin_Type
 import random
 
 
 # All plugins must implement Plugin and Singleton
-class Eight_Ball(Plugin, Singleton):
+class Eight_Ball(Plugin):
     '''
     Will only trigger on messages that start with ".8"
     This is indicated by the Plugin_Type being starts_with and the query being
@@ -20,7 +18,8 @@ class Eight_Ball(Plugin, Singleton):
     "fasdfs.8 Are you sentient?"
     '''
     def __init__(self):
-        super().__init__(Plugin_Type.starts_with, ".8")
+        prefix = ".8"
+        super().__init__(Plugin_Type.starts_with, prefix)
 
     '''
     Triggered when the query is matched by a message. Tha message is wrapped as
