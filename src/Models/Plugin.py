@@ -6,9 +6,8 @@ import re
 
 
 class Plugin(Singleton):
-    '''
-    All plugins must implement this class
-    Represents everything a plugin must have
+    """
+    All plugins must implement this class.
 
     match_type: How the query can match messages.
     Represted in constants.Plugin_Type
@@ -16,12 +15,11 @@ class Plugin(Singleton):
     query: The string to match in accordance with match_type
 
     callback: function that will run on query match
-    '''
+    """
 
     def __init__(self, match_type, query):
         self.match_type = match_type
         self.query = query
-        self._plugin_arr = []
 
     def _everything(self, message):
         return self.callback(message)
@@ -43,7 +41,10 @@ class Plugin(Singleton):
             return self.callback(message)
 
     def callback(reply, message):
-        raise NotImplementedError("Subclass must implement abstract method")
+        raise NotImplementedError("Plugins must implement callback method")
+
+    def tests(self):
+        raise NotImplementedError("Plugins must implement tests method")
 
     def handle(self, message):
         match = self.match_type

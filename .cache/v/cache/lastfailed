@@ -1,0 +1,3 @@
+{
+  "tests/test_plugins.py::PluginsTest::test_run_plugin_test": true
+}

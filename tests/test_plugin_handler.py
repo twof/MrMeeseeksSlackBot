@@ -1,5 +1,5 @@
 import unittest
-from ..src.Helpers import Plugin_Handler
+from src.Helpers import Plugin_Handler
 
 
 class FlaskServerTest(unittest.TestCase):
@@ -8,4 +8,3 @@ class FlaskServerTest(unittest.TestCase):
 
     def test_setup(self):
         self.handler.setup()
-        print(self.handler.plugin_arr)

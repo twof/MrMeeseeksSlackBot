@@ -3709,6 +3709,7 @@ MergedNodes	starterbot/lib/python3.4/site-packages/jedi/evaluate/iterable.py	/^c
 Message	mr_meeseeks.py	/^from src.Models.Message import Message$/;"	i
 Message	src/Models/Message.py	/^class Message:$/;"	c
 Message	starterbot/lib/python3.4/site-packages/wheel/bdist_wheel.py	/^        from email.message import Message$/;"	i
+Message	tests/test_plugins.py	/^from src.Models.Message import Message$/;"	i
 MetaPathFinder	starterbot/lib/python3.4/importlib/abc.py	/^class MetaPathFinder(Finder):$/;"	c
 Metadata	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/database.py	/^from .metadata import Metadata, METADATA_FILENAME, WHEEL_METADATA_FILENAME$/;"	i
 Metadata	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/locators.py	/^from .metadata import Metadata$/;"	i
@@ -4499,12 +4500,14 @@ Plugin	src/Plugins/Eight_Ball.py	/^from ..Models.Plugin import Plugin, Plugin_Ty
 Plugin	src/Plugins/Ping.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin	src/Plugins/Weather.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin_Handler	mr_meeseeks.py	/^import src.Helpers.Plugin_Handler as Plugin_Handler$/;"	i
-Plugin_Handler	tests/test_plugin_handler.py	/^from ..src.Helpers import Plugin_Handler$/;"	i
+Plugin_Handler	tests/test_plugin_handler.py	/^from src.Helpers import Plugin_Handler$/;"	i
+Plugin_Handler	tests/test_plugins.py	/^from src.Helpers import Plugin_Handler$/;"	i
 Plugin_Type	src/Models/Plugin.py	/^from ..Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	src/Plugins/Eight_Ball.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin_Type	src/Plugins/Ping.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin_Type	src/Plugins/Weather.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin_Type	src/Utils/constants.py	/^class Plugin_Type(Enum):$/;"	c
+PluginsTest	tests/test_plugins.py	/^class PluginsTest(unittest.TestCase):$/;"	c
 Po	starterbot/lib/python3.4/site-packages/jinja2/_stringdefs.py	/^Po = u'!"#%&\\'*,.\/:;?@\\\\\\xa1\\xb7\\xbf\\u037e\\u0387\\u055a\\u055b\\u055c\\u055d\\u055e\\u055f\\u0589\\u05be\\u05c0\\u05c3\\u05c6\\u05f3\\u05f4\\u060c\\u060d\\u061b\\u061e\\u061f\\u066a\\u066b\\u066c\\u066d\\u06d4\\u0700\\u0701\\u0702\\u0703\\u0704\\u0705\\u0706\\u0707\\u0708\\u0709\\u070a\\u070b\\u070c\\u070d\\u0964\\u0965\\u0970\\u0df4\\u0e4f\\u0e5a\\u0e5b\\u0f04\\u0f05\\u0f06\\u0f07\\u0f08\\u0f09\\u0f0a\\u0f0b\\u0f0c\\u0f0d\\u0f0e\\u0f0f\\u0f10\\u0f11\\u0f12\\u0f85\\u0fd0\\u0fd1\\u104a\\u104b\\u104c\\u104d\\u104e\\u104f\\u10fb\\u1361\\u1362\\u1363\\u1364\\u1365\\u1366\\u1367\\u1368\\u166d\\u166e\\u16eb\\u16ec\\u16ed\\u1735\\u1736\\u17d4\\u17d5\\u17d6\\u17d8\\u17d9\\u17da\\u1800\\u1801\\u1802\\u1803\\u1804\\u1805\\u1807\\u1808\\u1809\\u180a\\u1944\\u1945\\u19de\\u19df\\u1a1e\\u1a1f\\u2016\\u2017\\u2020\\u2021\\u2022\\u2023\\u2024\\u2025\\u2026\\u2027\\u2030\\u2031\\u2032\\u2033\\u2034\\u2035\\u2036\\u2037\\u2038\\u203b\\u203c\\u203d\\u203e\\u2041\\u2042\\u2043\\u2047\\u2048\\u2049\\u204a\\u204b\\u204c\\u204d\\u204e\\u204f\\u2050\\u2051\\u2053\\u2055\\u2056\\u2057\\u2058\\u2059\\u205a\\u205b\\u205c\\u205d\\u205e\\u23b6\\u2cf9\\u2cfa\\u2cfb\\u2cfc\\u2cfe\\u2cff\\u2e00\\u2e01\\u2e06\\u2e07\\u2e08\\u2e0b\\u2e0e\\u2e0f\\u2e10\\u2e11\\u2e12\\u2e13\\u2e14\\u2e15\\u2e16\\u3001\\u3002\\u3003\\u303d\\u30fb\\ufe10\\ufe11\\ufe12\\ufe13\\ufe14\\ufe15\\ufe16\\ufe19\\ufe30\\ufe45\\ufe46\\ufe49\\ufe4a\\ufe4b\\ufe4c\\ufe50\\ufe51\\ufe52\\ufe54\\ufe55\\ufe56\\ufe57\\ufe5f\\ufe60\\ufe61\\ufe68\\ufe6a\\ufe6b\\uff01\\uff02\\uff03\\uff05\\uff06\\uff07\\uff0a\\uff0c\\uff0e\\uff0f\\uff1a\\uff1b\\uff1f\\uff20\\uff3c\\uff61\\uff64\\uff65'$/;"	v
 Point	starterbot/lib/python3.4/collections/__main__.py	/^Point = namedtuple('Point', 'x, y', True)$/;"	v
 Point	starterbot/lib/python3.4/collections/__main__.py	/^class Point(namedtuple('Point', 'x y')):$/;"	c
@@ -23738,6 +23741,7 @@ setUp	starterbot/lib/python3.4/site-packages/websocket/tests/test_websocket.py	/
 setUp	starterbot/lib/python3.4/site-packages/websocket/tests/test_websocket.py	/^    def setUp(self):$/;"	m	class:WebSocketTest
 setUp	starterbot/lib/python3.4/site-packages/wheel/test/test_keys.py	/^    def setUp(self):$/;"	m	class:TestWheelKeys
 setUp	tests/test_plugin_handler.py	/^    def setUp(self):$/;"	m	class:FlaskServerTest
+setUp	tests/test_plugins.py	/^    def setUp(self):$/;"	m	class:PluginsTest
 setWhitespaceChars	starterbot/lib/python3.4/site-packages/pip/_vendor/pyparsing.py	/^    def setWhitespaceChars( self, chars ):$/;"	m	class:ParserElement
 setWhitespaceChars	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/pyparsing.py	/^    def setWhitespaceChars( self, chars ):$/;"	m	class:ParserElement
 set_attrs	starterbot/lib/python3.4/site-packages/pip/_vendor/colorama/winterm.py	/^    def set_attrs(self, value):$/;"	m	class:WinTerm
@@ -25189,6 +25193,7 @@ test_pydist	starterbot/lib/python3.4/site-packages/wheel/test/test_basic.py	/^de
 test_pythontag_in_setup_cfg	starterbot/lib/python3.4/site-packages/wheel/test/test_tagopt.py	/^def test_pythontag_in_setup_cfg(temp_pkg):$/;"	f
 test_requires	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/database.py	/^    def test_requires(self):$/;"	m	class:Distribution
 test_requires	starterbot/lib/python3.4/site-packages/wheel/test/pydist-schema.json	/^    "test_requires": {$/;"	f
+test_run_plugin_test	tests/test_plugins.py	/^    def test_run_plugin_test(self):$/;"	m	class:PluginsTest
 test_sameas	starterbot/lib/python3.4/site-packages/jinja2/tests.py	/^def test_sameas(value, other):$/;"	f
 test_sequence	starterbot/lib/python3.4/site-packages/jinja2/tests.py	/^def test_sequence(value):$/;"	f
 test_setup	tests/test_plugin_handler.py	/^    def test_setup(self):$/;"	m	class:FlaskServerTest
@@ -25213,6 +25218,10 @@ testdb	starterbot/lib/python3.4/site-packages/pip/_vendor/lockfile/sqlitelockfil
 testlist	starterbot/include/python3.4m/graminit.h	/^#define testlist /;"	d
 testlist_comp	starterbot/include/python3.4m/graminit.h	/^#define testlist_comp /;"	d
 testlist_star_expr	starterbot/include/python3.4m/graminit.h	/^#define testlist_star_expr /;"	d
+tests	src/Models/Plugin.py	/^    def tests(self):$/;"	m	class:Plugin
+tests	src/Plugins/Eight_Ball.py	/^    def tests(self):$/;"	m	class:Eight_Ball
+tests	src/Plugins/Ping.py	/^    def tests(self):$/;"	m	class:Ping
+tests	src/Plugins/Weather.py	/^    def tests(self):$/;"	m	class:Weather
 text	starterbot/include/python3.4m/parsetok.h	/^    char *text;                 \/* UTF-8-encoded string *\/$/;"	m	struct:__anon51
 text	starterbot/include/python3.4m/pyerrors.h	/^    PyObject *text;$/;"	m	struct:__anon54
 text	starterbot/lib/python3.4/site-packages/pip/_vendor/html5lib/treewalkers/base.py	/^    def text(self, data):$/;"	m	class:TreeWalker
@@ -25821,6 +25830,7 @@ unittest	starterbot/lib/python3.4/site-packages/websocket/tests/test_websocket.p
 unittest	starterbot/lib/python3.4/site-packages/wheel/test/test_keys.py	/^import unittest$/;"	i
 unittest	starterbot/lib/python3.4/site-packages/wheel/test/test_ranking.py	/^import unittest$/;"	i
 unittest	tests/test_plugin_handler.py	/^import unittest$/;"	i
+unittest	tests/test_plugins.py	/^import unittest$/;"	i
 unittest_main	starterbot/lib/python3.4/site-packages/setuptools/command/test.py	/^from setuptools.py31compat import unittest_main$/;"	i
 unittest_main	starterbot/lib/python3.4/site-packages/setuptools/py31compat.py	/^    def unittest_main(*args, **kwargs):$/;"	f
 unittest_main	starterbot/lib/python3.4/site-packages/setuptools/py31compat.py	/^unittest_main = unittest.main$/;"	v

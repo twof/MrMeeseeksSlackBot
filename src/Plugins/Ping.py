@@ -11,3 +11,9 @@ class Ping(Plugin):
             return "pong"
         else:
             return "ping"
+
+    def tests(self):
+        cases = [("ping", "pong"),
+                 ("pong", "ping"),
+                 ("scrabble", "pong")]
+        return cases
