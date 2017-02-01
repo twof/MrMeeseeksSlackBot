@@ -65,3 +65,6 @@ class Eight_Ball(Plugin):
                  (".8",
                   "Ask the magic 8ball a question! Usage: .8 <question>")]
         return cases
+
+    def usage(self):
+        return "usage: .8 <question> -> sends an answer"

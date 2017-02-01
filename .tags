@@ -2340,6 +2340,7 @@ HebrewProber	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/package
 HebrewProber	starterbot/lib/python3.4/site-packages/pip/_vendor/requests/packages/chardet/sbcsgroupprober.py	/^from .hebrewprober import HebrewProber$/;"	i
 HebrewProber	starterbot/lib/python3.4/site-packages/requests/packages/chardet/hebrewprober.py	/^class HebrewProber(CharSetProber):$/;"	c
 HebrewProber	starterbot/lib/python3.4/site-packages/requests/packages/chardet/sbcsgroupprober.py	/^from .hebrewprober import HebrewProber$/;"	i
+Help	src/Plugins/Help.py	/^class Help(Plugin):$/;"	c
 HelpCommand	starterbot/lib/python3.4/site-packages/pip/commands/__init__.py	/^from pip.commands.help import HelpCommand$/;"	i
 HelpCommand	starterbot/lib/python3.4/site-packages/pip/commands/help.py	/^class HelpCommand(Command):$/;"	c
 HelpFormatter	starterbot/lib/python3.4/site-packages/click/__init__.py	/^from .formatting import HelpFormatter, wrap_text$/;"	i
@@ -4497,13 +4498,16 @@ PlatformInfo	starterbot/lib/python3.4/site-packages/setuptools/msvc.py	/^class P
 Plugin	src/Helpers/Plugin_Handler.py	/^from ..Models.Plugin import Plugin$/;"	i
 Plugin	src/Models/Plugin.py	/^class Plugin(Singleton):$/;"	c
 Plugin	src/Plugins/Eight_Ball.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
+Plugin	src/Plugins/Help.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin	src/Plugins/Ping.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin	src/Plugins/Weather.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin_Handler	mr_meeseeks.py	/^import src.Helpers.Plugin_Handler as Plugin_Handler$/;"	i
+Plugin_Handler	src/Plugins/Help.py	/^from ..Helpers import Plugin_Handler$/;"	i
 Plugin_Handler	tests/test_plugin_handler.py	/^from src.Helpers import Plugin_Handler$/;"	i
 Plugin_Handler	tests/test_plugins.py	/^from src.Helpers import Plugin_Handler$/;"	i
 Plugin_Type	src/Models/Plugin.py	/^from ..Utils.constants import Plugin_Type$/;"	i
 Plugin_Type	src/Plugins/Eight_Ball.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
+Plugin_Type	src/Plugins/Help.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin_Type	src/Plugins/Ping.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin_Type	src/Plugins/Weather.py	/^from ..Models.Plugin import Plugin, Plugin_Type$/;"	i
 Plugin_Type	src/Utils/constants.py	/^class Plugin_Type(Enum):$/;"	c
@@ -8615,6 +8619,7 @@ __index__	starterbot/lib/python3.4/operator.py	/^__index__ = index$/;"	v
 __init__	src/Models/Message.py	/^    def __init__(self, content=None, sender_id=None, channel=None):$/;"	m	class:Message
 __init__	src/Models/Plugin.py	/^    def __init__(self, match_type, query):$/;"	m	class:Plugin
 __init__	src/Plugins/Eight_Ball.py	/^    def __init__(self):$/;"	m	class:Eight_Ball
+__init__	src/Plugins/Help.py	/^    def __init__(self):$/;"	m	class:Help
 __init__	src/Plugins/Ping.py	/^    def __init__(self):$/;"	m	class:Ping
 __init__	src/Plugins/Weather.py	/^    def __init__(self):$/;"	m	class:Weather
 __init__	starterbot/lib/python3.4/__future__.py	/^    def __init__(self, optionalRelease, mandatoryRelease, compiler_flag):$/;"	m	class:_Feature
@@ -13537,6 +13542,7 @@ callable	starterbot/lib/python3.4/site-packages/six.py	/^    callable = callable
 callable	starterbot/lib/python3.4/site-packages/six.py	/^    def callable(obj):$/;"	f
 callback	src/Models/Plugin.py	/^    def callback(reply, message):$/;"	m	class:Plugin
 callback	src/Plugins/Eight_Ball.py	/^    def callback(self, message):$/;"	m	class:Eight_Ball
+callback	src/Plugins/Help.py	/^    def callback(self, message):$/;"	m	class:Help
 callback	src/Plugins/Ping.py	/^    def callback(self, message):$/;"	m	class:Ping
 callback	src/Plugins/Weather.py	/^    def callback(self, message):$/;"	m	class:Weather
 callback	starterbot/lib/python3.4/site-packages/click/decorators.py	/^        def callback(ctx, param, value):$/;"	f	function:confirmation_option.decorator
@@ -25220,6 +25226,7 @@ testlist_comp	starterbot/include/python3.4m/graminit.h	/^#define testlist_comp /
 testlist_star_expr	starterbot/include/python3.4m/graminit.h	/^#define testlist_star_expr /;"	d
 tests	src/Models/Plugin.py	/^    def tests(self):$/;"	m	class:Plugin
 tests	src/Plugins/Eight_Ball.py	/^    def tests(self):$/;"	m	class:Eight_Ball
+tests	src/Plugins/Help.py	/^    def tests(self):$/;"	m	class:Help
 tests	src/Plugins/Ping.py	/^    def tests(self):$/;"	m	class:Ping
 tests	src/Plugins/Weather.py	/^    def tests(self):$/;"	m	class:Weather
 text	starterbot/include/python3.4m/parsetok.h	/^    char *text;                 \/* UTF-8-encoded string *\/$/;"	m	struct:__anon51
@@ -26115,6 +26122,11 @@ urlunparse	starterbot/lib/python3.4/site-packages/requests/compat.py	/^    from 
 urlunparse	starterbot/lib/python3.4/site-packages/requests/cookies.py	/^from .compat import cookielib, urlparse, urlunparse, Morsel$/;"	i
 urlunsplit	starterbot/lib/python3.4/site-packages/pip/_vendor/distlib/compat.py	/^    from urlparse import urlparse, urlunparse, urljoin, urlsplit, urlunsplit$/;"	i
 urlunsplit	starterbot/lib/python3.4/site-packages/pip/vcs/git.py	/^urlunsplit = urllib_parse.urlunsplit$/;"	v
+usage	src/Models/Plugin.py	/^    def usage(self):$/;"	m	class:Plugin
+usage	src/Plugins/Eight_Ball.py	/^    def usage(self):$/;"	m	class:Eight_Ball
+usage	src/Plugins/Help.py	/^    def usage(self):$/;"	m	class:Help
+usage	src/Plugins/Ping.py	/^    def usage(self):$/;"	m	class:Ping
+usage	src/Plugins/Weather.py	/^    def usage(self):$/;"	m	class:Weather
 usage	starterbot/lib/python3.4/site-packages/pip/_vendor/re-vendor.py	/^def usage():$/;"	f
 usage	starterbot/lib/python3.4/site-packages/pip/basecommand.py	/^    usage = None$/;"	v	class:Command
 usage	starterbot/lib/python3.4/site-packages/pip/commands/hash.py	/^    usage = '%prog [options] <file> ...'$/;"	v	class:HashCommand
