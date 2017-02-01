@@ -71,7 +71,7 @@ If anyone has an idea for a plugin, but either don't have the knowhow or motivat
 * Get schedule for the day (Make School)
 * Get headlines from Google News
 
-#### [Example Plugin](https://github.com/twof/MrMeeseeksSlackBot/blob/master/Plugins/Eight_Ball.py)
+#### [Example Plugin](https://github.com/twof/MrMeeseeksSlackBot/blob/master/src/Plugins/Eight_Ball.py)
 
 ## Code Style Guide
 Tabs for indentation.
