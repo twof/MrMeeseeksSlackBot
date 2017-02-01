@@ -16,8 +16,6 @@ def setup():
                   if fl.find(".py") != -1
                   and re.search(r"__init__|\.pyc", fl) is None]
 
-    print(plug_files)
-
     for plugin in plug_files:
         mod = "src.Plugins." + plugin
         new_mod = importlib.import_module(mod)
