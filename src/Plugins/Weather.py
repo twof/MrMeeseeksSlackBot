@@ -20,34 +20,24 @@ class Weather(Plugin):
 
         self.api_key = os.getenv("OPEN_WEATHER_KEY")
 
-    def _levenshtein_distance(self, origin, comparison):
-        print(origin)
-        print(comparison)
+    def _levenshtein_distance(self, s1, s2):
+        if len(s1) > len(s2):
+            s1, s2 = s2, s1
 
-        ORIGIN_LEN = len(origin) + 1
-        COMPARISON_LENGTH = len(comparison) + 1
-
-        matrix = [[0] * COMPARISON_LENGTH] * ORIGIN_LEN
-
-        for i in range(1, len(origin)):
-            matrix[i][0] = i
-
-        for i in range(1, len(comparison)):
-            matrix[0][i] = i
-
-        for i in range(i, len(origin)):
-            for j in range(i, len(comparison)):
-                if origin[i-1] == comparison[j-1]:
-                    matrix[i][j] = matrix[i-1][j-1]
+        distances = range(len(s1) + 1)
+        for i2, c2 in enumerate(s2):
+            distances_ = [i2+1]
+            for i1, c1 in enumerate(s1):
+                if c1 == c2:
+                    distances_.append(distances[i1])
                 else:
-                    matrix[i][j] = min([matrix[i-1][j],
-                                        matrix[i][j-1],
-                                        matrix[i-1][j-1] + 1])
+                    distances_.append(1 + min((distances[i1],
+                                               distances[i1 + 1],
+                                               distances_[-1])))
+            distances = distances_
 
-        average_len = (len(origin) + len(comparison))/2
-        matriv_val = matrix[len(origin)][len(comparison)]
-
-        return matriv_val/average_len
+        average_len = (float(len(s1)) + float(len(s2)))/2
+        return distances[-1]/average_len
 
     def _find_city(self, message):
         regex = re.compile('[^a-zA-Z\s]')
@@ -55,7 +45,6 @@ class Weather(Plugin):
         words = purged_content.split()
 
         for index, word in enumerate(words):
-            print(word)
             params = {"q": word}
             params_encoded = urlencode(params)
             url_with_params = Weather.city_api_url + "?" + params_encoded
@@ -73,45 +62,42 @@ class Weather(Plugin):
                 content = urlopen(url_with_params).read().decode('utf8')
                 extended_cities = json.loads(content)
 
-                print(cities)
-                print(extended_city)
-                print(extended_cities)
                 if len(extended_cities) > 0\
                         and len(extended_cities) < len(cities)\
                         and extended_cities[0] != '':
-                    print('extended_cities')
-                    print(extended_city)
-                    print(extended_cities)
-                    print(extended_cities[0].split(", ")[0])
 
                     edit_distance = self._levenshtein_distance(
                         extended_cities[0].split(", ")[0],
                         extended_city)
 
-                    print(edit_distance)
-
-                    if edit_distance < 2:
+                    if edit_distance < 0.2:
                         return extended_cities[0].split(", ")[0]
                     else:
                         continue
                 elif len(extended_cities) < 2:
-                    print('hit cities 1')
-                    print(cities)
-                    print(cities[0].split(", ")[0])
-                    print(word)
+                    first_city = cities[0].split(", ")[0]
 
                     edit_distance = self._levenshtein_distance(
-                        extended_cities[0].split(", ")[0],
-                        word)
+                        word,
+                        first_city)
 
-                    print(edit_distance)
-
-                    if edit_distance < 2:
+                    if edit_distance < 0.2:
                         return cities[0].split(", ")[0]
                     else:
                         continue
+            elif index == len(words) - 1 and len(cities) > 0\
+                    and not (cities[0] == '' or cities[0] == '%s'):
+                first_city = cities[0].split(", ")[0]
+
+                edit_distance = self._levenshtein_distance(
+                    word,
+                    first_city)
+
+                if edit_distance < 0.2:
+                    return cities[0].split(", ")[0]
+                else:
+                    continue
             else:
-                print('hit continue')
                 continue
 
         return None
