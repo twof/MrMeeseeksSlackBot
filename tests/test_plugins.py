@@ -16,7 +16,12 @@ class PluginsTest(unittest.TestCase):
                     + " does not conform to the query"\
                     + " for plugin " + type(plugin).__name__
 
-                if type(case[1]) == bool:
+                if len(case) < 2:
+                    print("Test case " + str(case)
+                          + " for plugin " + type(plugin).__name__
+                          + " sent back:")
+                    print(plugin.callback(Message(case[0])))
+                elif type(case[1]) == bool:
                     assert bool(plugin.callback(Message(case[0]))) == case[1],\
                         "Failed on " + type(plugin).__name__\
                         + " on test case " + str(case)

@@ -40,12 +40,6 @@ class Plugin(Singleton):
         if re.search(self.query, message.content) is not None:
             return self.callback(message)
 
-    def callback(reply, message):
-        raise NotImplementedError("Plugins must implement callback method")
-
-    def tests(self):
-        raise NotImplementedError("Plugins must implement tests method")
-
     def handle(self, message):
         match = self.match_type
 
@@ -63,3 +57,12 @@ class Plugin(Singleton):
             return None
 
         return response if response else None
+
+    def callback(reply, message):
+        raise NotImplementedError("Plugins must implement callback method")
+
+    def tests(self):
+        raise NotImplementedError("Plugins must implement tests method")
+
+    def usage(self):
+        raise NotImplementedError("Plugins must implement usage method")

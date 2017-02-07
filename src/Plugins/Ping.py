@@ -16,3 +16,6 @@ class Ping(Plugin):
         cases = [("ping", "pong"),
                  ("pong", "ping")]
         return cases
+
+    def usage(self):
+        return "usage: ping -> sends 'pong'"
