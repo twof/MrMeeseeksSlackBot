@@ -13,12 +13,20 @@ class Weather(Plugin):
     weather_api_url = "http://api.openweathermap.org/data/2.5/weather"
     city_api_url = "http://gd.geobytes.com/AutoCompleteCity"
     format_string = "{city} is experiencing {desc} and is {temp}°F"
-    # weather_format = "{} is experiencing {} and is {}°F"
 
     def __init__(self):
         super().__init__(Plugin_Type.contains, "weather", "WeatherFollowup")
 
         self.api_key = os.getenv("OPEN_WEATHER_KEY")
+
+    def _which_city_builder(self, message, cities):
+        response = "Which city did you mean?"
+        self.new_listener(message.user_id, cities,
+                          self.followups["SpecifyCity"])
+        for index, city in enumerate(cities):
+            response += str(index) + ". " + city
+
+        return response
 
     def _levenshtein_distance(self, s1, s2):
         if len(s1) > len(s2):
@@ -45,7 +53,8 @@ class Weather(Plugin):
         words = purged_content.split()
 
         for index, word in enumerate(words):
-            params = {"q": word}
+            params = {"q": word,
+                      "filter": "US,CA"}  # currently limited to us and ca
             params_encoded = urlencode(params)
             url_with_params = Weather.city_api_url + "?" + params_encoded
 
@@ -55,7 +64,8 @@ class Weather(Plugin):
             if index < len(words) - 1 and len(cities) > 0\
                     and not (cities[0] == '' or cities[0] == '%s'):
                 extended_city = word + ' ' + words[index + 1]
-                params = {"q": extended_city}
+                params = {"q": extended_city,
+                          "filter": "US,CA"}
                 params_encoded = urlencode(params)
                 url_with_params = Weather.city_api_url + "?" + params_encoded
 
@@ -71,7 +81,7 @@ class Weather(Plugin):
                         extended_city)
 
                     if edit_distance < 0.2:
-                        return extended_cities[0].split(", ")[0]
+                        return extended_cities
                     else:
                         continue
                 elif len(extended_cities) < 2:
@@ -103,7 +113,14 @@ class Weather(Plugin):
         return None
 
     def callback(self, message):
-        found_city = self._find_city(message)
+        found_cities = self._find_city(message)
+
+        if len(found_cities) > 1:
+            return self._which_city_builder(message, found_cities)
+        elif len(found_cities) == 1:
+            found_city = found_cities
+        else:
+            found_city = None
 
         if found_city:
             params = {"appid": self.api_key,

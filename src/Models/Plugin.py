@@ -23,7 +23,7 @@ class Plugin(Singleton):
     def __init__(self, match_type, query, followups_folder=None):
         self.match_type = match_type
         self.query = query
-        self.followups = []
+        self.followups = {}
         self.listeners = {}
 
         if followups_folder is not None:
@@ -48,7 +48,9 @@ class Plugin(Singleton):
                     raise Exception("Plugin subclass not found")
 
                 plugin_instance = plugin_classes[0]()
-                self.followups.append(plugin_instance)
+                c_name = plugin_instance.__class__.__name__
+
+                self.followups[c_name] = plugin_instance
 
     def _everything(self, message):
         return self.callback(message)
@@ -87,10 +89,10 @@ class Plugin(Singleton):
 
         return response if response else None
 
-    def new_listener(self, user_name, choices, followup):
-        self.listeners[user_name] = (choices, followup)
+    def new_listener(self, user_name, context_arr, followup):
+        self.listeners[user_name] = (context_arr, followup)
 
-    def callback(reply, message):
+    def callback(self, message):
         raise NotImplementedError("Plugins must implement callback method")
 
     def tests(self):
