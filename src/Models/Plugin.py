@@ -2,7 +2,10 @@
 # -*- coding: utf-8 -*-
 from ..Utils.constants import Plugin_Type
 from ..Models.Singleton import Singleton
+import importlib
+import os
 import re
+from inspect import isclass, getmembers
 
 
 class Plugin(Singleton):
@@ -17,9 +20,35 @@ class Plugin(Singleton):
     callback: function that will run on query match
     """
 
-    def __init__(self, match_type, query):
+    def __init__(self, match_type, query, followups_folder=None):
         self.match_type = match_type
         self.query = query
+        self.followups = []
+        self.listeners = {}
+
+        if followups_folder is not None:
+            dir = os.path.dirname(__file__)
+            filename = os.path.join(dir, '../Plugins/' + followups_folder)
+            fls = os.listdir(filename)
+            plug_files = [re.sub(r"\.pyc?", "", fl) for fl in fls
+                          if fl.find(".py") != -1
+                          and re.search(r"__init__|\.pyc", fl) is None]
+
+            for plugin in plug_files:
+                mod = "src.Plugins." + plugin
+                new_mod = importlib.import_module(mod)
+
+                plugin_classes = [plug[1]
+                                  for plug in getmembers(new_mod, isclass)
+                                  if issubclass(plug[1], Plugin)
+                                  and plug[1] is not Plugin]
+
+                if len(plugin_classes) == 0:
+                    print(mod)
+                    raise Exception("Plugin subclass not found")
+
+                plugin_instance = plugin_classes[0]()
+                self.followups.append(plugin_instance)
 
     def _everything(self, message):
         return self.callback(message)
@@ -57,6 +86,9 @@ class Plugin(Singleton):
             return None
 
         return response if response else None
+
+    def new_listener(self, user_name, choices, followup):
+        self.listeners[user_name] = (choices, followup)
 
     def callback(reply, message):
         raise NotImplementedError("Plugins must implement callback method")

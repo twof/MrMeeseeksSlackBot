@@ -16,7 +16,7 @@ BOT_ID = os.getenv("BOT_ID")
 # constants
 AT_BOT = "<@" + BOT_ID + ">"
 
-# instantiate Slack & Twilio clients
+# instantiate Slack client
 slack_client = SlackClient(os.getenv('SLACK_BOT_TOKEN'))
 
 

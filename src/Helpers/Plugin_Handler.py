@@ -2,7 +2,6 @@ import importlib
 import os
 import re
 from inspect import isclass, getmembers
-# from .. import Plugins
 from ..Models.Plugin import Plugin
 
 plugin_arr = []
@@ -36,7 +35,10 @@ def handle(message):
     responses = []
 
     for plugin in plugin_arr:
-        response = plugin.handle(message)
+        if message.sender_id in plugin.listeners:
+            response = plugin.listeners[message.sender_id][1].handle(message)
+        else:
+            response = plugin.handle(message)
 
         if response:
             responses.append(response)

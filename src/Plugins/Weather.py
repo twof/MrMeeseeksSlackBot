@@ -8,7 +8,7 @@ import re
 
 
 class Weather(Plugin):
-    """Tells us the weather in San Francisco."""
+    """Tells us the weather in a detected city."""
 
     weather_api_url = "http://api.openweathermap.org/data/2.5/weather"
     city_api_url = "http://gd.geobytes.com/AutoCompleteCity"
@@ -16,7 +16,7 @@ class Weather(Plugin):
     # weather_format = "{} is experiencing {} and is {}°F"
 
     def __init__(self):
-        super().__init__(Plugin_Type.contains, "weather")
+        super().__init__(Plugin_Type.contains, "weather", "WeatherFollowup")
 
         self.api_key = os.getenv("OPEN_WEATHER_KEY")
 
