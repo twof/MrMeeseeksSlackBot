@@ -8,7 +8,7 @@ from src.Models.Message import Message
 from src.Utils.constants import intros, outros
 
 # Load environment variables
-load_dotenv(os.path.join('.', '.env.example'))
+load_dotenv(os.path.join('.', '.env'))
 
 # Mr MeeseekBot's ID as an environment variable
 BOT_ID = os.getenv("BOT_ID")

@@ -36,7 +36,9 @@ def handle(message):
 
     for plugin in plugin_arr:
         if message.sender_id in plugin.listeners:
-            response = plugin.listeners[message.sender_id][1].handle(message)
+            context_arr = plugin.listeners[message.sender_id][0]
+            response = plugin.listeners[message.sender_id][1]\
+                .handle(message, context_arr)
         else:
             response = plugin.handle(message)
 

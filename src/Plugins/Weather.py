@@ -20,11 +20,11 @@ class Weather(Plugin):
         self.api_key = os.getenv("OPEN_WEATHER_KEY")
 
     def _which_city_builder(self, message, cities):
-        response = "Which city did you mean?"
-        self.new_listener(message.user_id, cities,
+        response = "Which city did you mean?\n"
+        self.new_listener(message.sender_id, cities,
                           self.followups["SpecifyCity"])
         for index, city in enumerate(cities):
-            response += str(index) + ". " + city
+            response += str(index + 1) + ". " + city + "\n"
 
         return response
 
@@ -92,7 +92,7 @@ class Weather(Plugin):
                         first_city)
 
                     if edit_distance < 0.2:
-                        return cities[0].split(", ")[0]
+                        return cities
                     else:
                         continue
             elif index == len(words) - 1 and len(cities) > 0\
@@ -104,7 +104,7 @@ class Weather(Plugin):
                     first_city)
 
                 if edit_distance < 0.2:
-                    return cities[0].split(", ")[0]
+                    return cities
                 else:
                     continue
             else:

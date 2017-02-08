@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 from ..Utils.constants import Plugin_Type
 from ..Models.Singleton import Singleton
+from inspect import isclass, getmembers
 import importlib
 import os
 import re
-from inspect import isclass, getmembers
 
 
 class Plugin(Singleton):
@@ -35,7 +35,7 @@ class Plugin(Singleton):
                           and re.search(r"__init__|\.pyc", fl) is None]
 
             for plugin in plug_files:
-                mod = "src.Plugins." + plugin
+                mod = "src.Plugins." + followups_folder + "." + plugin
                 new_mod = importlib.import_module(mod)
 
                 plugin_classes = [plug[1]
@@ -44,7 +44,6 @@ class Plugin(Singleton):
                                   and plug[1] is not Plugin]
 
                 if len(plugin_classes) == 0:
-                    print(mod)
                     raise Exception("Plugin subclass not found")
 
                 plugin_instance = plugin_classes[0]()
@@ -52,47 +51,63 @@ class Plugin(Singleton):
 
                 self.followups[c_name] = plugin_instance
 
-    def _everything(self, message):
-        return self.callback(message)
+    def _everything(self, message, context_arr=[]):
+        return self.callback(message, context_arr)
 
-    def _equals(self, message):
+    def _equals(self, message, context_arr=[]):
         if message.content is self.query:
-            return self.callback(message)
+            return self.callback(message, context_arr)
 
-    def _starts_with(self, message):
+    def _starts_with(self, message, context_arr=[]):
         if message.content.startswith(self.query):
-            return self.callback(message)
+            return self.callback(message, context_arr)
 
-    def _contains(self, message):
+    def _contains(self, message, context_arr=[]):
         if self.query in message.content:
-            return self.callback(message)
+            return self.callback(message, context_arr)
 
-    def _regex(self, message):
+    def _regex(self, message, context_arr=[]):
         if re.search(self.query, message.content) is not None:
-            return self.callback(message)
+            return self.callback(message, context_arr)
 
-    def handle(self, message):
+    def handle(self, message, context_arr=[]):
         match = self.match_type
-
-        if match is Plugin_Type.equals:
-            response = self._equals(message)
-        elif match is Plugin_Type.contains:
-            response = self._contains(message)
-        elif match is Plugin_Type.starts_with:
-            response = self._starts_with(message)
-        elif match is Plugin_Type.everything:
-            response = self._everything(message)
-        elif match is Plugin_Type.regex:
-            response = self._regex(message)
+        if not context_arr:
+            if match is Plugin_Type.equals:
+                response = self._equals(message)
+            elif match is Plugin_Type.contains:
+                response = self._contains(message)
+            elif match is Plugin_Type.starts_with:
+                response = self._starts_with(message)
+            elif match is Plugin_Type.everything:
+                response = self._everything(message)
+            elif match is Plugin_Type.regex:
+                response = self._regex(message)
+            else:
+                return None
         else:
-            return None
+            if match is Plugin_Type.equals:
+                response = self._equals(message, context_arr)
+            elif match is Plugin_Type.contains:
+                response = self._contains(message, context_arr)
+            elif match is Plugin_Type.starts_with:
+                response = self._starts_with(message, context_arr)
+            elif match is Plugin_Type.everything:
+                response = self._everything(message, context_arr)
+            elif match is Plugin_Type.regex:
+                response = self._regex(message, context_arr)
+            else:
+                return None
 
         return response if response else None
 
     def new_listener(self, user_name, context_arr, followup):
         self.listeners[user_name] = (context_arr, followup)
 
-    def callback(self, message):
+    def remove_listener(self, user_name):
+        self.listeners.pop(user_name)
+
+    def callback(self, message, context_arr=[]):
         raise NotImplementedError("Plugins must implement callback method")
 
     def tests(self):

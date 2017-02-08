@@ -1,11 +1,11 @@
-from src.Models.Followup import Followup, Plugin_Type
+from src.Models.Plugin import Plugin, Plugin_Type
 from urllib.request import urlopen
 from urllib.parse import urlencode
 import json
 import os
 
 
-class SpecifyCity(Followup):
+class SpecifyCity(Plugin):
     codio_key = "a803c085cc5a98c307853fac03735a535d949ac"
     codio_base_url = "https://api.geocod.io/v1/geocode?"
     format_string = "{city} is experiencing {desc} and is {temp}°F"
@@ -17,12 +17,12 @@ class SpecifyCity(Followup):
         self.oweather_api_key = os.getenv("OPEN_WEATHER_KEY")
 
     def callback(self, message, context_arr):
-        if int(message.content) > len(context_arr) - 1:
+        if int(message.content) > len(context_arr):
             return "Choice invalid try again"
         else:
-            found_city = context_arr[int(message.content)].split(', ')
+            found_city = context_arr[int(message.content)-1].split(', ')
 
-            codio_params = {"api_key": self.api_key,
+            codio_params = {"api_key": SpecifyCity.codio_key,
                             "units": "imperial",
                             "city": found_city[0],
                             "state": found_city[1],
@@ -56,7 +56,6 @@ class SpecifyCity(Followup):
                 SpecifyCity.format_string.format(city=city_name,
                                                  desc=description,
                                                  temp=temp)
-
             return weather_description
 
     def tests(self):
