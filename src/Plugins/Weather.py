@@ -110,9 +110,9 @@ class Weather(Plugin):
             else:
                 continue
 
-        return None
+        return []
 
-    def callback(self, message):
+    def callback(self, message, context_arr=[]):
         found_cities = self._find_city(message)
 
         if len(found_cities) > 1:
