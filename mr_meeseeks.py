@@ -12,6 +12,7 @@ load_dotenv(os.path.join('.', '.env'))
 
 # Mr MeeseekBot's ID as an environment variable
 BOT_ID = os.getenv("BOT_ID")
+print(BOT_ID)
 
 # constants
 AT_BOT = "<@" + BOT_ID + ">"

@@ -1,10 +1,15 @@
 import unittest
 from src.Helpers import Plugin_Handler
 from src.Models.Message import Message
+from dotenv import load_dotenv
+import os
 
 
 class PluginsTest(unittest.TestCase):
     def setUp(self):
+        # Load environment variables
+        load_dotenv(os.path.join('.', '.env'))
+
         self.handler = Plugin_Handler
         self.handler.setup()
 

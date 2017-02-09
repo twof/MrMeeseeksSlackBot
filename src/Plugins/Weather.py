@@ -133,6 +133,7 @@ class Weather(Plugin):
 
         params_encoded = urlencode(params)
         url_with_params = Weather.weather_api_url + "?" + params_encoded
+        print(url_with_params)
 
         content = urlopen(url_with_params).read().decode('utf8')
         parsed_json = json.loads(content)

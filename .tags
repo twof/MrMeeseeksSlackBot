@@ -20058,6 +20058,7 @@ load_dotenv	mr_meeseeks.py	/^from dotenv import load_dotenv$/;"	i
 load_dotenv	starterbot/lib/python3.4/site-packages/dotenv/__init__.py	/^from .main import load_dotenv, get_key, set_key, unset_key, find_dotenv$/;"	i
 load_dotenv	starterbot/lib/python3.4/site-packages/dotenv/ipython.py	/^from .main import load_dotenv, find_dotenv$/;"	i
 load_dotenv	starterbot/lib/python3.4/site-packages/dotenv/main.py	/^def load_dotenv(dotenv_path):$/;"	f
+load_dotenv	tests/test_plugins.py	/^from dotenv import load_dotenv$/;"	i
 load_dynamic	starterbot/lib/python3.4/imp.py	/^    from _imp import load_dynamic$/;"	i
 load_dynamic	starterbot/lib/python3.4/imp.py	/^    load_dynamic = None$/;"	v
 load_entry_point	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__init__.py	/^    def load_entry_point(self, group, name):$/;"	m	class:Distribution
@@ -21592,6 +21593,7 @@ os	starterbot/lib/python3.4/site-packages/wheel/util.py	/^import os$/;"	i
 os	starterbot/lib/python3.4/site-packages/wheel/wininst2wheel.py	/^import os.path$/;"	i
 os	starterbot/lib/python3.4/site.py	/^import os$/;"	i
 os	starterbot/lib/python3.4/tarfile.py	/^import os$/;"	i
+os	tests/test_plugins.py	/^import os$/;"	i
 os_name	starterbot/lib/python3.4/site-packages/pip/_vendor/appdirs.py	/^    os_name = platform.java_ver()[3][0]$/;"	v
 os_name	starterbot/lib/python3.4/site-packages/pkg_resources/_vendor/appdirs.py	/^    os_name = platform.java_ver()[3][0]$/;"	v
 os_open	starterbot/lib/python3.4/site-packages/pip/_vendor/pkg_resources/__init__.py	/^from os import open as os_open$/;"	i

@@ -78,9 +78,6 @@ class Plugin(Singleton):
     def handle(self, message, context_arr=[]):
         match = self.match_type
 
-        print(self.__class__.__name__)
-        print(context_arr)
-
         if not context_arr:
             if match is Plugin_Type.equals:
                 response = self._equals(message)

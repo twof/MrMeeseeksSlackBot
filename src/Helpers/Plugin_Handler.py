@@ -24,7 +24,6 @@ def setup():
                           and plug[1] is not Plugin]
 
         if len(plugin_classes) == 0:
-            print(mod)
             raise Exception("Plugin subclass not found")
 
         plugin_instance = plugin_classes[0]()
