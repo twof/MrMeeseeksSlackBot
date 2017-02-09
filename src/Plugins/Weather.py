@@ -148,7 +148,7 @@ class Weather(Plugin):
         return weather_description
 
     def tests(self):
-        return []
+        return [("weather Buffalo",)]
 
     def usage(self):
         return "usage: weather -> sends the weather for a city of choice if"\

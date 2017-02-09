@@ -37,14 +37,13 @@ def handle_command(message):
             are valid commands. If so, then acts on the commands. If not,
             returns back what it needs for clarification.
         """
-
         handled_responses = Plugin_Handler.handle(message)
 
         if handled_responses:
             for response in handled_responses:
                 _send_resonse(random.choice(intros), message.channel)
                 _send_resonse(response, message.channel)
-                _send_resonse(random.choice(outros), message.channel)
+            _send_resonse(random.choice(outros), message.channel)
 
         # This is kinda intrinsic to the bot's personality so I'd like to add
         # it back in at some point. Need to figure out how.
@@ -58,17 +57,14 @@ def handle_command(message):
 
 # returns a Message object
 def parse_slack_output(slack_rtm_output):
-    """
-        The Slack Real Time Messaging API is an events firehose.
-        this parsing function returns None unless a message is
-        directed at the Bot, based on its ID.
+    """The Slack Real Time Messaging API is an events firehose.
+
+    Returns a message object if there is a message.
     """
     output_list = slack_rtm_output
 
     if output_list and len(output_list) > 0:
         for output in output_list:
-            # if output and 'text' in output and AT_BOT in output['text']:
-            # return text after the @ mention, whitespace removed
             if 'text' in output and output['user'] != BOT_ID:
                 content = output['text'].strip().lower()
                 sender_id = output['user']

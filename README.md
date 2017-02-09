@@ -2,7 +2,6 @@
 
 ### v1 TODO:
 * Add listener timeouts
-* Add means to delete listeners from within a class other than the one they were created in. This will more likely than not be the primary use case.
 * Debug and refactor
 * Write more basic, offline plugin that makes use of followups and context. Weather has rapidly spiraled out of control
 

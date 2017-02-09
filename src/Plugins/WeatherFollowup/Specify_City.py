@@ -34,8 +34,12 @@ class SpecifyCity(Plugin):
             content = urlopen(codio_url_with_params).read().decode('utf8')
             city = json.loads(content)
 
-            found_city_lon = city["results"][0]["location"]["lng"]
-            found_city_lat = city["results"][0]["location"]["lat"]
+            try:
+                found_city_lon = city["results"][0]["location"]["lng"]
+                found_city_lat = city["results"][0]["location"]["lat"]
+            except IndexError:
+                return "I CAN'T FIND THAT CITY JERRY! "\
+                    + "ARE YOU SQUARING YOUR SHOULDERS?"
 
             oweather_params = {"appid": self.oweather_api_key,
                                "units": "imperial",

@@ -52,26 +52,34 @@ class Plugin(Singleton):
                 self.followups[c_name] = plugin_instance
 
     def _everything(self, message, context_arr=[]):
-        return self.callback(message, context_arr)
+        return self.callback(message, context_arr)\
+            if context_arr else self.callback(message)
 
     def _equals(self, message, context_arr=[]):
         if message.content is self.query:
-            return self.callback(message, context_arr)
+            return self.callback(message, context_arr)\
+                if context_arr else self.callback(message)
 
     def _starts_with(self, message, context_arr=[]):
         if message.content.startswith(self.query):
-            return self.callback(message, context_arr)
+            return self.callback(message, context_arr)\
+                if context_arr else self.callback(message)
 
     def _contains(self, message, context_arr=[]):
         if self.query in message.content:
-            return self.callback(message, context_arr)
+            return self.callback(message, context_arr)\
+                if context_arr else self.callback(message)
 
     def _regex(self, message, context_arr=[]):
         if re.search(self.query, message.content) is not None:
-            return self.callback(message, context_arr)
+            return self.callback(message, context_arr)\
+                if context_arr else self.callback(message)
 
     def handle(self, message, context_arr=[]):
         match = self.match_type
+
+        print(self.__class__.__name__)
+        print(context_arr)
 
         if not context_arr:
             if match is Plugin_Type.equals:
@@ -87,6 +95,8 @@ class Plugin(Singleton):
             else:
                 return None
         else:
+            print(self.__class__.__name__)
+            print(context_arr)
             if match is Plugin_Type.equals:
                 response = self._equals(message, context_arr)
             elif match is Plugin_Type.contains:
